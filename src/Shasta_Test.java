@@ -30,7 +30,9 @@ public class Shasta_Test extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 153, 0));
 
+        jTextField1.setForeground(new java.awt.Color(255, 153, 0));
         jTextField1.setText("Shasta 123 Test File   rickyyyyy");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -38,6 +40,7 @@ public class Shasta_Test extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setForeground(new java.awt.Color(51, 51, 255));
         jLabel1.setText("Esteban was here ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
