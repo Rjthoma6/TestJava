@@ -31,7 +31,7 @@ public class Shasta_Test extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextField1.setText("Shasta 123 Test File");
+        jTextField1.setText("Shasta 123 Test File   rickyyyyy");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
