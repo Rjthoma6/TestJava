@@ -12,7 +12,7 @@ package Testingtogether;
 public class Testinter extends javax.swing.JFrame {
 
     /**
-     * Creates new form Testinter
+     * Creates new form 
      */
     public Testinter() {
         initComponents();
