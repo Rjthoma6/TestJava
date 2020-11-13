@@ -184,8 +184,8 @@ public class Work_Order_Line_Assignment extends javax.swing.JFrame {
             Class.forName(driver);
             Connection con=DriverManager.getConnection(url,user,pass);
             String sql="insert into Work Order Line Assignment"
-                    +"(WorkOrderLineAssignmentID,WorkOrderID,SubContractorID)"
-                            +"values(?,?,?)";
+                    +"(WorkOrderID,SubContractorID)"
+                            +"values(?,?)";
             PreparedStatement pst=con.prepareStatement(sql);
            
             pst.setString(2, work2.getText());
