@@ -42,7 +42,7 @@ public class Work_Order_Line_Assignment extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        CustomerIDtxt = new javax.swing.JTextField();
+        SubContractorIDtxt = new javax.swing.JTextField();
         btnInsert = new javax.swing.JButton();
         btnUpdate = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
@@ -61,7 +61,7 @@ public class Work_Order_Line_Assignment extends javax.swing.JFrame {
         jLabel1.setText("Work Order  ID");
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel7.setText("Customer ID");
+        jLabel7.setText("Sub-Contractor ID");
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 51, 255));
@@ -85,7 +85,7 @@ public class Work_Order_Line_Assignment extends javax.swing.JFrame {
                 {null, null, null}
             },
             new String [] {
-                "Workorder Line Assignment ID", "Work Order ID", "Customer ID"
+                "Workorder Line Assignment ID", "Work Order ID", "Sub-Contractor ID"
             }
         ) {
             Class[] types = new Class [] {
@@ -142,7 +142,7 @@ public class Work_Order_Line_Assignment extends javax.swing.JFrame {
                             .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(CustomerIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(SubContractorIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(WorkOrderIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(WorkorderLineAssignmentIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jLabel5))
@@ -185,7 +185,7 @@ public class Work_Order_Line_Assignment extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel7)
-                                    .addComponent(CustomerIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(SubContractorIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(42, 42, 42)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -201,11 +201,11 @@ public class Work_Order_Line_Assignment extends javax.swing.JFrame {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, user, pass);
             String sql = "insert into Workorder_Line_Assignment"
-            +"(WorkorderID, CustomerID)"
+            +"(WorkorderID, SubContractorID)"
             +"values(?, ?)";
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, WorkOrderIDtxt.getText());
-            pst.setString(2, CustomerIDtxt.getText());
+            pst.setString(2, SubContractorIDtxt.getText());
 
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Insert Successfully");
@@ -221,11 +221,11 @@ public class Work_Order_Line_Assignment extends javax.swing.JFrame {
         {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, user, pass);
-            String sql = "update Workorder Line Assignment set WorkOrderID = ?, CustomerID = ?";
+            String sql = "update Workorder Line Assignment set WorkOrderID = ?, SubContractorID = ?";
 
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, WorkOrderIDtxt.getText());
-            pst.setString(2, CustomerIDtxt.getText());
+            pst.setString(2, SubContractorIDtxt.getText());
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Update Successfully");
         }
@@ -298,7 +298,7 @@ public class Work_Order_Line_Assignment extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField CustomerIDtxt;
+    private javax.swing.JTextField SubContractorIDtxt;
     private javax.swing.JTextField WorkOrderIDtxt;
     private javax.swing.JTextField WorkorderLineAssignmentIDtxt;
     private javax.swing.JButton btnDelete;

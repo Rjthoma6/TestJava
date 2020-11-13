@@ -34,7 +34,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="CustomerIDtxt" min="-2" pref="82" max="-2" attributes="0"/>
+                          <Component id="SubContractorIDtxt" min="-2" pref="82" max="-2" attributes="0"/>
                           <Component id="WorkOrderIDtxt" min="-2" pref="81" max="-2" attributes="0"/>
                           <Component id="WorkorderLineAssignmentIDtxt" min="-2" pref="81" max="-2" attributes="0"/>
                       </Group>
@@ -88,7 +88,7 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="CustomerIDtxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="SubContractorIDtxt" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -122,7 +122,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="12" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Customer ID"/>
+        <Property name="text" type="java.lang.String" value="Sub-Contractor ID"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
@@ -160,7 +160,7 @@
               <Table columnCount="3" rowCount="10">
                 <Column editable="true" title="Workorder Line Assignment ID" type="java.lang.Integer"/>
                 <Column editable="true" title="Work Order ID" type="java.lang.Integer"/>
-                <Column editable="true" title="Customer ID" type="java.lang.Integer"/>
+                <Column editable="true" title="Sub-Contractor ID" type="java.lang.Integer"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -189,7 +189,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JTextField" name="CustomerIDtxt">
+    <Component class="javax.swing.JTextField" name="SubContractorIDtxt">
     </Component>
     <Component class="javax.swing.JButton" name="btnInsert">
       <Properties>
