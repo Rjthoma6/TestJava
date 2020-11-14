@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author wilma
+ * @author Andrew Choe
  */
 public class Work_Order_Line_Assignment extends javax.swing.JFrame {
 
