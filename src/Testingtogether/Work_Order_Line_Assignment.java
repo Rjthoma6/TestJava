@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
 public class Work_Order_Line_Assignment extends javax.swing.JFrame {
 
     /**
-     * Creates new form Work_Order
+     * Creates new form Work_Order_Line_Assignment
      */
     public Work_Order_Line_Assignment() {
         initComponents();
@@ -293,20 +293,20 @@ public class Work_Order_Line_Assignment extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Work_Order.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Work_Order_Line_Assignment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Work_Order.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Work_Order_Line_Assignment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Work_Order.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Work_Order_Line_Assignment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Work_Order.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Work_Order_Line_Assignment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Work_Order().setVisible(true);
+                new Work_Order_Line_Assignment().setVisible(true);
             }
         });
     }
