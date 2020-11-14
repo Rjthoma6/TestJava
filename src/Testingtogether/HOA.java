@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author wilma
+ * @author Andrew Choe
  */
 public class HOA extends javax.swing.JFrame {
 
