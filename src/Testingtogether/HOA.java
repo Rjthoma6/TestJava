@@ -437,7 +437,7 @@ public class HOA extends javax.swing.JFrame {
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("HOAID"),rs.getString("HOAName"),rs.getString("HOAPhone"),rs.getString("HOAEmail"),rs.getString ("HOAAddress"),rs.getString("City"),rs.getString("StateProvinceID"),rs.getString("ZipCode"),rs.getString("CountryID")};
+                   Object o[]={rs.getString("HOAID"),rs.getString("HOAName"),rs.getString("ContactName"),rs.getString("HOAPhone"),rs.getString("HOAEmail"),rs.getString ("HOAAddress"),rs.getString("City"),rs.getString("StateProvinceID"),rs.getString("ZipCode"),rs.getString("CountryID")};
                    hoaTM.addRow(o);
                }
         }
