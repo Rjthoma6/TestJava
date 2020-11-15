@@ -25,7 +25,7 @@ public class HOA extends javax.swing.JFrame {
         initComponents();
     }
         String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        String url="jdbc:sqlserver://DESKTOP-RQELHUF\\SQLEXPRESS:1433;databaseName=CIS3365-06-Shasta Analysts";
+        String url="jdbc:sqlserver://DESKTOP-RQELHUF\\:1433;databaseName=CIS3365-06-Shasta Analysts";
         String user="shasta";
         String pass="admin";
     /**
@@ -102,7 +102,7 @@ public class HOA extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "HOAID", "HOA Name", "Contact Name", "HOA Phone", "HOA Email", "HOA Address", "City", "State Province ID", "Zip Code", "Country ID"
+                "HOAID", "HOA Name", "Contact Name", "HOA Phone", "HOA Email", "HOA Address", "City", "Zip Code", "State Province ID", "Country ID"
             }
         ) {
             Class[] types = new Class [] {
@@ -233,8 +233,9 @@ public class HOA extends javax.swing.JFrame {
                                     .addComponent(btnUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(btnDelete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(btnNew, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 637, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                .addGap(18, 18, 18)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 645, Short.MAX_VALUE)))
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -436,7 +437,7 @@ public class HOA extends javax.swing.JFrame {
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("HOAID"),rs.getString("HOAName"),rs.getString("HOAPhone"),rs.getString("HOAEmail"),rs.getString ("HOAAddress"),rs.getString("City"),rs.getString("StateProvinceID")};
+                   Object o[]={rs.getString("HOAID"),rs.getString("HOAName"),rs.getString("HOAPhone"),rs.getString("HOAEmail"),rs.getString ("HOAAddress"),rs.getString("City"),rs.getString("StateProvinceID"),rs.getString("ZipCode"),rs.getString("CountryID")};
                    hoaTM.addRow(o);
                }
         }
