@@ -23,6 +23,8 @@ public class HOA extends javax.swing.JFrame {
      */
     public HOA() {
         initComponents();
+        updateSPCombo();
+        
     }
         String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";
         String url="jdbc:sqlserver://DESKTOP-RQELHUF\\:1433;databaseName=CIS3365-06-Shasta Analysts";
@@ -172,7 +174,6 @@ public class HOA extends javax.swing.JFrame {
         jLabel15.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel15.setText("Zip Code");
 
-        StateProvinceDD.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AL", "AK", "AZ", "AR" }));
         StateProvinceDD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 StateProvinceDDActionPerformed(evt);
@@ -306,7 +307,26 @@ public class HOA extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    private void updateSPCombo(){
+        try{    
+        Class.forName(driver);
+            Connection con = DriverManager.getConnection(url, user, pass);
+            String sql = "select * from StateProvince";
+            PreparedStatement pst = con.prepareStatement(sql);
+            ResultSet rs=pst.executeQuery();
+            while(rs.next()){
+                StateProvinceDD.addItem(rs.getString("StateProvinceAbbreviation"));
+            }
+            
+        }
+        catch (Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        
+        }
+        
+        
+    }
+    
     private void btnInsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertActionPerformed
         try
         {
