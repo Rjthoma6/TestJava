@@ -24,6 +24,7 @@ public class HOA extends javax.swing.JFrame {
     public HOA() {
         initComponents();
         updateSPCombo();
+        updateCountryCombo();
         
     }
         String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";
@@ -64,9 +65,9 @@ public class HOA extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         ZipCodetxt = new javax.swing.JTextField();
-        CountryIDtxt = new javax.swing.JTextField();
         StateProvinceDD = new javax.swing.JComboBox<>();
         btnNew = new javax.swing.JButton();
+        countrycombo = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -187,6 +188,12 @@ public class HOA extends javax.swing.JFrame {
             }
         });
 
+        countrycombo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                countrycomboActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -224,7 +231,7 @@ public class HOA extends javax.swing.JFrame {
                                     .addComponent(HOAEmailtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Citytxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(ZipCodetxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(CountryIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(countrycombo, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(27, 27, 27)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -301,8 +308,8 @@ public class HOA extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
-                    .addComponent(CountryIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(129, 129, 129))
+                    .addComponent(countrycombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(132, 132, 132))
         );
 
         pack();
@@ -327,6 +334,26 @@ public class HOA extends javax.swing.JFrame {
         
     }
     
+        private void updateCountryCombo(){
+        try{    
+        Class.forName(driver);
+            Connection con = DriverManager.getConnection(url, user, pass);
+            String sql = "select * from Country";
+            PreparedStatement pst = con.prepareStatement(sql);
+            ResultSet rs=pst.executeQuery();
+            while(rs.next()){
+                countrycombo.addItem(rs.getString("CountryAbbreviation"));
+            }
+            
+        }
+        catch (Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        
+        }
+        
+        
+    }
+    
     private void btnInsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertActionPerformed
         try
         {
@@ -339,15 +366,25 @@ public class HOA extends javax.swing.JFrame {
            
             int stateprovid = 0;
             switch (StateProvinceDD.getSelectedItem().toString()){
-                case "AL": stateprovid=1;
+                
+                
+            }
+            
+            
+             int countryid = 0;
+            switch (countrycombo.getSelectedItem().toString()){
+                case "CN": countryid=1;
                             break;
-                case "AK": stateprovid=2;
+                case "IN": countryid=2;
                             break;
-                case "AZ": stateprovid=3;
+                case "US": countryid=3;
                             break;
-                case "AR": stateprovid=4;
+                case "ID": countryid=4;
+                            break;
+                case "BR": countryid=5;
                             break;
             }
+            
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, HOANametxt.getText());
             pst.setString(2, ContactNametxt.getText());
@@ -357,7 +394,7 @@ public class HOA extends javax.swing.JFrame {
             pst.setString(6, Citytxt.getText());
             pst.setString(7, String.valueOf(stateprovid));
             pst.setString(8, ZipCodetxt.getText());
-            pst.setString(9, CountryIDtxt.getText());
+            pst.setString(9, String.valueOf(countryid));
 
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Insert Successfully");
@@ -373,17 +410,26 @@ public class HOA extends javax.swing.JFrame {
         {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, user, pass);
-            String sql = "update HOA set HOAName = ?, ContactName = ?, HOAPhone = ?, HOAAddress = ?, City = ?, StateProvinceID = ?, ZipCode = ?, CountryID = ?";
+            String sql = "update HOA set HOAName = ?, ContactName = ?, HOAPhone = ?,HOAEmail = ?, HOAAddress = ?, City = ?, StateProvinceID = ?, ZipCode = ?, CountryID = ?";
 
             int stateprovid = 0;
             switch (StateProvinceDD.getSelectedItem().toString()){
-                case "AL": stateprovid=1;
+               
+                
+            }
+            int countryid = 0;
+            
+            
+            switch (countrycombo.getSelectedItem().toString()){
+                case "CN": countryid=1;
                             break;
-                case "AK": stateprovid=2;
+                case "IN": countryid=2;
                             break;
-                case "AZ": stateprovid=3;
+                case "US": countryid=3;
                             break;
-                case "AR": stateprovid=4;
+                case "ID": countryid=4;
+                            break;
+                case "BR": countryid=5;
                             break;
             }
             
@@ -396,7 +442,7 @@ public class HOA extends javax.swing.JFrame {
             pst.setString(6, Citytxt.getText());
             pst.setString(7, String.valueOf(stateprovid));
             pst.setString(8, ZipCodetxt.getText());
-            pst.setString(9, CountryIDtxt.getText());
+            pst.setString(9, String.valueOf(countryid));
             
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Update Successfully");
@@ -469,6 +515,10 @@ public class HOA extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnNewActionPerformed
 
+    private void countrycomboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_countrycomboActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_countrycomboActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -507,7 +557,6 @@ public class HOA extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Citytxt;
     private javax.swing.JTextField ContactNametxt;
-    private javax.swing.JTextField CountryIDtxt;
     private javax.swing.JTextField HOAAddresstxt;
     private javax.swing.JTextField HOAEmailtxt;
     private javax.swing.JTextField HOAIDtxt;
@@ -520,6 +569,7 @@ public class HOA extends javax.swing.JFrame {
     private javax.swing.JButton btnInsert;
     private javax.swing.JButton btnNew;
     private javax.swing.JButton btnUpdate;
+    private javax.swing.JComboBox<String> countrycombo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
