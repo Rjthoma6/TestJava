@@ -16,12 +16,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Andrew Choe
  */
-public class Appointment extends javax.swing.JFrame {
+public class Feedback extends javax.swing.JFrame {
 
     /**
      * Creates new form HOA
      */
-    public Appointment() {
+    public Feedback() {
         initComponents();
         
     }
@@ -38,38 +38,38 @@ public class Appointment extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        CustomerIDtxt = new javax.swing.JTextField();
+        FeedbackDatetxt = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        Appointmenttable = new javax.swing.JTable();
-        WorkOrdertxt = new javax.swing.JTextField();
+        Feedbacktable = new javax.swing.JTable();
+        Commenttxt = new javax.swing.JTextField();
         btnInsert = new javax.swing.JButton();
         btnUpdate = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
-        AppointmentIDtxt = new javax.swing.JTextField();
-        AppointmentDatetxt = new javax.swing.JTextField();
+        FeedbackIDtxt = new javax.swing.JTextField();
+        WorkOrderIDtxt = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        AppointmentPurposetxt = new javax.swing.JTextField();
+        CustomerIDtxt = new javax.swing.JTextField();
         btnNew = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        CustomerIDtxt.addActionListener(new java.awt.event.ActionListener() {
+        FeedbackDatetxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CustomerIDtxtActionPerformed(evt);
+                FeedbackDatetxtActionPerformed(evt);
             }
         });
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel1.setText("Customer ID");
+        jLabel1.setText("Feedback Date");
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel7.setText("Work Order ID");
+        jLabel7.setText("Comment");
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 51, 255));
@@ -77,9 +77,9 @@ public class Appointment extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel5.setText("Appointment");
+        jLabel5.setText("Feedback");
 
-        Appointmenttable.setModel(new javax.swing.table.DefaultTableModel(
+        Feedbacktable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -93,18 +93,18 @@ public class Appointment extends javax.swing.JFrame {
                 {null, null, null, null, null}
             },
             new String [] {
-                "Appointment ID", "Customer ID", "Work Order ID", "Appointment Date", "Appointment Purpose"
+                "Feedback ID", "Feedback Date", "Comment", "WorkOrderID", "CustomerID"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.Object.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(Appointmenttable);
+        jScrollPane1.setViewportView(Feedbacktable);
 
         btnInsert.setText("Insert");
         btnInsert.addActionListener(new java.awt.event.ActionListener() {
@@ -128,25 +128,25 @@ public class Appointment extends javax.swing.JFrame {
         });
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel8.setText("Appointment ID");
+        jLabel8.setText("Feedback ID");
 
-        AppointmentIDtxt.addActionListener(new java.awt.event.ActionListener() {
+        FeedbackIDtxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AppointmentIDtxtActionPerformed(evt);
+                FeedbackIDtxtActionPerformed(evt);
             }
         });
 
-        AppointmentDatetxt.addActionListener(new java.awt.event.ActionListener() {
+        WorkOrderIDtxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AppointmentDatetxtActionPerformed(evt);
+                WorkOrderIDtxtActionPerformed(evt);
             }
         });
 
         jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel9.setText("Appointment Purpose");
+        jLabel9.setText("Customer ID");
 
         jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel10.setText("Appointment Date");
+        jLabel10.setText("Work Order ID");
 
         btnNew.setText("View Table");
         btnNew.addActionListener(new java.awt.event.ActionListener() {
@@ -173,11 +173,11 @@ public class Appointment extends javax.swing.JFrame {
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(WorkOrdertxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CustomerIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AppointmentIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AppointmentDatetxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AppointmentPurposetxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(Commenttxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(FeedbackDatetxt, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(FeedbackIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(WorkOrderIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(CustomerIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -207,23 +207,23 @@ public class Appointment extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(jLabel8)
-                                            .addComponent(AppointmentIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(FeedbackIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(44, 44, 44)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(jLabel1)
-                                            .addComponent(CustomerIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(FeedbackDatetxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(jLabel7)
-                                            .addComponent(WorkOrdertxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(Commenttxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(AppointmentDatetxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(WorkOrderIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLabel10))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(AppointmentPurposetxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(CustomerIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel9)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(15, 15, 15)
@@ -248,17 +248,17 @@ public class Appointment extends javax.swing.JFrame {
         {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, user, pass);
-            String sql = "insert into Appointment"
-            +"(CustomerID, WorkOrderID, AppointmentDate, AppointmentPurpose)"
+            String sql = "insert into Feedback"
+            +"(FeedbackDate, Comment, WorkOrderID, CustomerID)"
             +"values(?, ?, ?, ?)";
             
         
             
             PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, CustomerIDtxt.getText());
-            pst.setString(2, WorkOrdertxt.getText());
-            pst.setString(3, AppointmentDatetxt.getText());
-            pst.setString(4, AppointmentPurposetxt.getText());
+            pst.setString(1, FeedbackDatetxt.getText());
+            pst.setString(2, Commenttxt.getText());
+            pst.setString(3, WorkOrderIDtxt.getText());
+            pst.setString(4, CustomerIDtxt.getText());
 
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Insert Successfully");
@@ -274,13 +274,13 @@ public class Appointment extends javax.swing.JFrame {
         {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, user, pass);
-            String sql = "update Appointment set CustomerID = ?, WorkOrderID = ?,AppointmentDate = ?, AppointmentPurpose = ?";
+            String sql = "update Feedback set FeedbackDate = ?, Comment = ?,WorkOrderID = ?, CustomerID = ?";
             
             PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, CustomerIDtxt.getText());
-            pst.setString(2, WorkOrdertxt.getText());
-            pst.setString(3, AppointmentDatetxt.getText());
-            pst.setString(4, AppointmentPurposetxt.getText());
+            pst.setString(1, FeedbackDatetxt.getText());
+            pst.setString(2, Commenttxt.getText());
+            pst.setString(3, WorkOrderIDtxt.getText());
+            pst.setString(4, CustomerIDtxt.getText());
             
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Update Successfully");
@@ -296,10 +296,10 @@ public class Appointment extends javax.swing.JFrame {
         {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, user, pass);
-            String sql = "Delete from Appointment where AppointmentID = ?";
+            String sql = "Delete from Feedback where FeedbackID = ?";
 
             PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, AppointmentIDtxt.getText());
+            pst.setString(1, FeedbackIDtxt.getText());
 
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Delete Successfully");
@@ -310,17 +310,17 @@ public class Appointment extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnDeleteActionPerformed
 
-    private void CustomerIDtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustomerIDtxtActionPerformed
+    private void FeedbackDatetxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FeedbackDatetxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_CustomerIDtxtActionPerformed
+    }//GEN-LAST:event_FeedbackDatetxtActionPerformed
 
-    private void AppointmentIDtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AppointmentIDtxtActionPerformed
+    private void FeedbackIDtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FeedbackIDtxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_AppointmentIDtxtActionPerformed
+    }//GEN-LAST:event_FeedbackIDtxtActionPerformed
 
-    private void AppointmentDatetxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AppointmentDatetxtActionPerformed
+    private void WorkOrderIDtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WorkOrderIDtxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_AppointmentDatetxtActionPerformed
+    }//GEN-LAST:event_WorkOrderIDtxtActionPerformed
 
     private void btnNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewActionPerformed
         // TODO add your handling code here:
@@ -329,16 +329,16 @@ public class Appointment extends javax.swing.JFrame {
         {
          
                Connection con=DriverManager.getConnection(url,user,pass);
-               String sql="select * from Appointment";
+               String sql="select * from Feedback";
                PreparedStatement pst=con.prepareStatement(sql);
                ResultSet rs=pst.executeQuery();
-               DefaultTableModel AppointmentTM=(DefaultTableModel)Appointmenttable.getModel();
-               AppointmentTM.setRowCount(0);
+               DefaultTableModel FeedbackTM=(DefaultTableModel)Feedbacktable.getModel();
+               FeedbackTM.setRowCount(0);
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("AppointmentID"),rs.getString("CustomerID"),rs.getString("WorkOrderID"),rs.getString("AppointmentDate"),rs.getString("AppointmentPurpose")};
-                   AppointmentTM.addRow(o);
+                   Object o[]={rs.getString("FeedbackID"),rs.getString("FeedbackDate"),rs.getString("Comment"),rs.getString("WorkOrderID"),rs.getString("CustomerID")};
+                   FeedbackTM.addRow(o);
                }
         }
         catch(Exception e)
@@ -366,32 +366,34 @@ public class Appointment extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Appointment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Feedback.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Appointment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Feedback.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Appointment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Feedback.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Appointment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Feedback.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Appointment().setVisible(true);
+                new Feedback().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField AppointmentDatetxt;
-    private javax.swing.JTextField AppointmentIDtxt;
-    private javax.swing.JTextField AppointmentPurposetxt;
-    private javax.swing.JTable Appointmenttable;
+    private javax.swing.JTextField Commenttxt;
     private javax.swing.JTextField CustomerIDtxt;
-    private javax.swing.JTextField WorkOrdertxt;
+    private javax.swing.JTextField FeedbackDatetxt;
+    private javax.swing.JTextField FeedbackIDtxt;
+    private javax.swing.JTable Feedbacktable;
+    private javax.swing.JTextField WorkOrderIDtxt;
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnInsert;
     private javax.swing.JButton btnNew;
