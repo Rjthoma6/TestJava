@@ -16,12 +16,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Andrew Choe
  */
-public class Mileage extends javax.swing.JFrame {
+public class Warranty extends javax.swing.JFrame {
 
     /**
      * Creates new form HOA
      */
-    public Mileage() {
+    public Warranty() {
         initComponents();
         
     }
@@ -44,21 +44,17 @@ public class Mileage extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        Mileagetable = new javax.swing.JTable();
-        TravelDatetxt = new javax.swing.JTextField();
+        Warrantytable = new javax.swing.JTable();
+        IssueDatetxt = new javax.swing.JTextField();
         btnInsert = new javax.swing.JButton();
         btnUpdate = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
-        MileageIDtxt = new javax.swing.JTextField();
-        VehicleLicensePlatetxt = new javax.swing.JTextField();
-        EndOdotxt = new javax.swing.JTextField();
+        WarrantyIDtxt = new javax.swing.JTextField();
+        ExpirationDatetxt = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        StartOdotxt = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        TotalMilestxt = new javax.swing.JTextField();
+        Documenttxt = new javax.swing.JTextField();
         btnNew = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -73,7 +69,7 @@ public class Mileage extends javax.swing.JFrame {
         jLabel1.setText("Work Order ID");
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel7.setText("Travel Date");
+        jLabel7.setText("Issue Date");
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 51, 255));
@@ -81,34 +77,34 @@ public class Mileage extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel5.setText("Mileage");
+        jLabel5.setText("Warranty");
 
-        Mileagetable.setModel(new javax.swing.table.DefaultTableModel(
+        Warrantytable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Mileage ID", "Work Order ID", "Travel Date", "Vehicle License Plate", "Start Odometer", "End Odometer", "Total Miles"
+                "Warranty ID", "Work Order ID", "Issue Date", "Expiration Date", "Document"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Integer.class, java.lang.Object.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
+                java.lang.Integer.class, java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(Mileagetable);
+        jScrollPane1.setViewportView(Warrantytable);
 
         btnInsert.setText("Insert");
         btnInsert.addActionListener(new java.awt.event.ActionListener() {
@@ -132,31 +128,32 @@ public class Mileage extends javax.swing.JFrame {
         });
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel8.setText("Mileage ID");
+        jLabel8.setText("Warranty ID");
 
-        MileageIDtxt.addActionListener(new java.awt.event.ActionListener() {
+        WarrantyIDtxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MileageIDtxtActionPerformed(evt);
+                WarrantyIDtxtActionPerformed(evt);
             }
         });
 
-        VehicleLicensePlatetxt.addActionListener(new java.awt.event.ActionListener() {
+        ExpirationDatetxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VehicleLicensePlatetxtActionPerformed(evt);
+                ExpirationDatetxtActionPerformed(evt);
             }
         });
 
         jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel9.setText("Start Odometer");
+        jLabel9.setText("Document");
 
         jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel10.setText("Vehicle License Plate");
+        jLabel10.setText("Expiration Date");
 
-        jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel11.setText("End Odometer");
-
-        jLabel12.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel12.setText("Total Miles");
+        Documenttxt.setText("NULL");
+        Documenttxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DocumenttxtActionPerformed(evt);
+            }
+        });
 
         btnNew.setText("View Table");
         btnNew.addActionListener(new java.awt.event.ActionListener() {
@@ -180,18 +177,14 @@ public class Mileage extends javax.swing.JFrame {
                                 .addComponent(jLabel1)
                                 .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TravelDatetxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(IssueDatetxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(WorkOrderIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(MileageIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(VehicleLicensePlatetxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(EndOdotxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(StartOdotxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TotalMilestxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(WarrantyIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ExpirationDatetxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Documenttxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -208,7 +201,7 @@ public class Mileage extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -221,7 +214,7 @@ public class Mileage extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(jLabel8)
-                                            .addComponent(MileageIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(WarrantyIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(44, 44, 44)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -230,23 +223,15 @@ public class Mileage extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(jLabel7)
-                                            .addComponent(TravelDatetxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(IssueDatetxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(VehicleLicensePlatetxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(ExpirationDatetxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLabel10))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(StartOdotxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel9))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel11)
-                                    .addComponent(EndOdotxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel12)
-                                    .addComponent(TotalMilestxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(Documenttxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel9)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(15, 15, 15)
                                 .addComponent(btnNew)
@@ -255,7 +240,8 @@ public class Mileage extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(btnUpdate)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnDelete))))
+                                .addComponent(btnDelete)))
+                        .addGap(46, 46, 46))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(215, 215, 215))
         );
@@ -269,17 +255,15 @@ public class Mileage extends javax.swing.JFrame {
         {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, user, pass);
-            String sql = "insert into Mileage"
-            +"(WorkOrderID, TravelDate, VehicleLicensePlate, StartOdometer, EndOdometer, TotalMiles)"
-            +"values(?, ?, ?, ?, ?, ?)";
+            String sql = "insert into Warranty"
+            +"(WorkOrderID, IssueDate, ExpirationDate, Document)"
+            +"values(?, ?, ?, ?)";
             
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, WorkOrderIDtxt.getText());
-            pst.setString(2, TravelDatetxt.getText());
-            pst.setString(3, VehicleLicensePlatetxt.getText());
-            pst.setString(4, StartOdotxt.getText());
-            pst.setString(5, EndOdotxt.getText());
-            pst.setString(6, TotalMilestxt.getText());
+            pst.setString(2, IssueDatetxt.getText());
+            pst.setString(3, ExpirationDatetxt.getText());
+            pst.setString(4, Documenttxt.getText());
 
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Insert Successfully");
@@ -295,15 +279,13 @@ public class Mileage extends javax.swing.JFrame {
         {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, user, pass);
-            String sql = "update Mileage set WorkOrderID = ?, TravelDate = ?, VehicleLicensePlate = ?,StartOdometer = ?, EndOdometer = ?, TotalMiles = ?";
+            String sql = "update Warranty set WorkOrderID = ?, IssueDate = ?, ExpirationDate = ?";
             
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, WorkOrderIDtxt.getText());
-            pst.setString(2, TravelDatetxt.getText());
-            pst.setString(3, VehicleLicensePlatetxt.getText());
-            pst.setString(4, StartOdotxt.getText());
-            pst.setString(5, EndOdotxt.getText());
-            pst.setString(6, TotalMilestxt.getText());
+            pst.setString(2, IssueDatetxt.getText());
+            pst.setString(3, ExpirationDatetxt.getText());
+            pst.setString(4, Documenttxt.getText());
 
             
             pst.executeUpdate();
@@ -320,10 +302,10 @@ public class Mileage extends javax.swing.JFrame {
         {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, user, pass);
-            String sql = "Delete from Mileage where MileageID = ?";
+            String sql = "Delete from Warranty where WarrantyID = ?";
 
             PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, MileageIDtxt.getText());
+            pst.setString(1, WarrantyIDtxt.getText());
 
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Delete Successfully");
@@ -338,13 +320,13 @@ public class Mileage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_WorkOrderIDtxtActionPerformed
 
-    private void MileageIDtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MileageIDtxtActionPerformed
+    private void WarrantyIDtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WarrantyIDtxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_MileageIDtxtActionPerformed
+    }//GEN-LAST:event_WarrantyIDtxtActionPerformed
 
-    private void VehicleLicensePlatetxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VehicleLicensePlatetxtActionPerformed
+    private void ExpirationDatetxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExpirationDatetxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_VehicleLicensePlatetxtActionPerformed
+    }//GEN-LAST:event_ExpirationDatetxtActionPerformed
 
     private void btnNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewActionPerformed
         // TODO add your handling code here:
@@ -353,16 +335,16 @@ public class Mileage extends javax.swing.JFrame {
         {
          
                Connection con=DriverManager.getConnection(url,user,pass);
-               String sql="select * from Mileage";
+               String sql="select * from Warranty";
                PreparedStatement pst=con.prepareStatement(sql);
                ResultSet rs=pst.executeQuery();
-               DefaultTableModel MileageTM=(DefaultTableModel)Mileagetable.getModel();
-               MileageTM.setRowCount(0);
+               DefaultTableModel WarrantyTM=(DefaultTableModel)Warrantytable.getModel();
+               WarrantyTM.setRowCount(0);
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("MileageID"),rs.getString("WorkOrderID"),rs.getString("TravelDate"),rs.getString("VehicleLicensePlate"),rs.getString("StartOdometer"),rs.getString ("EndOdometer"),rs.getString("TotalMiles")};
-                   MileageTM.addRow(o);
+                   Object o[]={rs.getString("WarrantyID"),rs.getString("WorkOrderID"),rs.getString("IssueDate"),rs.getString("ExpirationDate"),rs.getString("Document")};
+                   WarrantyTM.addRow(o);
                }
         }
         catch(Exception e)
@@ -372,6 +354,10 @@ public class Mileage extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_btnNewActionPerformed
+
+    private void DocumenttxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DocumenttxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DocumenttxtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -390,33 +376,33 @@ public class Mileage extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Mileage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Warranty.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Mileage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Warranty.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Mileage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Warranty.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Mileage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Warranty.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Mileage().setVisible(true);
+                new Warranty().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField EndOdotxt;
-    private javax.swing.JTextField MileageIDtxt;
-    private javax.swing.JTable Mileagetable;
-    private javax.swing.JTextField StartOdotxt;
-    private javax.swing.JTextField TotalMilestxt;
-    private javax.swing.JTextField TravelDatetxt;
-    private javax.swing.JTextField VehicleLicensePlatetxt;
+    private javax.swing.JTextField Documenttxt;
+    private javax.swing.JTextField ExpirationDatetxt;
+    private javax.swing.JTextField IssueDatetxt;
+    private javax.swing.JTextField WarrantyIDtxt;
+    private javax.swing.JTable Warrantytable;
     private javax.swing.JTextField WorkOrderIDtxt;
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnInsert;
@@ -424,8 +410,6 @@ public class Mileage extends javax.swing.JFrame {
     private javax.swing.JButton btnUpdate;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;

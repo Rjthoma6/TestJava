@@ -69,7 +69,7 @@ public class Work_Order_Line extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel5.setText("Home Owner Association");
+        jLabel5.setText("Work Order Line");
 
         WOLtable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
