@@ -234,8 +234,8 @@
                 <Column editable="true" title="HOA Email" type="java.lang.Object"/>
                 <Column editable="true" title="HOA Address" type="java.lang.Integer"/>
                 <Column editable="true" title="City" type="java.lang.Object"/>
-                <Column editable="true" title="Zip Code" type="java.lang.Object"/>
                 <Column editable="true" title="State Province ID" type="java.lang.Object"/>
+                <Column editable="true" title="Zip Code" type="java.lang.Object"/>
                 <Column editable="true" title="Country ID" type="java.lang.Object"/>
               </Table>
             </Property>

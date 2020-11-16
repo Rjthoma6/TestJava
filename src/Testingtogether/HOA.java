@@ -105,7 +105,7 @@ public class HOA extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "HOAID", "HOA Name", "Contact Name", "HOA Phone", "HOA Email", "HOA Address", "City", "Zip Code", "State Province ID", "Country ID"
+                "HOAID", "HOA Name", "Contact Name", "HOA Phone", "HOA Email", "HOA Address", "City", "State Province ID", "Zip Code", "Country ID"
             }
         ) {
             Class[] types = new Class [] {
