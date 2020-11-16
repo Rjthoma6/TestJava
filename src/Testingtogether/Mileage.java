@@ -38,34 +38,34 @@ public class Mileage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        HOANametxt = new javax.swing.JTextField();
+        WorkOrderIDtxt = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         Mileagetable = new javax.swing.JTable();
-        ContactNametxt = new javax.swing.JTextField();
+        TravelDatetxt = new javax.swing.JTextField();
         btnInsert = new javax.swing.JButton();
         btnUpdate = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
-        HOAIDtxt = new javax.swing.JTextField();
-        HOAPhonetxt = new javax.swing.JTextField();
-        HOAAddresstxt = new javax.swing.JTextField();
+        MileageIDtxt = new javax.swing.JTextField();
+        VehicleLicensePlatetxt = new javax.swing.JTextField();
+        EndOdotxt = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        HOAEmailtxt = new javax.swing.JTextField();
+        StartOdotxt = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
-        Citytxt = new javax.swing.JTextField();
+        TotalMilestxt = new javax.swing.JTextField();
         btnNew = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        HOANametxt.addActionListener(new java.awt.event.ActionListener() {
+        WorkOrderIDtxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HOANametxtActionPerformed(evt);
+                WorkOrderIDtxtActionPerformed(evt);
             }
         });
 
@@ -134,15 +134,15 @@ public class Mileage extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel8.setText("Mileage ID");
 
-        HOAIDtxt.addActionListener(new java.awt.event.ActionListener() {
+        MileageIDtxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HOAIDtxtActionPerformed(evt);
+                MileageIDtxtActionPerformed(evt);
             }
         });
 
-        HOAPhonetxt.addActionListener(new java.awt.event.ActionListener() {
+        VehicleLicensePlatetxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HOAPhonetxtActionPerformed(evt);
+                VehicleLicensePlatetxtActionPerformed(evt);
             }
         });
 
@@ -185,13 +185,13 @@ public class Mileage extends javax.swing.JFrame {
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ContactNametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(HOANametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(HOAIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(HOAPhonetxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(HOAAddresstxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(HOAEmailtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Citytxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(TravelDatetxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(WorkOrderIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(MileageIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(VehicleLicensePlatetxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(EndOdotxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(StartOdotxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TotalMilestxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -221,32 +221,32 @@ public class Mileage extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(jLabel8)
-                                            .addComponent(HOAIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(MileageIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(44, 44, 44)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(jLabel1)
-                                            .addComponent(HOANametxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(WorkOrderIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(jLabel7)
-                                            .addComponent(ContactNametxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(TravelDatetxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(HOAPhonetxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(VehicleLicensePlatetxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLabel10))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(HOAEmailtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(StartOdotxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel9))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel11)
-                                    .addComponent(HOAAddresstxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(EndOdotxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel12)
-                                    .addComponent(Citytxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(TotalMilestxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(15, 15, 15)
                                 .addComponent(btnNew)
@@ -274,12 +274,12 @@ public class Mileage extends javax.swing.JFrame {
             +"values(?, ?, ?, ?, ?, ?)";
             
             PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, HOANametxt.getText());
-            pst.setString(2, ContactNametxt.getText());
-            pst.setString(3, HOAPhonetxt.getText());
-            pst.setString(4, HOAEmailtxt.getText());
-            pst.setString(5, HOAAddresstxt.getText());
-            pst.setString(6, Citytxt.getText());
+            pst.setString(1, WorkOrderIDtxt.getText());
+            pst.setString(2, TravelDatetxt.getText());
+            pst.setString(3, VehicleLicensePlatetxt.getText());
+            pst.setString(4, StartOdotxt.getText());
+            pst.setString(5, EndOdotxt.getText());
+            pst.setString(6, TotalMilestxt.getText());
 
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Insert Successfully");
@@ -298,12 +298,12 @@ public class Mileage extends javax.swing.JFrame {
             String sql = "update Mileage set WorkOrderID = ?, TravelDate = ?, VehicleLicensePlate = ?,StartOdometer = ?, EndOdometer = ?, TotalMiles = ?";
             
             PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, HOANametxt.getText());
-            pst.setString(2, ContactNametxt.getText());
-            pst.setString(3, HOAPhonetxt.getText());
-            pst.setString(4, HOAEmailtxt.getText());
-            pst.setString(5, HOAAddresstxt.getText());
-            pst.setString(6, Citytxt.getText());
+            pst.setString(1, WorkOrderIDtxt.getText());
+            pst.setString(2, TravelDatetxt.getText());
+            pst.setString(3, VehicleLicensePlatetxt.getText());
+            pst.setString(4, StartOdotxt.getText());
+            pst.setString(5, EndOdotxt.getText());
+            pst.setString(6, TotalMilestxt.getText());
 
             
             pst.executeUpdate();
@@ -323,7 +323,7 @@ public class Mileage extends javax.swing.JFrame {
             String sql = "Delete from Mileage where MileageID = ?";
 
             PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, HOAIDtxt.getText());
+            pst.setString(1, MileageIDtxt.getText());
 
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Delete Successfully");
@@ -334,17 +334,17 @@ public class Mileage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnDeleteActionPerformed
 
-    private void HOANametxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HOANametxtActionPerformed
+    private void WorkOrderIDtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WorkOrderIDtxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_HOANametxtActionPerformed
+    }//GEN-LAST:event_WorkOrderIDtxtActionPerformed
 
-    private void HOAIDtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HOAIDtxtActionPerformed
+    private void MileageIDtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MileageIDtxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_HOAIDtxtActionPerformed
+    }//GEN-LAST:event_MileageIDtxtActionPerformed
 
-    private void HOAPhonetxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HOAPhonetxtActionPerformed
+    private void VehicleLicensePlatetxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VehicleLicensePlatetxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_HOAPhonetxtActionPerformed
+    }//GEN-LAST:event_VehicleLicensePlatetxtActionPerformed
 
     private void btnNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewActionPerformed
         // TODO add your handling code here:
@@ -410,14 +410,14 @@ public class Mileage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Citytxt;
-    private javax.swing.JTextField ContactNametxt;
-    private javax.swing.JTextField HOAAddresstxt;
-    private javax.swing.JTextField HOAEmailtxt;
-    private javax.swing.JTextField HOAIDtxt;
-    private javax.swing.JTextField HOANametxt;
-    private javax.swing.JTextField HOAPhonetxt;
+    private javax.swing.JTextField EndOdotxt;
+    private javax.swing.JTextField MileageIDtxt;
     private javax.swing.JTable Mileagetable;
+    private javax.swing.JTextField StartOdotxt;
+    private javax.swing.JTextField TotalMilestxt;
+    private javax.swing.JTextField TravelDatetxt;
+    private javax.swing.JTextField VehicleLicensePlatetxt;
+    private javax.swing.JTextField WorkOrderIDtxt;
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnInsert;
     private javax.swing.JButton btnNew;

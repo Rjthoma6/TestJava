@@ -41,13 +41,13 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="ContactNametxt" min="-2" pref="82" max="-2" attributes="0"/>
-                          <Component id="HOANametxt" min="-2" pref="81" max="-2" attributes="0"/>
-                          <Component id="HOAIDtxt" min="-2" pref="81" max="-2" attributes="0"/>
-                          <Component id="HOAPhonetxt" alignment="0" min="-2" pref="82" max="-2" attributes="0"/>
-                          <Component id="HOAAddresstxt" alignment="0" min="-2" pref="82" max="-2" attributes="0"/>
-                          <Component id="HOAEmailtxt" min="-2" pref="82" max="-2" attributes="0"/>
-                          <Component id="Citytxt" min="-2" pref="82" max="-2" attributes="0"/>
+                          <Component id="TravelDatetxt" min="-2" pref="82" max="-2" attributes="0"/>
+                          <Component id="WorkOrderIDtxt" min="-2" pref="81" max="-2" attributes="0"/>
+                          <Component id="MileageIDtxt" min="-2" pref="81" max="-2" attributes="0"/>
+                          <Component id="VehicleLicensePlatetxt" alignment="0" min="-2" pref="82" max="-2" attributes="0"/>
+                          <Component id="EndOdotxt" alignment="0" min="-2" pref="82" max="-2" attributes="0"/>
+                          <Component id="StartOdotxt" min="-2" pref="82" max="-2" attributes="0"/>
+                          <Component id="TotalMilestxt" min="-2" pref="82" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -86,41 +86,41 @@
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="HOAIDtxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="MileageIDtxt" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="HOANametxt" min="-2" max="-2" attributes="0"/>
+                                          <Component id="WorkOrderIDtxt" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="ContactNametxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="TravelDatetxt" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="HOAPhonetxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="VehicleLicensePlatetxt" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="HOAEmailtxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="StartOdotxt" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="HOAAddresstxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EndOdotxt" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Citytxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="TotalMilestxt" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -143,9 +143,9 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="HOANametxt">
+    <Component class="javax.swing.JTextField" name="WorkOrderIDtxt">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="HOANametxtActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="WorkOrderIDtxtActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
@@ -252,7 +252,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JTextField" name="ContactNametxt">
+    <Component class="javax.swing.JTextField" name="TravelDatetxt">
     </Component>
     <Component class="javax.swing.JButton" name="btnInsert">
       <Properties>
@@ -286,17 +286,17 @@
         <Property name="text" type="java.lang.String" value="Mileage ID"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="HOAIDtxt">
+    <Component class="javax.swing.JTextField" name="MileageIDtxt">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="HOAIDtxtActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MileageIDtxtActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="HOAPhonetxt">
+    <Component class="javax.swing.JTextField" name="VehicleLicensePlatetxt">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="HOAPhonetxtActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VehicleLicensePlatetxtActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="HOAAddresstxt">
+    <Component class="javax.swing.JTextField" name="EndOdotxt">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel9">
       <Properties>
@@ -322,7 +322,7 @@
         <Property name="text" type="java.lang.String" value="End Odometer"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="HOAEmailtxt">
+    <Component class="javax.swing.JTextField" name="StartOdotxt">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel12">
       <Properties>
@@ -332,7 +332,7 @@
         <Property name="text" type="java.lang.String" value="Total Miles"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="Citytxt">
+    <Component class="javax.swing.JTextField" name="TotalMilestxt">
     </Component>
     <Component class="javax.swing.JButton" name="btnNew">
       <Properties>
