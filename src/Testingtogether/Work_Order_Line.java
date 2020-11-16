@@ -26,7 +26,7 @@ public class Work_Order_Line extends javax.swing.JFrame {
         updateWOLSCombo();   
     }
         String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        String url="jdbc:sqlserver://DESKTOP-RQELHUF\\:1433;databaseName=CIS3365-06-Shasta Analysts";
+        String url="jdbc:sqlserver://DESKTOP-RQELHUF\\:1433;databaseName=CIS3365 Shasta Analysts";
         String user="shasta";
         String pass="admin";
     /**
