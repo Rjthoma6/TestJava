@@ -274,13 +274,14 @@ public class Feedback extends javax.swing.JFrame {
         {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, user, pass);
-            String sql = "update Feedback set FeedbackDate = ?, Comment = ?,WorkOrderID = ?, CustomerID = ?";
+            String sql = "update Feedback set FeedbackDate = ?, Comment = ?,WorkOrderID = ?, CustomerID = ? where FeedbackID = ?";
             
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, FeedbackDatetxt.getText());
             pst.setString(2, Commenttxt.getText());
             pst.setString(3, WorkOrderIDtxt.getText());
             pst.setString(4, CustomerIDtxt.getText());
+            pst.setString(4, FeedbackIDtxt.getText());
             
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Update Successfully");

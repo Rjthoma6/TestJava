@@ -279,14 +279,14 @@ public class Warranty extends javax.swing.JFrame {
         {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, user, pass);
-            String sql = "update Warranty set WorkOrderID = ?, IssueDate = ?, ExpirationDate = ?";
+            String sql = "update Warranty set WorkOrderID = ?, IssueDate = ?, ExpirationDate = ? where WarrantyID = ?";
             
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, WorkOrderIDtxt.getText());
             pst.setString(2, IssueDatetxt.getText());
             pst.setString(3, ExpirationDatetxt.getText());
             pst.setString(4, Documenttxt.getText());
-
+            pst.setString(5, WarrantyIDtxt.getText());
             
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Update Successfully");

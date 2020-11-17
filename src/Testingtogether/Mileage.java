@@ -295,7 +295,7 @@ public class Mileage extends javax.swing.JFrame {
         {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, user, pass);
-            String sql = "update Mileage set WorkOrderID = ?, TravelDate = ?, VehicleLicensePlate = ?,StartOdometer = ?, EndOdometer = ?, TotalMiles = ?";
+            String sql = "update Mileage set WorkOrderID = ?, TravelDate = ?, VehicleLicensePlate = ?,StartOdometer = ?, EndOdometer = ?, TotalMiles = ? where MileageID = ?";
             
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, WorkOrderIDtxt.getText());
@@ -304,7 +304,8 @@ public class Mileage extends javax.swing.JFrame {
             pst.setString(4, StartOdotxt.getText());
             pst.setString(5, EndOdotxt.getText());
             pst.setString(6, TotalMilestxt.getText());
-
+            pst.setString(7, MileageIDtxt.getText());
+            
             
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Update Successfully");

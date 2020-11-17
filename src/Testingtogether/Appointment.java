@@ -274,13 +274,14 @@ public class Appointment extends javax.swing.JFrame {
         {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, user, pass);
-            String sql = "update Appointment set CustomerID = ?, WorkOrderID = ?,AppointmentDate = ?, AppointmentPurpose = ?";
+            String sql = "update Appointment set CustomerID = ?, WorkOrderID = ?,AppointmentDate = ?, AppointmentPurpose = ? where AppointmentID = ?";
             
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, CustomerIDtxt.getText());
             pst.setString(2, WorkOrdertxt.getText());
             pst.setString(3, AppointmentDatetxt.getText());
             pst.setString(4, AppointmentPurposetxt.getText());
+            pst.setString(5, AppointmentIDtxt.getText());
             
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Update Successfully");

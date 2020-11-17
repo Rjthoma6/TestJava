@@ -238,11 +238,13 @@ public class Work_Order_Line_Assignment extends javax.swing.JFrame {
         {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, user, pass);
-            String sql = "update WorkOrderLineAssignmentt set WorkOrderID = ?, SubContractorID = ?";
+            String sql = "update WorkOrderLineAssignment set WorkOrderID = ?, SubContractorID = ? where WorkOrderLineAssignmentID = ?";
 
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, WorkOrderIDtxt.getText());
             pst.setString(2, SubContractorIDtxt.getText());
+            pst.setString(3, WorkorderLineAssignmentIDtxt.getText());
+            
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Update Successfully");
         }

@@ -340,7 +340,7 @@ public class Work_Order_Line extends javax.swing.JFrame {
         {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, user, pass);
-            String sql = "update WorkOrderLine set WorkOrderLineStatusID = ?, WorkOrderID = ?, SubContractorServiceID = ?";
+            String sql = "update WorkOrderLine set WorkOrderLineStatusID = ?, WorkOrderID = ?, SubContractorServiceID = ? where WorkOrderLineID = ?";
 
             int WOLSid = 0;
             switch (WorkOrderLineStatusDD.getSelectedItem().toString()){
@@ -405,6 +405,7 @@ public class Work_Order_Line extends javax.swing.JFrame {
             pst.setString(1, String.valueOf(WOLSid));
             pst.setString(2, WorkOrderIDtxt.getText());
             pst.setString(3, SubContractorServicetxt.getText());
+            pst.setString(4, WorkOrderLinetxt.getText());
             
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Update Successfully");

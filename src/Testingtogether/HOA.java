@@ -630,7 +630,7 @@ public class HOA extends javax.swing.JFrame {
         {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, user, pass);
-            String sql = "update HOA set HOAName = ?, ContactName = ?, HOAPhone = ?,HOAEmail = ?, HOAAddress = ?, City = ?, StateProvinceID = ?, ZipCode = ?, CountryID = ?";
+            String sql = "update HOA set HOAName = ?, ContactName = ?, HOAPhone = ?,HOAEmail = ?, HOAAddress = ?, City = ?, StateProvinceID = ?, ZipCode = ?, CountryID = ? where HOAID = ?";
 
             int stateprovid = 0;
             switch (StateProvinceDD.getSelectedItem().toString()){
@@ -880,6 +880,7 @@ public class HOA extends javax.swing.JFrame {
             pst.setString(7, String.valueOf(stateprovid));
             pst.setString(8, ZipCodetxt.getText());
             pst.setString(9, String.valueOf(countryid));
+            pst.setString(10, HOAIDtxt.getText());
             
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Update Successfully");
