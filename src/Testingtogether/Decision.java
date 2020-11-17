@@ -316,7 +316,7 @@ public class Decision extends javax.swing.JFrame {
         { 
             Class.forName(driver);
                     Connection con=DriverManager.getConnection(url,user,pass);
-                    String sql="update Decision set DecisionDate=?,DecisionType=?,Comment=?,Document=?,Feedback=?,where DecisionID=?";  
+                    String sql="update Decision set DecisionDate=?,DecisionType=?,Comment=?,Document=?,FeedbackID=? where DecisionID=?";  
                     PreparedStatement pst=con.prepareStatement(sql);    
                    
                     pst.setString(1,box2.getText());
