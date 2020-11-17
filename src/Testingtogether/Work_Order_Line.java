@@ -396,6 +396,7 @@ public class Work_Order_Line extends javax.swing.JFrame {
                             break;
                 case "Final Walkthrough Completed": WOLSid=26;
                             break;
+                            
             }
             
             
