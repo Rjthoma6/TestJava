@@ -29,7 +29,7 @@ public class customer extends javax.swing.JFrame {
     }
     
         String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        String url="jdbc:sqlserver://DESKTOP-RQELHUF\\:1433;databaseName=CIS3365 Shasta Analysts";
+        String url="jdbc:sqlserver://DESKTOP-OUTBSKJ:1433;databaseName=CIS3365-06-Shasta Analysts";
         String user="shasta";
         String pass="admin";
 
@@ -234,7 +234,7 @@ public class customer extends javax.swing.JFrame {
                                     .addComponent(jLabel18))
                                 .addGap(55, 55, 55)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(countryid)
+                                    .addComponent(countryid, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
                                     .addComponent(pid)
                                     .addComponent(mcity)
                                     .addComponent(maddress)
@@ -284,7 +284,7 @@ public class customer extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(49, Short.MAX_VALUE)
+                .addContainerGap(91, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
