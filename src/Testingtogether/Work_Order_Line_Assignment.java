@@ -19,7 +19,7 @@ import javax.swing.table.DefaultTableModel;
 public class Work_Order_Line_Assignment extends javax.swing.JFrame {
 
     /**
-     * Creates new form Work_Order_Line_Assignment
+     * Creates new form Work_Order_Line_Assignments
      */
     public Work_Order_Line_Assignment() {
         initComponents();

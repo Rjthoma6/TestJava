@@ -19,7 +19,7 @@ import javax.swing.table.DefaultTableModel;
 public class Feedback extends javax.swing.JFrame {
 
     /**
-     * Creates new form HOA
+     * Creates new form Feedback
      */
     public Feedback() {
         initComponents();

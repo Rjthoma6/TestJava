@@ -19,7 +19,7 @@ import javax.swing.table.DefaultTableModel;
 public class Mileage extends javax.swing.JFrame {
 
     /**
-     * Creates new form HOA
+     * Creates new form Mileage
      */
     public Mileage() {
         initComponents();

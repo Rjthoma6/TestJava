@@ -19,7 +19,7 @@ import javax.swing.table.DefaultTableModel;
 public class Appointment extends javax.swing.JFrame {
 
     /**
-     * Creates new form HOA
+     * Creates new form Assignment
      */
     public Appointment() {
         initComponents();

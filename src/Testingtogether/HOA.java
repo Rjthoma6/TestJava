@@ -19,7 +19,7 @@ import javax.swing.table.DefaultTableModel;
 public class HOA extends javax.swing.JFrame {
 
     /**
-     * Creates new form HOA
+     * Creates new HOA form
      */
     public HOA() {
         initComponents();

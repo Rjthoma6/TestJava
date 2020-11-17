@@ -19,7 +19,7 @@ import javax.swing.table.DefaultTableModel;
 public class Work_Order_Line extends javax.swing.JFrame {
 
     /**
-     * Creates new form HOA
+     * Creates WOL Form
      */
     public Work_Order_Line() {
         initComponents();

@@ -19,7 +19,7 @@ import javax.swing.table.DefaultTableModel;
 public class Warranty extends javax.swing.JFrame {
 
     /**
-     * Creates new form HOA
+     * Creates new form Warranty
      */
     public Warranty() {
         initComponents();
