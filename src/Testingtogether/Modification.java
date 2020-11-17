@@ -16,12 +16,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Andrew Choe
  */
-public class Warranty extends javax.swing.JFrame {
+public class Modification extends javax.swing.JFrame {
 
     /**
      * Creates new form Warranty
      */
-    public Warranty() {
+    public Modification() {
         initComponents();
         
     }
@@ -38,38 +38,36 @@ public class Warranty extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        WorkOrderIDtxt = new javax.swing.JTextField();
+        ModificationNametxt = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        Warrantytable = new javax.swing.JTable();
-        IssueDatetxt = new javax.swing.JTextField();
+        Modtable = new javax.swing.JTable();
+        DecisionIDtxt = new javax.swing.JTextField();
         btnInsert = new javax.swing.JButton();
         btnUpdate = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
-        WarrantyIDtxt = new javax.swing.JTextField();
-        ExpirationDatetxt = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
+        ModficationIDtxt = new javax.swing.JTextField();
+        WorkOrderIDtxt = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        Documenttxt = new javax.swing.JTextField();
         btnNew = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        WorkOrderIDtxt.addActionListener(new java.awt.event.ActionListener() {
+        ModificationNametxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                WorkOrderIDtxtActionPerformed(evt);
+                ModificationNametxtActionPerformed(evt);
             }
         });
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel1.setText("Work Order ID");
+        jLabel1.setText("Modification Name");
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel7.setText("Issue Date");
+        jLabel7.setText("Decision ID");
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 51, 255));
@@ -77,34 +75,34 @@ public class Warranty extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel5.setText("Warranty");
+        jLabel5.setText("Modification");
 
-        Warrantytable.setModel(new javax.swing.table.DefaultTableModel(
+        Modtable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Warranty ID", "Work Order ID", "Issue Date", "Expiration Date", "Document"
+                "Modifcation ID", "Modification Name", "Decision ID", "Work Order ID"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(Warrantytable);
+        jScrollPane1.setViewportView(Modtable);
 
         btnInsert.setText("Insert");
         btnInsert.addActionListener(new java.awt.event.ActionListener() {
@@ -128,32 +126,22 @@ public class Warranty extends javax.swing.JFrame {
         });
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel8.setText("Warranty ID");
+        jLabel8.setText("Modification ID");
 
-        WarrantyIDtxt.addActionListener(new java.awt.event.ActionListener() {
+        ModficationIDtxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                WarrantyIDtxtActionPerformed(evt);
+                ModficationIDtxtActionPerformed(evt);
             }
         });
 
-        ExpirationDatetxt.addActionListener(new java.awt.event.ActionListener() {
+        WorkOrderIDtxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ExpirationDatetxtActionPerformed(evt);
+                WorkOrderIDtxtActionPerformed(evt);
             }
         });
-
-        jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel9.setText("Document");
 
         jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel10.setText("Expiration Date");
-
-        Documenttxt.setText("NULL");
-        Documenttxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DocumenttxtActionPerformed(evt);
-            }
-        });
+        jLabel10.setText("Work Order ID");
 
         btnNew.setText("View Table");
         btnNew.addActionListener(new java.awt.event.ActionListener() {
@@ -176,15 +164,13 @@ public class Warranty extends javax.swing.JFrame {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel1)
                                 .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(IssueDatetxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(WorkOrderIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(WarrantyIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ExpirationDatetxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Documenttxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(DecisionIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ModificationNametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ModficationIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(WorkOrderIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -208,30 +194,25 @@ public class Warranty extends javax.swing.JFrame {
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jLabel8)
-                                            .addComponent(WarrantyIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(44, 44, 44)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jLabel1)
-                                            .addComponent(WorkOrderIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jLabel7)
-                                            .addComponent(IssueDatetxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(ExpirationDatetxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel10))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(Documenttxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel9)))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(18, 18, 18)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel8)
+                                        .addComponent(ModficationIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(44, 44, 44)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabel1)
+                                        .addComponent(ModificationNametxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel7)
+                                        .addComponent(DecisionIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(WorkOrderIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel10))))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(15, 15, 15)
                                 .addComponent(btnNew)
@@ -241,7 +222,7 @@ public class Warranty extends javax.swing.JFrame {
                                 .addComponent(btnUpdate)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(btnDelete)))
-                        .addGap(46, 46, 46))
+                        .addGap(48, 48, 48))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(215, 215, 215))
         );
@@ -255,15 +236,14 @@ public class Warranty extends javax.swing.JFrame {
         {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, user, pass);
-            String sql = "insert into Warranty"
-            +"(WorkOrderID, IssueDate, ExpirationDate, Document)"
-            +"values(?, ?, ?, ?)";
+            String sql = "insert into Modification"
+            +"(ModificationName, DecisionID, WorkOrderID)"
+            +"values(?, ?, ?)";
             
             PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, WorkOrderIDtxt.getText());
-            pst.setString(2, IssueDatetxt.getText());
-            pst.setString(3, ExpirationDatetxt.getText());
-            pst.setString(4, Documenttxt.getText());
+            pst.setString(1, ModificationNametxt.getText());
+            pst.setString(2, DecisionIDtxt.getText());
+            pst.setString(3, WorkOrderIDtxt.getText());
 
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Insert Successfully");
@@ -279,14 +259,13 @@ public class Warranty extends javax.swing.JFrame {
         {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, user, pass);
-            String sql = "update Warranty set WorkOrderID = ?, IssueDate = ?, ExpirationDate = ? where WarrantyID = ?";
+            String sql = "update Modification set ModificationName = ?, DecisionID = ?, WorkOrderID = ? where ModificationID = ?";
             
             PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, WorkOrderIDtxt.getText());
-            pst.setString(2, IssueDatetxt.getText());
-            pst.setString(3, ExpirationDatetxt.getText());
-            pst.setString(4, Documenttxt.getText());
-            pst.setString(5, WarrantyIDtxt.getText());
+            pst.setString(1, ModificationNametxt.getText());
+            pst.setString(2, DecisionIDtxt.getText());
+            pst.setString(3, WorkOrderIDtxt.getText());
+            pst.setString(4, ModficationIDtxt.getText());
             
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Update Successfully");
@@ -302,10 +281,10 @@ public class Warranty extends javax.swing.JFrame {
         {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, user, pass);
-            String sql = "Delete from Warranty where WarrantyID = ?";
+            String sql = "Delete from Modification where ModificationID = ?";
 
             PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, WarrantyIDtxt.getText());
+            pst.setString(1, ModficationIDtxt.getText());
 
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Delete Successfully");
@@ -316,17 +295,17 @@ public class Warranty extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnDeleteActionPerformed
 
+    private void ModificationNametxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificationNametxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ModificationNametxtActionPerformed
+
+    private void ModficationIDtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModficationIDtxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ModficationIDtxtActionPerformed
+
     private void WorkOrderIDtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WorkOrderIDtxtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_WorkOrderIDtxtActionPerformed
-
-    private void WarrantyIDtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WarrantyIDtxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_WarrantyIDtxtActionPerformed
-
-    private void ExpirationDatetxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExpirationDatetxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ExpirationDatetxtActionPerformed
 
     private void btnNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewActionPerformed
         // TODO add your handling code here:
@@ -335,16 +314,16 @@ public class Warranty extends javax.swing.JFrame {
         {
          
                Connection con=DriverManager.getConnection(url,user,pass);
-               String sql="select * from Warranty";
+               String sql="select * from Modification";
                PreparedStatement pst=con.prepareStatement(sql);
                ResultSet rs=pst.executeQuery();
-               DefaultTableModel WarrantyTM=(DefaultTableModel)Warrantytable.getModel();
-               WarrantyTM.setRowCount(0);
+               DefaultTableModel ModTM=(DefaultTableModel)Modtable.getModel();
+               ModTM.setRowCount(0);
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("WarrantyID"),rs.getString("WorkOrderID"),rs.getString("IssueDate"),rs.getString("ExpirationDate"),rs.getString("Document")};
-                   WarrantyTM.addRow(o);
+                   Object o[]={rs.getString("ModificationID"),rs.getString("ModificationName"),rs.getString("DecisionID"),rs.getString("WorkOrderID")};
+                   ModTM.addRow(o);
                }
         }
         catch(Exception e)
@@ -354,10 +333,6 @@ public class Warranty extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_btnNewActionPerformed
-
-    private void DocumenttxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DocumenttxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_DocumenttxtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -376,14 +351,18 @@ public class Warranty extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Warranty.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Modification.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Warranty.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Modification.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Warranty.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Modification.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Warranty.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Modification.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -392,17 +371,16 @@ public class Warranty extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Warranty().setVisible(true);
+                new Modification().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Documenttxt;
-    private javax.swing.JTextField ExpirationDatetxt;
-    private javax.swing.JTextField IssueDatetxt;
-    private javax.swing.JTextField WarrantyIDtxt;
-    private javax.swing.JTable Warrantytable;
+    private javax.swing.JTextField DecisionIDtxt;
+    private javax.swing.JTextField ModficationIDtxt;
+    private javax.swing.JTextField ModificationNametxt;
+    private javax.swing.JTable Modtable;
     private javax.swing.JTextField WorkOrderIDtxt;
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnInsert;
@@ -414,7 +392,6 @@ public class Warranty extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
