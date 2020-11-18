@@ -855,7 +855,9 @@ public class PermitRequest extends javax.swing.JFrame {
         {
          
                Connection con=DriverManager.getConnection(url,user,pass);
-               String sql="select * from PermitRequest";
+               String sql="select * from PermitRequest"
+                       + " inner join PermitRequestStatus on PermitRequest.PermitRequestStatusID = PermitRequestStatus.PermitRequestStatusID "
+                       + " inner join PermitRequestType on PermitRequest.PermitRequestTypeID = PermitRequestType.PermitRequestTypeID ";;
                PreparedStatement pst=con.prepareStatement(sql);
                ResultSet rs=pst.executeQuery();
                DefaultTableModel WOLTM=(DefaultTableModel)permitrequesttable.getModel();
@@ -863,7 +865,7 @@ public class PermitRequest extends javax.swing.JFrame {
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("PermitRequestID"),rs.getString("PermitRequestDate"),rs.getString("PermitRequestStatusID"),rs.getString("PermitRequestTypeID"),rs.getString("Document"),rs.getString("WorkOrderLineFormID"),rs.getString("GovID")};
+                   Object o[]={rs.getString("PermitRequestID"),rs.getString("PermitRequestDate"),rs.getString("PermitRequestStatusName"),rs.getString("PermitRequestTypeName"),rs.getString("Document"),rs.getString("WorkOrderLineFormID"),rs.getString("GovID")};
                    WOLTM.addRow(o);
                }
         }
