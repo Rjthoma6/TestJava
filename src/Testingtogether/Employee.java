@@ -23,7 +23,7 @@ public class Employee extends javax.swing.JFrame {
         updateCountryCombo();
     }
         String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        String url="jdbc:sqlserver://DESKTOP-592B8RA\\SQLEXPRESS:1433;databaseName=CIS3365 Shasta Analysts";
+        String url="jdbc:sqlserver://DESKTOP-RQELHUF\\:1433;databaseName=CIS3365 Shasta Analysts";
         String user="shasta";
         String pass="admin";
     /**
@@ -1352,7 +1352,10 @@ public class Employee extends javax.swing.JFrame {
         {
          
                Connection con=DriverManager.getConnection(url,user,pass);
-               String sql="select * from Employee";
+               String sql="select * from Employee"
+                       + " inner join StateProvince on Employee.StateProvinceID = StateProvince.StateProvinceID"
+                       + " inner join Country on StateProvince.CountryID = Country.CountryID"
+                       + " inner join EmployeeStatus on Employee.EmployeeStatusID = EmployeeStatus.EmployeeStatusID";
                PreparedStatement pst=con.prepareStatement(sql);
                ResultSet rs=pst.executeQuery();
                DefaultTableModel employeeTM=(DefaultTableModel)Employeetable.getModel();
@@ -1360,7 +1363,7 @@ public class Employee extends javax.swing.JFrame {
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("EmployeeID"),rs.getString("Lastname"),rs.getString("Firstname"),rs.getString("Address"),rs.getString("City"),rs.getString ("StateProvinceID"),rs.getString("ZipCode"),rs.getString("CountryID"),rs.getString("Phone1"),rs.getString("Phone2"),rs.getString("Email"),rs.getString("EmergContName"),rs.getString("EmergContPhoneNum"),rs.getString("EmployeeStatusID")};
+                   Object o[]={rs.getString("EmployeeID"),rs.getString("Lastname"),rs.getString("Firstname"),rs.getString("Address"),rs.getString("City"),rs.getString ("StateProvinceAbbreviation"),rs.getString("ZipCode"),rs.getString("CountryAbbreviation"),rs.getString("Phone1"),rs.getString("Phone2"),rs.getString("Email"),rs.getString("EmergContName"),rs.getString("EmergContPhoneNum"),rs.getString("EmployeeStatusName")};
                    employeeTM.addRow(o);
                }
         }
