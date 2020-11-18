@@ -21,7 +21,7 @@ public class SubcontractorService extends javax.swing.JFrame {
         updateServiceCombo();
     }
         String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        String url="jdbc:sqlserver://DESKTOP-592B8RA\\SQLEXPRESS:1433;databaseName=CIS3365 Shasta Analysts";
+        String url="jdbc:sqlserver://DESKTOP-RQELHUF\\:1433;databaseName=CIS3365 Shasta Analysts";
         String user="shasta";
         String pass="admin";
     /**
@@ -118,11 +118,11 @@ public class SubcontractorService extends javax.swing.JFrame {
                 {null, null, null}
             },
             new String [] {
-                "Subcontractor Service ID", "Sub-Contractor ID", "Service"
+                "Subcontractor Service ID", "SubContractor ID", "Service"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
+                java.lang.Integer.class, java.lang.Integer.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -738,7 +738,7 @@ public class SubcontractorService extends javax.swing.JFrame {
 
             Connection con=DriverManager.getConnection(url,user,pass);
             String sql="select * from SubContractorService"
-                    + "inner join Service on SubContractorService.ServiceID = Service.ServiceID";
+                    + " inner join Service on SubContractorService.ServiceID = Service.ServiceID";
             PreparedStatement pst=con.prepareStatement(sql);
             ResultSet rs=pst.executeQuery();
             DefaultTableModel SubSTM;
@@ -747,7 +747,7 @@ public class SubcontractorService extends javax.swing.JFrame {
 
             while(rs.next())
             {
-                Object o[]={rs.getString("SubContractorServiceID"),rs.getString("SubContractorID"),rs.getString("ServiceName")};
+                Object o[]={rs.getString("SubContractorServiceID"),rs.getString("SubContraactorID"),rs.getString("ServiceName")};
                 SubSTM.addRow(o);
             }
         }

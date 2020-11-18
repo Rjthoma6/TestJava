@@ -433,8 +433,8 @@
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="3" rowCount="10">
                 <Column editable="true" title="Subcontractor Service ID" type="java.lang.Integer"/>
-                <Column editable="true" title="Sub-Contractor ID" type="java.lang.Integer"/>
-                <Column editable="true" title="Service" type="java.lang.Integer"/>
+                <Column editable="true" title="SubContractor ID" type="java.lang.Integer"/>
+                <Column editable="true" title="Service" type="java.lang.Object"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
