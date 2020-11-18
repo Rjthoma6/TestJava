@@ -27,9 +27,11 @@ public class Work_Order extends javax.swing.JFrame {
         updateSPCombo();
         updateCountryCombo();
         updateworkorderstat();
+        updatezonedrop();
+        updatetemplatedrop();
     }
         String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        String url="jdbc:sqlserver://LAPTOP-CP0I48O5\\SQLEXPRESS:1433;databaseName=CIS3365-06-Shasta Analysts";
+        String url="jdbc:sqlserver://LAPTOP-CP0I48O5\\SQLEXPRESS:1433;databaseName=CIS3365 Shasta Analysts";
         String user="shasta";
         String pass="admin";
     /**
@@ -39,7 +41,24 @@ public class Work_Order extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     
-    
+     private void updatetemplatedrop(){
+        try{    
+        Class.forName(driver);
+            Connection con = DriverManager.getConnection(url, user, pass);
+            String sql = "select * from template";
+            PreparedStatement pst = con.prepareStatement(sql);
+            ResultSet rs=pst.executeQuery();
+            while(rs.next()){
+                templatecombo.addItem(rs.getString("templatename"));
+            }
+            
+        }
+        catch (Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        
+        }
+        }
+     
      private void updateSPCombo(){
         try{    
         Class.forName(driver);
@@ -95,6 +114,27 @@ public class Work_Order extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, e);
         
         }
+        }
+        
+         private void updatezonedrop(){
+        try{    
+        Class.forName(driver);
+            Connection con = DriverManager.getConnection(url, user, pass);
+            String sql = "select * from zone";
+            PreparedStatement pst = con.prepareStatement(sql);
+            ResultSet rs=pst.executeQuery();
+            while(rs.next()){
+                zonecombo.addItem(rs.getString("zonename"));
+            }
+            
+        }
+        catch (Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        
+        }
+        
+        
+         
         
         
     }
@@ -121,8 +161,6 @@ public class Work_Order extends javax.swing.JFrame {
         work7 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        work10 = new javax.swing.JTextField();
-        work11 = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -132,19 +170,17 @@ public class Work_Order extends javax.swing.JFrame {
         stated = new javax.swing.JComboBox<>();
         countryc = new javax.swing.JComboBox<>();
         workstatusbox = new javax.swing.JComboBox<>();
+        zonecombo = new javax.swing.JComboBox<>();
+        templatecombo = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        work4.setText("jTextField4");
         work4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 work4ActionPerformed(evt);
             }
         });
 
-        work3.setText("jTextField3");
-
-        work6.setText("jTextField7");
         work6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 work6ActionPerformed(evt);
@@ -160,7 +196,11 @@ public class Work_Order extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel8.setText("Site Location");
 
-        work5.setText("jTextField5");
+        work5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                work5ActionPerformed(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel7.setText("Customer ID");
@@ -207,22 +247,11 @@ public class Work_Order extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel4.setText("State Province ");
 
-        work7.setText("jTextField9");
-
         jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel9.setText("Zip Code");
 
         jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel11.setText("Zone");
-
-        work10.setText("jTextField11");
-        work10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                work10ActionPerformed(evt);
-            }
-        });
-
-        work11.setText("jTextField4");
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel14.setText("Country");
@@ -232,8 +261,6 @@ public class Work_Order extends javax.swing.JFrame {
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel10.setText("Work Order ID");
-
-        idbox.setText("jTextField1");
 
         wtable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -288,35 +315,40 @@ public class Work_Order extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel10)
-                                .addGap(67, 67, 67)
-                                .addComponent(idbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btn_wupdate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(wrk_delete, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(btn_wupdate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(wrk_delete, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(53, 53, 53)
+                                        .addComponent(idbox, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(55, 55, 55)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(zonecombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(stated, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(countryc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(work7, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(work10, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(work11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(templatecombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton1)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(workstatusbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(jButton1)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 238, Short.MAX_VALUE)
+                                .addComponent(workstatusbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)))
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 708, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -331,13 +363,13 @@ public class Work_Order extends javax.swing.JFrame {
                                 .addComponent(jLabel8)
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGap(44, 44, 44)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(work6, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(work3, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(work4, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(work5, javax.swing.GroupLayout.Alignment.LEADING)))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(work6)
+                                .addComponent(work5)
+                                .addComponent(work4)
+                                .addComponent(work3, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)))
                         .addComponent(jLabel1))
-                    .addContainerGap(922, Short.MAX_VALUE)))
+                    .addGap(886, 886, 886)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -382,11 +414,11 @@ public class Work_Order extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel11)
-                            .addComponent(work10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(zonecombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel16)
-                            .addComponent(work11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(templatecombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -426,6 +458,81 @@ public class Work_Order extends javax.swing.JFrame {
             String sql="insert into Workorder"
                     +"(WorkOrderStatusID,CustomerID,WorkOrderDate,SiteLocation,City,StateProvinceID,ZipCode,CountryID,ZoneID,TemplateID)"
                             +"values(?,?,?,?,?,?,?,?,?,?)";
+            int templatedrop = 0;
+            switch (templatecombo.getSelectedItem().toString()){
+                case "Residential": templatedrop=1;
+                                break;
+                
+                case "Commercial": templatedrop=2;
+                                break;
+                case "Apartment": templatedrop=3;
+                                break;
+            }
+            
+            
+            
+            
+            
+            
+            
+            
+            int zonedrop = 0;
+            switch (zonecombo.getSelectedItem().toString()){
+                case "Pearland": zonedrop=1;
+                                break;
+                
+                case "Clear Lake": zonedrop=2;
+                                break;
+                case "Baytown": zonedrop=3;
+                                break;
+                case "Kingwood": zonedrop=4;
+                                break;               
+                                
+                case "Spring": zonedrop=5;
+                                break;                
+                case "Cypress": zonedrop=6;
+                                break;                
+                                
+                case "Tomball": zonedrop=7;
+                                break;                
+                case "Katy": zonedrop=8;
+                                break;                
+                case "Sugar Land": zonedrop=9;
+                                break;                
+               case "Galleria": zonedrop=10;
+                                break;                 
+                                
+               case "Heights": zonedrop=11;
+                                break;      
+                case "Bellaire": zonedrop=12;
+                                break;   
+                case "Pasadena": zonedrop=13;
+                                break;                   
+                case "Channelview": zonedrop=14;
+                                break;                   
+                case "Montrose": zonedrop=15;
+                                break;      
+                case "Medical Center": zonedrop=16;
+                                break;   
+                case "Eado": zonedrop=17;
+                                break;                   
+                case "Downtown": zonedrop=18;
+                                break;                   
+                case "West U": zonedrop=19;
+                                break;                   
+                case "Galveston": zonedrop=20;
+                                break;             
+            
+            
+            
+            }
+            
+            
+            
+            
+            
+            
+            
             
             int workorderstat = 0;
             
@@ -737,8 +844,8 @@ public class Work_Order extends javax.swing.JFrame {
             pst.setString(8, String.valueOf(countryid));
             
      
-            pst.setString(9, work10.getText());
-            pst.setString(10, work11.getText());
+            pst.setString(9, String.valueOf(zonedrop));
+            pst.setString(10, String.valueOf(templatedrop));
           
             
             
@@ -753,17 +860,13 @@ public class Work_Order extends javax.swing.JFrame {
             {
                  JOptionPane.showMessageDialog(this,e.getMessage());
             }
-        new NewJFrame().setVisible(true);
-        this.setVisible(false);
+       
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void work6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_work6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_work6ActionPerformed
-
-    private void work10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_work10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_work10ActionPerformed
 
     private void work4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_work4ActionPerformed
         // TODO add your handling code here:
@@ -779,6 +882,80 @@ public class Work_Order extends javax.swing.JFrame {
             Connection con=DriverManager.getConnection(url,user,pass);
             String sql="update Workorder set WorkOrderStatusID=?,CustomerID=?,WorkOrderDate=?,SiteLocation=?,City=?,StateProvinceID=?,ZipCode=?,CountryID=?,ZoneID=?,TemplateID=? where WorkOrderID=?";
                             ;
+               
+                 int templatedrop = 0;
+            switch (templatecombo.getSelectedItem().toString()){
+                case "Residential": templatedrop=1;
+                                break;
+                
+                case "Commercial": templatedrop=2;
+                                break;
+                case "Apartment": templatedrop=3;
+                                break;
+            }          
+                            
+                            
+                            
+                            
+                  int zonedrop = 0;
+            switch (zonecombo.getSelectedItem().toString()){
+                case "Pearland": zonedrop=1;
+                                break;
+                
+                case "Clear Lake": zonedrop=2;
+                                break;
+                case "Baytown": zonedrop=3;
+                                break;
+                case "Kingwood": zonedrop=4;
+                                break;               
+                                
+                case "Spring": zonedrop=5;
+                                break;                
+                case "Cypress": zonedrop=6;
+                                break;                
+                                
+                case "Tomball": zonedrop=7;
+                                break;                
+                case "Katy": zonedrop=8;
+                                break;                
+                case "Sugar Land": zonedrop=9;
+                                break;                
+               case "Galleria": zonedrop=10;
+                                break;                 
+                                
+               case "Heights": zonedrop=11;
+                                break;      
+                case "Bellaire": zonedrop=12;
+                                break;   
+                case "Pasadena": zonedrop=13;
+                                break;                   
+                case "Channelview": zonedrop=14;
+                                break;                   
+                case "Montrose": zonedrop=15;
+                                break;      
+                case "Medical Center": zonedrop=16;
+                                break;   
+                case "Eado": zonedrop=17;
+                                break;                   
+                case "Downtown": zonedrop=18;
+                                break;                   
+                case "West U": zonedrop=19;
+                                break;                   
+                case "Galveston": zonedrop=20;
+                                break;             
+            
+            
+            
+            }
+                      
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                             
                int workorderstat = 0;
             switch (workstatusbox.getSelectedItem().toString()){
@@ -1098,8 +1275,8 @@ public class Work_Order extends javax.swing.JFrame {
             pst.setString(6, String.valueOf(stateprovid));
             pst.setString(7, work7.getText());
             pst.setString(8, String.valueOf(countryid));
-            pst.setString(9, work10.getText());
-            pst.setString(10, work11.getText());
+            pst.setString(9, String.valueOf(zonedrop));
+             pst.setString(10, String.valueOf(templatedrop));
             pst.setString(11, idbox.getText());
             
             
@@ -1182,6 +1359,10 @@ public class Work_Order extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_workstatusboxActionPerformed
 
+    private void work5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_work5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_work5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1238,8 +1419,7 @@ public class Work_Order extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JComboBox<String> stated;
-    private javax.swing.JTextField work10;
-    private javax.swing.JTextField work11;
+    private javax.swing.JComboBox<String> templatecombo;
     private javax.swing.JTextField work3;
     private javax.swing.JTextField work4;
     private javax.swing.JTextField work5;
@@ -1248,5 +1428,6 @@ public class Work_Order extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> workstatusbox;
     private javax.swing.JButton wrk_delete;
     private javax.swing.JTable wtable;
+    private javax.swing.JComboBox<String> zonecombo;
     // End of variables declaration//GEN-END:variables
 }
