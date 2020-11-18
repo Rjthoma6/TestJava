@@ -12,21 +12,21 @@ import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
+
 /**
  *
- * @author 
+ * @author Andrew Choe
  */
-public class HOARequest extends javax.swing.JFrame {
+public class template extends javax.swing.JFrame {
 
     /**
-     * Creates new form Warranty
+     * Creates new form Work_Order_Line_Assignments
      */
-    public HOARequest() {
+    public template() {
         initComponents();
-        updateHOAReqStatusCombo();
     }
         String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        String url="jdbc:sqlserver://DESKTOP-592B8RA\\SQLEXPRESS:1433;databaseName=CIS3365 Shasta Analysts";
+        String url="jdbc:sqlserver://LAPTOP-CP0I48O5\\SQLEXPRESS:1433;databaseName=CIS3365 Shasta Analysts";
         String user="shasta";
         String pass="admin";
     /**
@@ -38,26 +38,20 @@ public class HOARequest extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        ReqSenttxt = new javax.swing.JTextField();
+        templateNametxt = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        HOAReqtable = new javax.swing.JTable();
+        templateTable = new javax.swing.JTable();
         btnInsert = new javax.swing.JButton();
         btnUpdate = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
-        HOAReqIDtxt = new javax.swing.JTextField();
-        HOAtxt = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        WOLFtxt = new javax.swing.JTextField();
-        btnNew = new javax.swing.JButton();
-        jLabel11 = new javax.swing.JLabel();
-        Documenttxt = new javax.swing.JTextField();
-        HOAReqStatuscombo = new javax.swing.JComboBox<>();
+        templateIDtxt = new javax.swing.JTextField();
+        New = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu10 = new javax.swing.JMenu();
         jMenuItem29 = new javax.swing.JMenuItem();
@@ -95,17 +89,14 @@ public class HOARequest extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        ReqSenttxt.addActionListener(new java.awt.event.ActionListener() {
+        templateNametxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ReqSenttxtActionPerformed(evt);
+                templateNametxtActionPerformed(evt);
             }
         });
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel1.setText("Request Sent Date");
-
-        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel7.setText("HOA Request Status ID");
+        jLabel1.setText("Template Name");
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 51, 255));
@@ -113,34 +104,34 @@ public class HOARequest extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel5.setText("HOA Request");
+        jLabel5.setText("Template");
 
-        HOAReqtable.setModel(new javax.swing.table.DefaultTableModel(
+        templateTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "HOA Request ID", "Request Sent Date", "HOA Request Status ID", "HOA ID", "Work Order Line Form", "Document"
+                "Template ID", "Template Name", "Template Document"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(HOAReqtable);
+        jScrollPane1.setViewportView(templateTable);
 
         btnInsert.setText("Insert");
         btnInsert.addActionListener(new java.awt.event.ActionListener() {
@@ -164,49 +155,29 @@ public class HOARequest extends javax.swing.JFrame {
         });
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel8.setText("HOA Request ID");
+        jLabel8.setText("Template ID");
 
-        HOAReqIDtxt.addActionListener(new java.awt.event.ActionListener() {
+        templateIDtxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HOAReqIDtxtActionPerformed(evt);
+                templateIDtxtActionPerformed(evt);
             }
         });
 
-        HOAtxt.addActionListener(new java.awt.event.ActionListener() {
+        New.setText("View Table");
+        New.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HOAtxtActionPerformed(evt);
+                NewActionPerformed(evt);
             }
         });
 
-        jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel9.setText("Work Order Line Form ID");
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel2.setText("Template Document");
 
-        jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel10.setText("HOA ID");
-
-        WOLFtxt.addActionListener(new java.awt.event.ActionListener() {
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                WOLFtxtActionPerformed(evt);
+                jTextField1ActionPerformed(evt);
             }
         });
-
-        btnNew.setText("View Table");
-        btnNew.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNewActionPerformed(evt);
-            }
-        });
-
-        jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel11.setText("Document");
-
-        Documenttxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DocumenttxtActionPerformed(evt);
-            }
-        });
-
-        HOAReqStatuscombo.setToolTipText("");
 
         jMenu10.setText("Home");
 
@@ -450,148 +421,83 @@ public class HOARequest extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel1)
                                 .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(65, 65, 65)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(HOAReqIDtxt, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(HOAtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(WOLFtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(ReqSenttxt, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(HOAReqStatuscombo, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(Documenttxt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(27, 27, 27)
+                            .addComponent(jLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(templateNametxt, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
+                            .addComponent(templateIDtxt, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
+                            .addComponent(jTextField1))))
+                .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnInsert, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnDelete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnNew, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(New, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 589, Short.MAX_VALUE)))
-                .addGap(27, 27, 27))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 485, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel8)
-                                    .addComponent(HOAReqIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel8)
+                                        .addComponent(templateIDtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(New))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(28, 28, 28)
+                                        .addComponent(btnInsert)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnUpdate)
+                                .addGap(10, 10, 10)
+                                .addComponent(btnDelete))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(44, 44, 44)
+                                .addGap(33, 33, 33)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel1)
-                                    .addComponent(ReqSenttxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(templateNametxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel7)
-                                    .addComponent(HOAReqStatuscombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(HOAtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel10))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(WOLFtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Documenttxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel11)))
+                                    .addComponent(jLabel2)
+                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(btnNew)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnInsert)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnUpdate)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnDelete))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(204, Short.MAX_VALUE))
+                        .addGap(45, 45, 45)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-        private void updateHOAReqStatusCombo(){
-        try{    
-        Class.forName(driver);
-            Connection con = DriverManager.getConnection(url, user, pass);
-            String sql = "select * from HOARequestStatus";
-            PreparedStatement pst = con.prepareStatement(sql);
-            ResultSet rs=pst.executeQuery();
-            while(rs.next()){
-                HOAReqStatuscombo.addItem(rs.getString("HOARequestStatusName"));
-            }
-            
-        }
-        catch (Exception e){
-            JOptionPane.showMessageDialog(null, e);
-        
-        }
-        
-       
-    }
-        
     private void btnInsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertActionPerformed
         try
         {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, user, pass);
-            String sql = "insert into HOARequest"
-            +"(RequestSentDate, HOARequestStatusID, HOAID, WorkOrderLineFormID)"
-            +"values(?, ?, ?, ?)";
-            
-            int hoareqstatusid = 0;
-            switch (HOAReqStatuscombo.getSelectedItem().toString()){
-                case "Approved": hoareqstatusid=1;
-                            break;
-                case "Denied": hoareqstatusid=2;
-                            break;
-                case "Initiated": hoareqstatusid=3;
-                            break;
-                case "Additional Information Requested": hoareqstatusid=4;
-                            break;
-                case "Corrections Required": hoareqstatusid=5;
-                            break;
-                case "Withdrawn": hoareqstatusid=6;
-                            break;
-                case "Application Completed": hoareqstatusid=7;
-                            break;
-                case "Reviews in Process": hoareqstatusid=8;
-                            break;
-                case "Correction Submitted": hoareqstatusid=9;
-                            break;
-                case "Reviews Completed": hoareqstatusid=10;
-                            break;
-            }
-            
+            String sql = "insert into template"
+            +"(templateName)"
+            +"values(?)";
             PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, ReqSenttxt.getText());
-            pst.setString(2, String.valueOf(hoareqstatusid));
-            pst.setString(3, HOAtxt.getText());
-            pst.setString(3, WOLFtxt.getText());
+            pst.setString(1, templateNametxt.getText());
+         
 
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Insert Successfully");
@@ -607,38 +513,11 @@ public class HOARequest extends javax.swing.JFrame {
         {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, user, pass);
-            String sql = "update HOARequest set RequestSentDate = ?, HOARequestStatusID = ?, HOAID = ?, WorkOrderLineFormID = ? where HOARequestID = ?";
-            
-             int hoareqstatusid = 0;
-            switch (HOAReqStatuscombo.getSelectedItem().toString()){
-                case "Approved": hoareqstatusid=1;
-                            break;
-                case "Denied": hoareqstatusid=2;
-                            break;
-                case "Initiated": hoareqstatusid=3;
-                            break;
-                case "Additional Information Requested": hoareqstatusid=4;
-                            break;
-                case "Corrections Required": hoareqstatusid=5;
-                            break;
-                case "Withdrawn": hoareqstatusid=6;
-                            break;
-                case "Application Completed": hoareqstatusid=7;
-                            break;
-                case "Reviews in Process": hoareqstatusid=8;
-                            break;
-                case "Correction Submitted": hoareqstatusid=9;
-                            break;
-                case "Reviews Completed": hoareqstatusid=10;
-                            break;
-            }
-            
+            String sql = "update template set templateName = ? where templateID = ?";
+
             PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, ReqSenttxt.getText());
-            pst.setString(2, String.valueOf(hoareqstatusid));
-            pst.setString(3, HOAtxt.getText());
-            pst.setString(3, WOLFtxt.getText());
-            pst.setString(5, HOAReqIDtxt.getText());
+            pst.setString(1, templateNametxt.getText());
+            pst.setString(2, templateIDtxt.getText());
             
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Update Successfully");
@@ -654,10 +533,10 @@ public class HOARequest extends javax.swing.JFrame {
         {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, user, pass);
-            String sql = "Delete from HOARequest where HOARequestID = ?";
+            String sql = "Delete from template where templateID = ?";
 
             PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, HOAReqIDtxt.getText());
+            pst.setString(1, templateIDtxt.getText());
 
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Delete Successfully");
@@ -668,52 +547,44 @@ public class HOARequest extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnDeleteActionPerformed
 
-    private void ReqSenttxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReqSenttxtActionPerformed
+    private void templateNametxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_templateNametxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ReqSenttxtActionPerformed
+    }//GEN-LAST:event_templateNametxtActionPerformed
 
-    private void HOAReqIDtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HOAReqIDtxtActionPerformed
+    private void templateIDtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_templateIDtxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_HOAReqIDtxtActionPerformed
+    }//GEN-LAST:event_templateIDtxtActionPerformed
 
-    private void HOAtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HOAtxtActionPerformed
+    private void NewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_HOAtxtActionPerformed
 
-    private void btnNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewActionPerformed
-        // TODO add your handling code here:
-        
-         try
+        try
         {
-         
-               Connection con=DriverManager.getConnection(url,user,pass);
-               String sql="select * from HOARequest";
-               PreparedStatement pst=con.prepareStatement(sql);
-               ResultSet rs=pst.executeQuery();
-               DefaultTableModel HOARTM=(DefaultTableModel)HOAReqtable.getModel();
-               HOARTM.setRowCount(0);
-               
-               while(rs.next())
-               {
-                   Object o[]={rs.getString("HOARequestID"),rs.getString("RequestSentDate"),rs.getString("HOARequestStatusID"),rs.getString("HOAID"),rs.getString("WorkOrderLineFormID")};
-                   HOARTM.addRow(o);
-               }
+
+            Connection con=DriverManager.getConnection(url,user,pass);
+            String sql="select * from template";
+            PreparedStatement pst=con.prepareStatement(sql);
+            ResultSet rs=pst.executeQuery();
+            DefaultTableModel ServiceTM;
+            ServiceTM = (DefaultTableModel)templateTable.getModel();
+            ServiceTM.setRowCount(0);
+
+            while(rs.next())
+            {
+                Object o[]={rs.getString("templateID"),rs.getString("templateName")};
+                ServiceTM.addRow(o);
+            }
         }
         catch(Exception e)
         {
             JOptionPane.showMessageDialog(this, e);
         }
-        
-        
-    }//GEN-LAST:event_btnNewActionPerformed
 
-    private void WOLFtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WOLFtxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_WOLFtxtActionPerformed
+    }//GEN-LAST:event_NewActionPerformed
 
-    private void DocumenttxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DocumenttxtActionPerformed
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_DocumenttxtActionPerformed
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jMenuItem29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem29ActionPerformed
         // TODO add your handling code here:
@@ -881,26 +752,14 @@ public class HOARequest extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(HOARequest.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(template.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(HOARequest.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(template.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(HOARequest.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(template.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(HOARequest.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(template.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -909,31 +768,21 @@ public class HOARequest extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new HOARequest().setVisible(true);
+                new template().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Documenttxt;
-    private javax.swing.JTextField HOAReqIDtxt;
-    private javax.swing.JComboBox<String> HOAReqStatuscombo;
-    private javax.swing.JTable HOAReqtable;
-    private javax.swing.JTextField HOAtxt;
-    private javax.swing.JTextField ReqSenttxt;
-    private javax.swing.JTextField WOLFtxt;
+    private javax.swing.JButton New;
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnInsert;
-    private javax.swing.JButton btnNew;
     private javax.swing.JButton btnUpdate;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;
     private javax.swing.JMenu jMenu2;
@@ -969,5 +818,9 @@ public class HOARequest extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField templateIDtxt;
+    private javax.swing.JTextField templateNametxt;
+    private javax.swing.JTable templateTable;
     // End of variables declaration//GEN-END:variables
 }
