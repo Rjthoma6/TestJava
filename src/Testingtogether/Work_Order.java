@@ -1231,7 +1231,7 @@ public class Work_Order extends javax.swing.JFrame {
                 case "New Request": workorderstat=1;
                                 break;
                 
-                case "In Progress": workorderstat=2;
+                case "In-Progress": workorderstat=2;
                                 break;
                 case "Cancelled by Employee": workorderstat=3;
                                 break;
@@ -1594,7 +1594,12 @@ public class Work_Order extends javax.swing.JFrame {
         {
          
                Connection con=DriverManager.getConnection(url,user,pass);
-               String sql="select * from Workorder";
+               String sql="select * from Workorder"
+                       + " inner join Template on WorkOrder.TemplateID = Template.TemplateID "
+                       + " inner join Zone on WorkOrder.ZoneID = Zone.ZoneID "
+                       + " inner join WorkOrderStatus on WorkOrder.WorkOrderStatusID = WorkOrderStatus.WorkOrderStatusID "
+                       + " inner join StateProvince on WorkOrder.StateProvinceID = StateProvince.StateProvinceID"
+                       + " inner join Country on StateProvince.CountryID = Country.CountryID";
                PreparedStatement pst=con.prepareStatement(sql);
                ResultSet rs=pst.executeQuery();
                DefaultTableModel tm=(DefaultTableModel)wtable.getModel();
@@ -1602,7 +1607,7 @@ public class Work_Order extends javax.swing.JFrame {
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("WorkOrderID"),rs.getString("WorkOrderStatusID"),rs.getString("CustomerID"),rs.getString("WorkOrderDate"),rs.getString ("SiteLocation"),rs.getString("City"),rs.getString("StateProvinceID"),rs.getString("ZipCode"),rs.getString("CountryID"),rs.getString("ZoneID"),rs.getString("TemplateID")};
+                   Object o[]={rs.getString("WorkOrderID"),rs.getString("WorkOrderStatusName"),rs.getString("CustomerID"),rs.getString("WorkOrderDate"),rs.getString ("SiteLocation"),rs.getString("City"),rs.getString("StateProvinceName"),rs.getString("ZipCode"),rs.getString("CountryName"),rs.getString("ZoneName"),rs.getString("TemplateName")};
                    tm.addRow(o);
                }
         }
