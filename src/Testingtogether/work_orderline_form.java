@@ -745,7 +745,8 @@ public class work_orderline_form extends javax.swing.JFrame {
         {
          
                Connection con=DriverManager.getConnection(url,user,pass);
-               String sql="select * from WorkOrderLineform";
+               String sql="select * from WorkOrderLineform"
+                       + " inner join WorkOrderLineFormStatus on WorkOrderLineForm.WorkOrderLineFormStatusID = WorkOrderLineFormStatus.WorkOrderLineFormStatusID";
                PreparedStatement pst=con.prepareStatement(sql);
                ResultSet rs=pst.executeQuery();
                DefaultTableModel WOLTM=(DefaultTableModel)WOLFtable.getModel();
@@ -753,7 +754,7 @@ public class work_orderline_form extends javax.swing.JFrame {
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("workorderlineformid"),rs.getString("WorkorderID"),rs.getString("workorderlineID"),rs.getString("subcontractorserviceID"),rs.getString("workorderlineformstatusid")};
+                   Object o[]={rs.getString("workorderlineformid"),rs.getString("WorkorderID"),rs.getString("workorderlineID"),rs.getString("subcontractorserviceID"),rs.getString("WorkOrderLineFormStatus")};
                    WOLTM.addRow(o);
                }
         }
