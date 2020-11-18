@@ -284,7 +284,7 @@ public class HOARequest extends javax.swing.JFrame {
         
         }
         
-        
+       
     }
         
     private void btnInsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertActionPerformed
@@ -423,13 +423,13 @@ public class HOARequest extends javax.swing.JFrame {
                String sql="select * from HOARequest";
                PreparedStatement pst=con.prepareStatement(sql);
                ResultSet rs=pst.executeQuery();
-               DefaultTableModel CRTM=(DefaultTableModel)HOAReqtable.getModel();
-               CRTM.setRowCount(0);
+               DefaultTableModel HOARTM=(DefaultTableModel)HOAReqtable.getModel();
+               HOARTM.setRowCount(0);
                
                while(rs.next())
                {
                    Object o[]={rs.getString("HOARequestID"),rs.getString("RequestSentDate"),rs.getString("HOARequestStatusID"),rs.getString("HOAID"),rs.getString("WorkOrderLineFormID")};
-                   CRTM.addRow(o);
+                   HOARTM.addRow(o);
                }
         }
         catch(Exception e)
