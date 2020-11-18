@@ -434,7 +434,7 @@
               <Table columnCount="3" rowCount="10">
                 <Column editable="true" title="Subcontractor Service ID" type="java.lang.Integer"/>
                 <Column editable="true" title="Sub-Contractor ID" type="java.lang.Integer"/>
-                <Column editable="true" title="Service ID" type="java.lang.Integer"/>
+                <Column editable="true" title="Service" type="java.lang.Integer"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -515,6 +515,9 @@
         </Property>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ServicecomboActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>

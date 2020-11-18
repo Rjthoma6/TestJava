@@ -118,7 +118,7 @@ public class SubcontractorService extends javax.swing.JFrame {
                 {null, null, null}
             },
             new String [] {
-                "Subcontractor Service ID", "Sub-Contractor ID", "Service ID"
+                "Subcontractor Service ID", "Sub-Contractor ID", "Service"
             }
         ) {
             Class[] types = new Class [] {
@@ -169,6 +169,11 @@ public class SubcontractorService extends javax.swing.JFrame {
         });
 
         Servicecombo.setToolTipText("");
+        Servicecombo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ServicecomboActionPerformed(evt);
+            }
+        });
 
         jMenu10.setText("Home");
 
@@ -732,7 +737,8 @@ public class SubcontractorService extends javax.swing.JFrame {
         {
 
             Connection con=DriverManager.getConnection(url,user,pass);
-            String sql="select * from SubContractorService";
+            String sql="select * from SubContractorService"
+                    + "inner join Service on SubContractorService.ServiceID = Service.ServiceID";
             PreparedStatement pst=con.prepareStatement(sql);
             ResultSet rs=pst.executeQuery();
             DefaultTableModel SubSTM;
@@ -741,7 +747,7 @@ public class SubcontractorService extends javax.swing.JFrame {
 
             while(rs.next())
             {
-                Object o[]={rs.getString("SubContractorServiceID"),rs.getString("SubContractorID"),rs.getString("ServiceID")};
+                Object o[]={rs.getString("SubContractorServiceID"),rs.getString("SubContractorID"),rs.getString("ServiceName")};
                 SubSTM.addRow(o);
             }
         }
@@ -900,6 +906,10 @@ public class SubcontractorService extends javax.swing.JFrame {
         new PermitRequest ().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jMenuItem28ActionPerformed
+
+    private void ServicecomboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ServicecomboActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ServicecomboActionPerformed
 
     /**
      * @param args the command line arguments
