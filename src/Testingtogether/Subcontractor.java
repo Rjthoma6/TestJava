@@ -30,7 +30,7 @@ public class Subcontractor extends javax.swing.JFrame {
         
     }
         String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        String url="jdbc:sqlserver://LAPTOP-CP0I48O5\\SQLEXPRESS:1433;databaseName=CIS3365 Shasta Analysts";
+        String url="jdbc:sqlserver://DESKTOP-RQELHUF\\:1433;databaseName=CIS3365 Shasta Analysts";
         String user="shasta";
         String pass="admin";
     /**
@@ -1321,9 +1321,9 @@ public class Subcontractor extends javax.swing.JFrame {
          
                Connection con=DriverManager.getConnection(url,user,pass);
                String sql="select * from SubContractor"
-                       + "  join StateProvince on SubContractor.StateProvinceID = StateProvince.StateProvinceID"
-                       + "  join Country on StateProvince.CountryID = Country.CountryID"
-                       + " join SubContractorStatus on SubContractorStatus.SubContractorStatusID = SubContractorStatus.SubContractorStatusID";
+                       + " inner join StateProvince on SubContractor.StateProvinceID = StateProvince.StateProvinceID"
+                       + " inner join Country on StateProvince.CountryID = Country.CountryID"
+                       + " inner join SubContractorStatus on SubContractorStatus.SubContractorStatusID = SubContractor.SubContractorStatusID";
                PreparedStatement pst=con.prepareStatement(sql);
                ResultSet rs=pst.executeQuery();
                DefaultTableModel SCTM=(DefaultTableModel)Subtable.getModel();
