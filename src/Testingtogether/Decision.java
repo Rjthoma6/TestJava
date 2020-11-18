@@ -280,7 +280,7 @@ public class Decision extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
      
-        try
+      /*  try
         { 
             Class.forName(driver);
                     Connection con=DriverManager.getConnection(url,user,pass);
@@ -306,13 +306,13 @@ public class Decision extends javax.swing.JFrame {
         {
             JOptionPane.showMessageDialog(this,e.getMessage());
         }
-        
+        */
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
      
-         try
+       /*  try
         { 
             Class.forName(driver);
                     Connection con=DriverManager.getConnection(url,user,pass);
@@ -336,6 +336,7 @@ public class Decision extends javax.swing.JFrame {
         {
             JOptionPane.showMessageDialog(this,e.getMessage());
         }
+        */
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
