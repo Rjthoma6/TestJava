@@ -353,7 +353,7 @@ public class GovernmentAgency extends javax.swing.JFrame {
         
         }
         
-        
+       
     }
     
     private void btnInsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertActionPerformed
@@ -935,13 +935,13 @@ public class GovernmentAgency extends javax.swing.JFrame {
                String sql="select * from GovernmentAgency";
                PreparedStatement pst=con.prepareStatement(sql);
                ResultSet rs=pst.executeQuery();
-               DefaultTableModel hoaTM=(DefaultTableModel)Govtable.getModel();
-               hoaTM.setRowCount(0);
+               DefaultTableModel GATM=(DefaultTableModel)Govtable.getModel();
+               GATM.setRowCount(0);
                
                while(rs.next())
                {
                    Object o[]={rs.getString("GovID"),rs.getString("GovName"),rs.getString("GovPhone"),rs.getString("GovEmail"),rs.getString ("GovAddress"),rs.getString("City"),rs.getString("StateProvinceID"),rs.getString("ZipCode"),rs.getString("CountryID")};
-                   hoaTM.addRow(o);
+                   GATM.addRow(o);
                }
         }
         catch(Exception e)
