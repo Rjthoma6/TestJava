@@ -13,15 +13,9 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 
-/**
- *
- * @author Andrew Choe
- */
 public class Employee extends javax.swing.JFrame {
 
-    /**
-     * Creates new HOA form
-     */
+    
     public Employee() {
         initComponents();
         updateSPCombo();
