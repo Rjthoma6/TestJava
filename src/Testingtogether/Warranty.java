@@ -256,14 +256,14 @@ public class Warranty extends javax.swing.JFrame {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, user, pass);
             String sql = "insert into Warranty"
-            +"(WorkOrderID, IssueDate, ExpirationDate, Document)"
-            +"values(?, ?, ?, ?)";
+            +"(WorkOrderID, IssueDate, ExpirationDate)"
+            +"values(?, ?, ?)";
             
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, WorkOrderIDtxt.getText());
             pst.setString(2, IssueDatetxt.getText());
             pst.setString(3, ExpirationDatetxt.getText());
-            pst.setString(4, Documenttxt.getText());
+            
 
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Insert Successfully");
@@ -284,9 +284,8 @@ public class Warranty extends javax.swing.JFrame {
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, WorkOrderIDtxt.getText());
             pst.setString(2, IssueDatetxt.getText());
-            pst.setString(3, ExpirationDatetxt.getText());
-            pst.setString(4, Documenttxt.getText());
-            pst.setString(5, WarrantyIDtxt.getText());
+            pst.setString(3, ExpirationDatetxt.getText());   
+            pst.setString(4, WarrantyIDtxt.getText());
             
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Update Successfully");
