@@ -1218,7 +1218,9 @@ public class HOA extends javax.swing.JFrame {
         {
          
                Connection con=DriverManager.getConnection(url,user,pass);
-               String sql="select * from HOA";
+               String sql="select * from HOA"
+                       + " inner join StateProvince on HOA.StateProvinceID = StateProvince.StateProvinceID"
+                       + " inner join Country on StateProvince.CountryID = Country.CountryID";;
                PreparedStatement pst=con.prepareStatement(sql);
                ResultSet rs=pst.executeQuery();
                DefaultTableModel hoaTM=(DefaultTableModel)HOAtable.getModel();
@@ -1226,7 +1228,7 @@ public class HOA extends javax.swing.JFrame {
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("HOAID"),rs.getString("HOAName"),rs.getString("ContactName"),rs.getString("HOAPhone"),rs.getString("HOAEmail"),rs.getString ("HOAAddress"),rs.getString("City"),rs.getString("StateProvinceID"),rs.getString("ZipCode"),rs.getString("CountryID")};
+                   Object o[]={rs.getString("HOAID"),rs.getString("HOAName"),rs.getString("ContactName"),rs.getString("HOAPhone"),rs.getString("HOAEmail"),rs.getString ("HOAAddress"),rs.getString("City"),rs.getString("StateProvinceName"),rs.getString("ZipCode"),rs.getString("CountryName")};
                    hoaTM.addRow(o);
                }
         }
