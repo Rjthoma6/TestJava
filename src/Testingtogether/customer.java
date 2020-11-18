@@ -26,13 +26,94 @@ public class customer extends javax.swing.JFrame {
      */
     public customer() {
         initComponents();
+        updateSPCombo();
+        updateCountryCombo();
+        updateCustomerStatusCombo();
+        updateReferralCombo();
     }
     
         String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        String url="jdbc:sqlserver://DESKTOP-OUTBSKJ:1433;databaseName=CIS3365-06-Shasta Analysts";
+        String url="jdbc:sqlserver://DESKTOP-RQELHUF\\:1433;databaseName=CIS3365 Shasta Analysts";
         String user="shasta";
         String pass="admin";
 
+        private void updateSPCombo(){
+        try{    
+        Class.forName(driver);
+            Connection con = DriverManager.getConnection(url, user, pass);
+            String sql = "select * from StateProvince";
+            PreparedStatement pst = con.prepareStatement(sql);
+            ResultSet rs=pst.executeQuery();
+            while(rs.next()){
+                pid.addItem(rs.getString("StateProvinceAbbreviation"));
+            }
+            
+        }
+        catch (Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        
+        }
+        
+        
+    }
+        
+        private void updateCountryCombo(){
+        try{    
+        Class.forName(driver);
+            Connection con = DriverManager.getConnection(url, user, pass);
+            String sql = "select * from Country";
+            PreparedStatement pst = con.prepareStatement(sql);
+            ResultSet rs=pst.executeQuery();
+            while(rs.next()){
+                cid.addItem(rs.getString("CountryAbbreviation"));
+            }
+            
+        }
+        catch (Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        
+        }
+        
+        
+    }
+        private void updateCustomerStatusCombo(){
+        try{    
+        Class.forName(driver);
+            Connection con = DriverManager.getConnection(url, user, pass);
+            String sql = "select * from CustomerStatus";
+            PreparedStatement pst = con.prepareStatement(sql);
+            ResultSet rs=pst.executeQuery();
+            while(rs.next()){
+                statusid.addItem(rs.getString("CustomerStatusName"));
+            }
+            
+        }
+        catch (Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        
+        }
+        
+        
+    }
+        private void updateReferralCombo(){
+        try{    
+        Class.forName(driver);
+            Connection con = DriverManager.getConnection(url, user, pass);
+            String sql = "select * from Referral";
+            PreparedStatement pst = con.prepareStatement(sql);
+            ResultSet rs=pst.executeQuery();
+            while(rs.next()){
+                rid.addItem(rs.getString("ReferralType"));
+            }
+            
+        }
+        catch (Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        
+        }
+        
+        
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -233,18 +314,17 @@ public class customer extends javax.swing.JFrame {
             }
         });
 
-        pid.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         pid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pidActionPerformed(evt);
             }
         });
 
-        cid.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        statusid.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        rid.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cidActionPerformed(evt);
+            }
+        });
 
         jMenu10.setText("Home");
 
@@ -1520,6 +1600,10 @@ public class customer extends javax.swing.JFrame {
     private void pidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pidActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_pidActionPerformed
+
+    private void cidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cidActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cidActionPerformed
 
     
                                          
