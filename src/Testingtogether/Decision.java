@@ -286,7 +286,7 @@ public class Decision extends javax.swing.JFrame {
                          +"(DecisionDate,DecisionType,Comment,FeedbackID)"
                           +"values(?,?,?,?)";  
                     PreparedStatement pst=con.prepareStatement(sql);    
-                    //pst.setString(1,id.getText());
+                   
                     pst.setString(1,box2.getText());
                     pst.setString(2,box3.getText());
                     pst.setString(3,box4.getText());
