@@ -29,7 +29,7 @@ public class GovernmentAgency extends javax.swing.JFrame {
         
     }
         String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        String url="jdbc:sqlserver://DESKTOP-592B8RA\\SQLEXPRESS:1433;databaseName=CIS3365 Shasta Analysts";
+        String url="jdbc:sqlserver://DESKTOP-RQELHUF\\:1433;databaseName=CIS3365 Shasta Analysts";
         String user="shasta";
         String pass="admin";
     /**
@@ -1196,7 +1196,9 @@ public class GovernmentAgency extends javax.swing.JFrame {
         {
          
                Connection con=DriverManager.getConnection(url,user,pass);
-               String sql="select * from GovernmentAgency";
+               String sql="select * from GovernmentAgency"
+                       + " inner join StateProvince on GovernmentAgency.StateProvinceID = StateProvince.StateProvinceID"
+                       + " inner join Country on StateProvince.CountryID = Country.CountryID";
                PreparedStatement pst=con.prepareStatement(sql);
                ResultSet rs=pst.executeQuery();
                DefaultTableModel GATM=(DefaultTableModel)Govtable.getModel();
@@ -1204,7 +1206,7 @@ public class GovernmentAgency extends javax.swing.JFrame {
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("GovID"),rs.getString("GovName"),rs.getString("GovPhone"),rs.getString("GovEmail"),rs.getString ("GovAddress"),rs.getString("City"),rs.getString("StateProvinceID"),rs.getString("ZipCode"),rs.getString("CountryID")};
+                   Object o[]={rs.getString("GovID"),rs.getString("GovName"),rs.getString("GovPhone"),rs.getString("GovEmail"),rs.getString ("GovAddress"),rs.getString("City"),rs.getString("StateProvinceName"),rs.getString("ZipCode"),rs.getString("CountryName")};
                    GATM.addRow(o);
                }
         }
