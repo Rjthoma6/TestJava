@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 import static javax.swing.UIManager.getString;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 
 /**
  *
@@ -297,6 +298,12 @@ public class Work_Order extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel10.setText("Work Order ID");
 
+        idbox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                idboxActionPerformed(evt);
+            }
+        });
+
         wtable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -311,6 +318,11 @@ public class Work_Order extends javax.swing.JFrame {
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+            }
+        });
+        wtable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                wtableMouseClicked(evt);
             }
         });
         jScrollPane1.setViewportView(wtable);
@@ -1768,6 +1780,25 @@ public class Work_Order extends javax.swing.JFrame {
         new PermitRequest ().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jMenuItem28ActionPerformed
+
+    private void wtableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_wtableMouseClicked
+        // TODO add your handling code here:
+        int i =wtable.getSelectedRow();
+        TableModel model = wtable.getModel();
+        idbox.setText(model.getValueAt(i, 0).toString());
+        {
+            
+        }
+        
+       
+                                                
+                        
+    
+    }//GEN-LAST:event_wtableMouseClicked
+
+    private void idboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idboxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_idboxActionPerformed
 
     /**
      * @param args the command line arguments
