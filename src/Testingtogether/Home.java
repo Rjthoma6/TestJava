@@ -646,6 +646,8 @@ public class Home extends javax.swing.JFrame {
 
     private void TemplateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TemplateActionPerformed
         // TODO add your handling code here:
+        new template().setVisible(true);
+        this.setVisible(false);
         
     }//GEN-LAST:event_TemplateActionPerformed
 
