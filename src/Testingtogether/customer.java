@@ -1068,7 +1068,11 @@ public class customer extends javax.swing.JFrame {
         {
          
                Connection con=DriverManager.getConnection(url,user,pass);
-               String sql="select * from Customer";
+               String sql="select * from Customer"
+               + " inner join StateProvince on Customer.StateProvinceID = StateProvince.StateProvinceID"
+               + " inner join Country on StateProvince.CountryID = Country.CountryID"
+               + " inner join CustomerStatus on Customer.CustomerStatusID = CustomerStatus.CustomerStatusID"
+               + " inner join Referral on Customer.ReferralID = Referral.ReferralID";
                PreparedStatement pst=con.prepareStatement(sql);
                ResultSet rs=pst.executeQuery();
                DefaultTableModel tm=(DefaultTableModel)ctable.getModel();
@@ -1076,7 +1080,7 @@ public class customer extends javax.swing.JFrame {
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("CustomerID"),rs.getString("RegistrationDate"),rs.getString("Lastname"),rs.getString("Firstname"),rs.getString ("Phone1"),rs.getString("Phone2"),rs.getString("Email"),rs.getString("SecondaryContactName"),rs.getString("SecondaryContactPhone"),rs.getString("MailingAddress"),rs.getString("MailingCity"),rs.getString("StateProvinceID"),rs.getString("MailingZipCode"),rs.getString("CountryID"),rs.getString("CustomerStatusID"),rs.getString("ReferralID")};
+                   Object o[]={rs.getString("CustomerID"),rs.getString("RegistrationDate"),rs.getString("Lastname"),rs.getString("Firstname"),rs.getString ("Phone1"),rs.getString("Phone2"),rs.getString("Email"),rs.getString("SecondaryContactName"),rs.getString("SecondaryContactPhone"),rs.getString("MailingAddress"),rs.getString("MailingCity"),rs.getString("StateProvinceAbbreviation"),rs.getString("MailingZipCode"),rs.getString("CountryAbbreviation"),rs.getString("CustomerStatusName"),rs.getString("ReferralType")};
                    tm.addRow(o);
                }
         }

@@ -69,7 +69,6 @@ public class HOA extends javax.swing.JFrame {
         StateProvinceDD = new javax.swing.JComboBox<>();
         btnNew = new javax.swing.JButton();
         countrycombo = new javax.swing.JComboBox<>();
-        Home = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu10 = new javax.swing.JMenu();
         jMenuItem29 = new javax.swing.JMenuItem();
@@ -228,13 +227,6 @@ public class HOA extends javax.swing.JFrame {
         countrycombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 countrycomboActionPerformed(evt);
-            }
-        });
-
-        Home.setText("Home");
-        Home.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HomeActionPerformed(evt);
             }
         });
 
@@ -512,8 +504,7 @@ public class HOA extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Home))
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(btnInsert, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -527,15 +518,10 @@ public class HOA extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(Home)))
+                .addGap(22, 22, 22)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1220,7 +1206,7 @@ public class HOA extends javax.swing.JFrame {
                Connection con=DriverManager.getConnection(url,user,pass);
                String sql="select * from HOA"
                        + " inner join StateProvince on HOA.StateProvinceID = StateProvince.StateProvinceID"
-                       + " inner join Country on StateProvince.CountryID = Country.CountryID";;
+                       + " inner join Country on StateProvince.CountryID = Country.CountryID";
                PreparedStatement pst=con.prepareStatement(sql);
                ResultSet rs=pst.executeQuery();
                DefaultTableModel hoaTM=(DefaultTableModel)HOAtable.getModel();
@@ -1243,12 +1229,6 @@ public class HOA extends javax.swing.JFrame {
     private void countrycomboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_countrycomboActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_countrycomboActionPerformed
-
-    private void HomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeActionPerformed
-        // TODO add your handling code here:
-        new Home().setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_HomeActionPerformed
 
     private void jMenuItem29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem29ActionPerformed
         // TODO add your handling code here:
@@ -1443,7 +1423,6 @@ public class HOA extends javax.swing.JFrame {
     private javax.swing.JTextField HOANametxt;
     private javax.swing.JTextField HOAPhonetxt;
     private javax.swing.JTable HOAtable;
-    private javax.swing.JButton Home;
     private javax.swing.JComboBox<String> StateProvinceDD;
     private javax.swing.JTextField ZipCodetxt;
     private javax.swing.JButton btnDelete;
