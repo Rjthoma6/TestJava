@@ -53,13 +53,15 @@
                           <Component id="jLabel12" alignment="1" min="-2" pref="174" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="PermitRequestStatusDD" max="32767" attributes="0"/>
-                          <Component id="Permitrequesttypetxt" alignment="0" max="32767" attributes="0"/>
-                          <Component id="doctxt" alignment="0" max="32767" attributes="0"/>
-                          <Component id="PermitDatetxt" alignment="0" max="32767" attributes="0"/>
-                          <Component id="workorderlineformtxt" alignment="0" max="32767" attributes="0"/>
-                          <Component id="govtxt" alignment="0" pref="82" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="PermitRequestStatusDD" max="32767" attributes="0"/>
+                              <Component id="doctxt" alignment="0" max="32767" attributes="0"/>
+                              <Component id="PermitDatetxt" alignment="0" max="32767" attributes="0"/>
+                              <Component id="workorderlineformtxt" alignment="0" max="32767" attributes="0"/>
+                              <Component id="govtxt" alignment="0" pref="82" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="prtcombo" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -129,8 +131,8 @@
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="Permitrequesttypetxt" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="prtcombo" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -261,8 +263,6 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JTextField" name="Permitrequesttypetxt">
-    </Component>
     <Component class="javax.swing.JButton" name="btnInsert">
       <Properties>
         <Property name="text" type="java.lang.String" value="Insert"/>
@@ -370,6 +370,16 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Government"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="prtcombo">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="0"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

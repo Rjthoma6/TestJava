@@ -23,7 +23,8 @@ public class PermitRequest extends javax.swing.JFrame {
      */
     public PermitRequest() {
         initComponents();
-        updateWOLSCombo();   
+        updateWOLSCombo();  
+        updateprt();
     }
         String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";
         String url="jdbc:sqlserver://LAPTOP-CP0I48O5\\SQLEXPRESS:1433;databaseName=CIS3365 Shasta Analysts";
@@ -45,7 +46,6 @@ public class PermitRequest extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         permitrequesttable = new javax.swing.JTable();
-        Permitrequesttypetxt = new javax.swing.JTextField();
         btnInsert = new javax.swing.JButton();
         btnUpdate = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
@@ -61,6 +61,7 @@ public class PermitRequest extends javax.swing.JFrame {
         workorderlineformtxt = new javax.swing.JTextField();
         govtxt = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
+        prtcombo = new javax.swing.JComboBox<>();
 
         jTextField1.setText("jTextField1");
 
@@ -204,13 +205,14 @@ public class PermitRequest extends javax.swing.JFrame {
                             .addComponent(jLabel2)
                             .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(PermitRequestStatusDD, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Permitrequesttypetxt)
-                            .addComponent(doctxt)
-                            .addComponent(PermitDatetxt)
-                            .addComponent(workorderlineformtxt)
-                            .addComponent(govtxt, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(PermitRequestStatusDD, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(doctxt)
+                                .addComponent(PermitDatetxt)
+                                .addComponent(workorderlineformtxt)
+                                .addComponent(govtxt, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE))
+                            .addComponent(prtcombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(68, 68, 68)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -263,8 +265,8 @@ public class PermitRequest extends javax.swing.JFrame {
                                     .addComponent(PermitRequestStatusDD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(Permitrequesttypetxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel7))
+                                    .addComponent(jLabel7)
+                                    .addComponent(prtcombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel10)
@@ -282,6 +284,8 @@ public class PermitRequest extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    
+    
     private void updateWOLSCombo(){
         try{    
         Class.forName(driver);
@@ -302,6 +306,28 @@ public class PermitRequest extends javax.swing.JFrame {
         
     }
     
+    
+    
+    private void updateprt(){
+        try{    
+        Class.forName(driver);
+            Connection con = DriverManager.getConnection(url, user, pass);
+            String sql = "select * from permitrequesttype";
+            PreparedStatement pst = con.prepareStatement(sql);
+            ResultSet rs=pst.executeQuery();
+            while(rs.next()){
+                prtcombo.addItem(rs.getString("PermitRequesttypename"));
+            }
+            
+        }
+        catch (Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        
+        }
+        
+        
+    }
+    
     private void btnInsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertActionPerformed
         try
         {
@@ -311,7 +337,57 @@ public class PermitRequest extends javax.swing.JFrame {
             +"(PermitRequestDate, PermitRequestStatusID, PermitRequestTypeID,WorkOrderLineFormID,GovID)"
             +"values(?,?,?,?,?)";
             
-           
+            int prt = 0;
+            switch (prtcombo.getSelectedItem().toString()){
+                case "Add or Remove Load-Bearing Walls": prt=1;
+                            break;
+                case "Room Addition": prt=2;
+                            break;
+                case "Room Conversion": prt=3;
+                            break;
+                case "Plumbing": prt=4;
+                            break;
+                case "Re-roofing": prt=5;
+                            break;
+                case "Demolition": prt=6;
+                            break;
+                case "Electrical": prt=7;
+                            break;
+                case "Solar Component": prt=8;
+                            break;
+                case "Pool": prt=9;
+                            break;
+                case "Fencing": prt=10;
+                            break;
+                case "Driveway": prt=11;
+                            break;
+                 case "Parking Lot": prt=12;
+                            break;
+                case "Sidewalk": prt=13;
+                            break;
+                case "Covered Deck": prt=14;
+                            break;
+                case "Patio Cover": prt=15;
+                            break;
+                case "Pergola": prt=16;
+                            break;
+                case "Storage Shed": prt=17;
+                            break;
+                case "Structural Addition/Expansion": prt=18;
+                            break;
+                case "Add a New Exterior Door": prt=19;
+                            break;
+                case "HVAC": prt=20;
+                            break;
+                case "Basement": prt=21;
+                            break;
+               
+                
+                            
+            }
+            
+            
+            
             int WOLSid = 0;
             switch (PermitRequestStatusDD.getSelectedItem().toString()){
                 case "Issued": WOLSid=1;
@@ -347,7 +423,7 @@ public class PermitRequest extends javax.swing.JFrame {
             pst.setString(1, PermitDatetxt.getText());
             pst.setString(2, String.valueOf(WOLSid));
             
-            pst.setString(3, Permitrequesttypetxt.getText());
+            pst.setString(3, String.valueOf(prt));
             
             pst.setString(4, workorderlineformtxt.getText());
             pst.setString(5, govtxt.getText());
@@ -370,6 +446,61 @@ public class PermitRequest extends javax.swing.JFrame {
             Connection con = DriverManager.getConnection(url, user, pass);
             String sql = "update permitrequest set permitrequestdate = ?, permitrequeststatusid = ?, permitrequesttypeid = ?,workorderlineformid=?,govid=? where permitrequestid = ?";
 
+            
+            int prt = 0;
+            switch (prtcombo.getSelectedItem().toString()){
+                case "Add or Remove Load-Bearing Walls": prt=1;
+                            break;
+                case "Room Addition": prt=2;
+                            break;
+                case "Room Conversion": prt=3;
+                            break;
+                case "Plumbing": prt=4;
+                            break;
+                case "Re-roofing": prt=5;
+                            break;
+                case "Demolition": prt=6;
+                            break;
+                case "Electrical": prt=7;
+                            break;
+                case "Solar Component": prt=8;
+                            break;
+                case "Pool": prt=9;
+                            break;
+                case "Fencing": prt=10;
+                            break;
+                case "Driveway": prt=11;
+                            break;
+                 case "Parking Lot": prt=12;
+                            break;
+                case "Sidewalk": prt=13;
+                            break;
+                case "Covered Deck": prt=14;
+                            break;
+                case "Patio Cover": prt=15;
+                            break;
+                case "Pergola": prt=16;
+                            break;
+                case "Storage Shed": prt=17;
+                            break;
+                case "Structural Addition/Expansion": prt=18;
+                            break;
+                case "Add a New Exterior Door": prt=19;
+                            break;
+                case "HVAC": prt=20;
+                            break;
+                case "Basement": prt=21;
+                            break;
+               
+                
+                            
+            }
+            
+            
+            
+            
+            
+            
             int WOLSid = 0;
             switch (PermitRequestStatusDD.getSelectedItem().toString()){
                 case "Issued": WOLSid=1;
@@ -406,7 +537,7 @@ public class PermitRequest extends javax.swing.JFrame {
             pst.setString(1, PermitDatetxt.getText());
             pst.setString(2, String.valueOf(WOLSid));
             
-            pst.setString(3, Permitrequesttypetxt.getText());
+           pst.setString(3, String.valueOf(prt));
             
             pst.setString(4, workorderlineformtxt.getText());
             pst.setString(5, govtxt.getText());
@@ -530,7 +661,6 @@ public class PermitRequest extends javax.swing.JFrame {
     private javax.swing.JTextField PermitDatetxt;
     private javax.swing.JComboBox<String> PermitRequestStatusDD;
     private javax.swing.JTextField PermitRequesttxt;
-    private javax.swing.JTextField Permitrequesttypetxt;
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnInsert;
     private javax.swing.JButton btnNew;
@@ -549,6 +679,7 @@ public class PermitRequest extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTable permitrequesttable;
+    private javax.swing.JComboBox<String> prtcombo;
     private javax.swing.JTextField workorderlineformtxt;
     // End of variables declaration//GEN-END:variables
 }
