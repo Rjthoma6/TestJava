@@ -187,9 +187,7 @@ public class Decision extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(box1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jLabel1)))
+                                    .addComponent(jLabel1))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(layout.createSequentialGroup()
@@ -280,20 +278,19 @@ public class Decision extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
      
-      /*  try
+       try
         { 
             Class.forName(driver);
                     Connection con=DriverManager.getConnection(url,user,pass);
                     String sql="insert into Decision"
-                         +"(DecisionDate,DecisionType,Comment,Document,FeedbackID)"
-                          +"values(?,?,?,?,?)";  
+                         +"(DecisionDate,DecisionType,Comment,FeedbackID)"
+                          +"values(?,?,?,?)";  
                     PreparedStatement pst=con.prepareStatement(sql);    
                     //pst.setString(1,id.getText());
                     pst.setString(1,box2.getText());
                     pst.setString(2,box3.getText());
                     pst.setString(3,box4.getText());
-                    pst.setString(4,box5.getText());
-                    pst.setString(5,box6.getText());
+                    pst.setString(4,box6.getText());
                     
                     
                     pst.executeUpdate();
@@ -306,25 +303,24 @@ public class Decision extends javax.swing.JFrame {
         {
             JOptionPane.showMessageDialog(this,e.getMessage());
         }
-        */
+        
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
      
-       /*  try
+         try
         { 
             Class.forName(driver);
                     Connection con=DriverManager.getConnection(url,user,pass);
-                    String sql="update Decision set DecisionDate=?,DecisionType=?,Comment=?,Document=?,FeedbackID=? where DecisionID=?";  
+                    String sql="update Decision set DecisionDate=?,DecisionType=?,Comment=?,FeedbackID=? where DecisionID=?";  
                     PreparedStatement pst=con.prepareStatement(sql);    
                    
                     pst.setString(1,box2.getText());
                     pst.setString(2,box3.getText());
                     pst.setString(3,box4.getText());
-                    pst.setString(4,box5.getText());
-                    pst.setString(5,box6.getText());
-                    pst.setString(6,box1.getText());
+                    pst.setString(4,box6.getText());
+                    pst.setString(5,box1.getText());
                     
                     pst.executeUpdate();
                     JOptionPane.showMessageDialog(this,"Upate Successfully");
@@ -336,7 +332,7 @@ public class Decision extends javax.swing.JFrame {
         {
             JOptionPane.showMessageDialog(this,e.getMessage());
         }
-        */
+       
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
