@@ -56,7 +56,6 @@ public class Customer_Request extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         Commenttxt = new javax.swing.JTextField();
         btnNew = new javax.swing.JButton();
-        Home = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu10 = new javax.swing.JMenu();
         jMenuItem29 = new javax.swing.JMenuItem();
@@ -195,8 +194,6 @@ public class Customer_Request extends javax.swing.JFrame {
                 btnNewActionPerformed(evt);
             }
         });
-
-        Home.setText("Home");
 
         jMenu10.setText("Home");
 
@@ -458,8 +455,7 @@ public class Customer_Request extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Home))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnInsert, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -467,7 +463,7 @@ public class Customer_Request extends javax.swing.JFrame {
                             .addComponent(btnDelete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnNew, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 645, Short.MAX_VALUE)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 665, Short.MAX_VALUE)))
                 .addGap(18, 18, 18))
         );
         layout.setVerticalGroup(
@@ -503,9 +499,7 @@ public class Customer_Request extends javax.swing.JFrame {
                             .addComponent(Commenttxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel9)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(Home)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(64, 64, 64)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(btnNew)
@@ -828,7 +822,6 @@ public class Customer_Request extends javax.swing.JFrame {
     private javax.swing.JTextField Commenttxt;
     private javax.swing.JTextField CustomerIDtxt;
     private javax.swing.JTextField Documenttxt;
-    private javax.swing.JButton Home;
     private javax.swing.JTextField WorkOrderIDtxt;
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnInsert;
