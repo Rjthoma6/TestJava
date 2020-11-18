@@ -78,11 +78,11 @@ public class customer extends javax.swing.JFrame {
         cphone = new javax.swing.JTextField();
         maddress = new javax.swing.JTextField();
         mcity = new javax.swing.JTextField();
-        pid = new javax.swing.JTextField();
         zcode = new javax.swing.JTextField();
-        countryid = new javax.swing.JTextField();
-        statusid = new javax.swing.JTextField();
-        rid = new javax.swing.JTextField();
+        pid = new javax.swing.JComboBox<>();
+        cid = new javax.swing.JComboBox<>();
+        statusid = new javax.swing.JComboBox<>();
+        rid = new javax.swing.JComboBox<>();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu10 = new javax.swing.JMenu();
         jMenuItem29 = new javax.swing.JMenuItem();
@@ -233,11 +233,18 @@ public class customer extends javax.swing.JFrame {
             }
         });
 
-        countryid.addActionListener(new java.awt.event.ActionListener() {
+        pid.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        pid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                countryidActionPerformed(evt);
+                pidActionPerformed(evt);
             }
         });
+
+        cid.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        statusid.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        rid.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jMenu10.setText("Home");
 
@@ -486,6 +493,26 @@ public class customer extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE))
+                                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(44, 44, 44)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(phone2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                                    .addComponent(date, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(last, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(first, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(id, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(phone1, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(email)
+                                    .addComponent(cname)
+                                    .addComponent(cphone)))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -501,37 +528,17 @@ public class customer extends javax.swing.JFrame {
                                     .addComponent(jLabel18))
                                 .addGap(55, 55, 55)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(countryid, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
-                                    .addComponent(pid)
                                     .addComponent(mcity)
                                     .addComponent(maddress)
                                     .addComponent(zcode)
-                                    .addComponent(statusid)
-                                    .addComponent(rid)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE))
-                                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel8)
-                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(44, 44, 44)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(phone2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                                        .addComponent(date, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(last, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(first, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(id, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(phone1, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(email)
-                                        .addComponent(cname)
-                                        .addComponent(cphone)))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel17)
-                                    .addGap(175, 175, 175))))
+                                    .addComponent(pid, 0, 187, Short.MAX_VALUE)
+                                    .addComponent(cid, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel17)
+                                .addGap(42, 42, 42)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(rid, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(statusid, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                         .addGap(55, 55, 55)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -616,16 +623,16 @@ public class customer extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel15)
                             .addComponent(zcode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel16)
-                            .addComponent(countryid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel16)
+                            .addComponent(cid, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel17)
                             .addComponent(statusid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel18)
                             .addComponent(rid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -643,9 +650,310 @@ public class customer extends javax.swing.JFrame {
                     Connection con=DriverManager.getConnection(url,user,pass);
                     String sql="insert into Customer"
                          +"(RegistrationDate,Lastname,Firstname,Phone1,Phone2,Email,SecondaryContactName,SecondaryContactPhone,MailingAddress,MailingCity,StateProvinceID,MailingZipCode,CountryID,CustomerStatusID,ReferralID)"
-                          +"values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";  
-                    PreparedStatement pst=con.prepareStatement(sql);    
-                    //pst.setString(1,id.getText());
+                          +"values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"; 
+                    
+                    
+                    int stateprovid = 0;
+            switch (pid.getSelectedItem().toString()){
+                case "AL": stateprovid=1;
+                            break;
+                case "AK": stateprovid=2;
+                            break;
+                case "AZ": stateprovid=3;
+                            break;
+                case "AR": stateprovid=4;
+                            break;
+                case "CA": stateprovid=5;
+                            break;
+                case "CO": stateprovid=6;
+                            break;
+                case "CT": stateprovid=7;
+                            break;
+                case "DE": stateprovid=8;
+                            break;
+                case "FL": stateprovid=9;
+                            break;
+                case "GA": stateprovid=10;
+                            break;
+                case "HI": stateprovid=11;
+                            break;
+                case "ID": stateprovid=12;
+                            break;
+                case "IL": stateprovid=13;
+                            break;
+                case "IN": stateprovid=14;
+                            break;
+                case "IA": stateprovid=15;
+                            break;
+                case "KS": stateprovid=16;
+                            break;
+                case "KY": stateprovid=17;
+                            break;
+                case "LA": stateprovid=18;
+                            break;
+                case "ME": stateprovid=19;
+                            break;
+                case "MD": stateprovid=20;
+                            break;
+                case "MA": stateprovid=21;
+                            break;
+                case "MI": stateprovid=22;
+                            break;
+                case "MN": stateprovid=23;
+                            break;
+                case "MS": stateprovid=24;
+                            break;
+                case "MO": stateprovid=25;
+                            break;
+                case "MT": stateprovid=26;
+                            break;
+                case "NE": stateprovid=27;
+                            break;
+                case "NV": stateprovid=28;
+                            break;
+                case "NH": stateprovid=29;
+                            break;
+                case "NJ": stateprovid=30;
+                            break;
+                case "NM": stateprovid=31;
+                            break;
+                case "NY": stateprovid=32;
+                            break;
+                case "NC": stateprovid=33;
+                            break;
+                case "ND": stateprovid=34;
+                            break;
+                case "OH": stateprovid=35;
+                            break;
+                case "OK": stateprovid=36;
+                            break;
+                case "OR": stateprovid=37;
+                            break;
+                case "PA": stateprovid=38;
+                            break;
+                case "RI": stateprovid=39;
+                            break;
+                case "SC": stateprovid=40;
+                            break;
+                case "SD": stateprovid=41;
+                            break;
+                case "TN": stateprovid=42;
+                            break;
+                case "TX": stateprovid=43;
+                            break;
+                case "UT": stateprovid=44;
+                            break;
+                case "VT": stateprovid=45;
+                            break;
+                case "VA": stateprovid=46;
+                            break;
+                case "WA": stateprovid=47;
+                            break;
+                case "WV": stateprovid=48;
+                            break;
+                case "WI": stateprovid=49;
+                            break;
+                case "WY": stateprovid=50;
+                            break;
+                case "DC": stateprovid=51;
+                            break;
+                case "AS": stateprovid=52;
+                            break;
+                case "GU": stateprovid=53;
+                            break;
+                case "MP": stateprovid=54;
+                            break;
+                case "PR": stateprovid=55;
+                            break;
+                case "VI": stateprovid=56;
+                            break;
+                case "AG": stateprovid=57;
+                            break;
+                case "BC": stateprovid=58;
+                            break;
+                case "BS": stateprovid=59;
+                            break;
+                case "CM": stateprovid=60;
+                            break;
+                case "VS": stateprovid=61;
+                            break;
+                case "DF": stateprovid=62;
+                            break;
+                case "CH": stateprovid=63;
+                            break;
+                case "CL": stateprovid=65;
+                            break;
+                case "DG": stateprovid=66;
+                            break;
+                case "GT": stateprovid=67;
+                            break;
+                case "GR": stateprovid=68;
+                            break;
+                case "HG": stateprovid=69;
+                            break;
+                case "JA": stateprovid=70;
+                            break;
+                case "EM": stateprovid=71;
+                            break;
+                case "NA": stateprovid=74;
+                            break;
+                case "NL": stateprovid=75;
+                            break;
+                case "OA": stateprovid=76;
+                            break;
+                case "PU": stateprovid=77;
+                            break;
+                case "QT": stateprovid=78;
+                            break;
+                case "QR": stateprovid=79;
+                            break;
+                case "SL": stateprovid=80;
+                            break;
+                case "SI": stateprovid=81;
+                            break;
+                case "SO": stateprovid=82;
+                            break;
+                case "TB": stateprovid=83;
+                            break;
+                case "TM": stateprovid=84;
+                            break;
+                case "TL": stateprovid=85;
+                            break;
+                case "VE": stateprovid=86;
+                            break;
+                case "YU": stateprovid=87;
+                            break;
+                case "ZA": stateprovid=88;
+                            break;
+                case "ON": stateprovid=89;
+                            break;
+                case "QC": stateprovid=90;
+                            break;
+                case "NS": stateprovid=91;
+                            break;
+                case "NB": stateprovid=92;
+                            break;
+                case "MB": stateprovid=93;
+                            break;
+                case "PE": stateprovid=95;
+                            break;
+                case "SK": stateprovid=96;
+                            break;
+                case "AB": stateprovid=97;
+                            break;
+                case "NT": stateprovid=99;
+                            break;
+                case "YT": stateprovid=100;
+                            break;
+                case "NU": stateprovid=101;
+            }
+            
+             int countryid = 0;
+            switch (cid.getSelectedItem().toString()){
+                case "CN": countryid=1;
+                            break;
+                case "IN": countryid=2;
+                            break;
+                case "US": countryid=3;
+                            break;
+                case "ID": countryid=4;
+                            break;
+                case "BR": countryid=5;
+                            break;
+                case "PK": countryid=6;
+                            break;
+                case "NG": countryid=7;
+                            break;
+                case "BD": countryid=8;
+                            break;
+                case "RU": countryid=9;
+                            break;
+                case "JP": countryid=10;
+                            break;
+                case "MX": countryid=11;
+                            break;
+                case "PH": countryid=12;
+                            break;
+                case "VN": countryid=13;
+                            break;
+                case "ET": countryid=14;
+                            break;
+                case "EG": countryid=15;
+                            break;
+                case "DE": countryid=16;
+                            break;
+                case "IR": countryid=17;
+                            break;
+                case "TR": countryid=18;
+                            break;
+                case "CD": countryid=19;
+                            break;
+                case "TH": countryid=20;
+                            break;
+            }
+            
+            int customerstatusid = 0;
+            switch (statusid.getSelectedItem().toString()){
+                case "No Work Order": customerstatusid=1;
+                            break;
+                case "Quote Reuested": customerstatusid=2;
+                            break;
+                case "Quote Pending": customerstatusid=3;
+                            break;
+                case "Work Order In Progress": customerstatusid=4;
+                            break;
+                case "Meeting Scheduled": customerstatusid=5;
+                            break;
+                case "Work Orders Completed": customerstatusid=6;
+                            break;
+            }
+            
+            int referralid = 0;
+            switch (statusid.getSelectedItem().toString()){
+                case "Word of Mouth": referralid=1;
+                            break;
+                case "Website": referralid=2;
+                            break;
+                case "Email": referralid=3;
+                            break;
+                case "Phone": referralid=4;
+                            break;
+                case "Advertisement": referralid=5;
+                            break;
+                case "Social Media": referralid=6;
+                            break;
+                case "Radio": referralid=7;
+                            break;
+                 case "Search Engine": referralid=8;
+                            break;
+                 case "Employee": referralid=9;
+                            break;
+                  case "Other": referralid=10;
+                            break;
+            }
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    PreparedStatement pst=con.prepareStatement(sql);     
                     pst.setString(1,date.getText());
                     pst.setString(2,last.getText());
                     pst.setString(3,first.getText());
@@ -656,11 +964,11 @@ public class customer extends javax.swing.JFrame {
                     pst.setString(8,cphone.getText());
                     pst.setString(9,maddress.getText());
                     pst.setString(10,mcity.getText());
-                    pst.setString(11,pid.getText());
+                    pst.setString(11,String.valueOf(stateprovid));
                     pst.setString(12,zcode.getText());
-                    pst.setString(13,countryid.getText());
-                    pst.setString(14,statusid.getText());
-                    pst.setString(15,rid.getText());
+                    pst.setString(13,String.valueOf(countryid));
+                    pst.setString(14,String.valueOf(customerstatusid));
+                    pst.setString(15,String.valueOf(referralid));
                     
                     pst.executeUpdate();
                     JOptionPane.showMessageDialog(this,"Insert Successfully");
@@ -699,14 +1007,301 @@ public class customer extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
         
         try
         { 
             Class.forName(driver);
                     Connection con=DriverManager.getConnection(url,user,pass);
                     String sql="update Customer set RegistrationDate=?,Lastname=?,Firstname=?,Phone1=?,Phone2=?,Email=?,SecondaryContactName=?,SecondaryContactPhone=?,MailingAddress=?,MailingCity=?,StateProvinceID=?,MailingZipCode=?,CountryID=?,CustomerStatusID=?,ReferralID=? where CustomerID=?";  
-                    PreparedStatement pst=con.prepareStatement(sql);    
+                    PreparedStatement pst=con.prepareStatement(sql);  
+                    
+                       
+                    int stateprovid = 0;
+            switch (pid.getSelectedItem().toString()){
+                case "AL": stateprovid=1;
+                            break;
+                case "AK": stateprovid=2;
+                            break;
+                case "AZ": stateprovid=3;
+                            break;
+                case "AR": stateprovid=4;
+                            break;
+                case "CA": stateprovid=5;
+                            break;
+                case "CO": stateprovid=6;
+                            break;
+                case "CT": stateprovid=7;
+                            break;
+                case "DE": stateprovid=8;
+                            break;
+                case "FL": stateprovid=9;
+                            break;
+                case "GA": stateprovid=10;
+                            break;
+                case "HI": stateprovid=11;
+                            break;
+                case "ID": stateprovid=12;
+                            break;
+                case "IL": stateprovid=13;
+                            break;
+                case "IN": stateprovid=14;
+                            break;
+                case "IA": stateprovid=15;
+                            break;
+                case "KS": stateprovid=16;
+                            break;
+                case "KY": stateprovid=17;
+                            break;
+                case "LA": stateprovid=18;
+                            break;
+                case "ME": stateprovid=19;
+                            break;
+                case "MD": stateprovid=20;
+                            break;
+                case "MA": stateprovid=21;
+                            break;
+                case "MI": stateprovid=22;
+                            break;
+                case "MN": stateprovid=23;
+                            break;
+                case "MS": stateprovid=24;
+                            break;
+                case "MO": stateprovid=25;
+                            break;
+                case "MT": stateprovid=26;
+                            break;
+                case "NE": stateprovid=27;
+                            break;
+                case "NV": stateprovid=28;
+                            break;
+                case "NH": stateprovid=29;
+                            break;
+                case "NJ": stateprovid=30;
+                            break;
+                case "NM": stateprovid=31;
+                            break;
+                case "NY": stateprovid=32;
+                            break;
+                case "NC": stateprovid=33;
+                            break;
+                case "ND": stateprovid=34;
+                            break;
+                case "OH": stateprovid=35;
+                            break;
+                case "OK": stateprovid=36;
+                            break;
+                case "OR": stateprovid=37;
+                            break;
+                case "PA": stateprovid=38;
+                            break;
+                case "RI": stateprovid=39;
+                            break;
+                case "SC": stateprovid=40;
+                            break;
+                case "SD": stateprovid=41;
+                            break;
+                case "TN": stateprovid=42;
+                            break;
+                case "TX": stateprovid=43;
+                            break;
+                case "UT": stateprovid=44;
+                            break;
+                case "VT": stateprovid=45;
+                            break;
+                case "VA": stateprovid=46;
+                            break;
+                case "WA": stateprovid=47;
+                            break;
+                case "WV": stateprovid=48;
+                            break;
+                case "WI": stateprovid=49;
+                            break;
+                case "WY": stateprovid=50;
+                            break;
+                case "DC": stateprovid=51;
+                            break;
+                case "AS": stateprovid=52;
+                            break;
+                case "GU": stateprovid=53;
+                            break;
+                case "MP": stateprovid=54;
+                            break;
+                case "PR": stateprovid=55;
+                            break;
+                case "VI": stateprovid=56;
+                            break;
+                case "AG": stateprovid=57;
+                            break;
+                case "BC": stateprovid=58;
+                            break;
+                case "BS": stateprovid=59;
+                            break;
+                case "CM": stateprovid=60;
+                            break;
+                case "VS": stateprovid=61;
+                            break;
+                case "DF": stateprovid=62;
+                            break;
+                case "CH": stateprovid=63;
+                            break;
+                case "CL": stateprovid=65;
+                            break;
+                case "DG": stateprovid=66;
+                            break;
+                case "GT": stateprovid=67;
+                            break;
+                case "GR": stateprovid=68;
+                            break;
+                case "HG": stateprovid=69;
+                            break;
+                case "JA": stateprovid=70;
+                            break;
+                case "EM": stateprovid=71;
+                            break;
+                case "NA": stateprovid=74;
+                            break;
+                case "NL": stateprovid=75;
+                            break;
+                case "OA": stateprovid=76;
+                            break;
+                case "PU": stateprovid=77;
+                            break;
+                case "QT": stateprovid=78;
+                            break;
+                case "QR": stateprovid=79;
+                            break;
+                case "SL": stateprovid=80;
+                            break;
+                case "SI": stateprovid=81;
+                            break;
+                case "SO": stateprovid=82;
+                            break;
+                case "TB": stateprovid=83;
+                            break;
+                case "TM": stateprovid=84;
+                            break;
+                case "TL": stateprovid=85;
+                            break;
+                case "VE": stateprovid=86;
+                            break;
+                case "YU": stateprovid=87;
+                            break;
+                case "ZA": stateprovid=88;
+                            break;
+                case "ON": stateprovid=89;
+                            break;
+                case "QC": stateprovid=90;
+                            break;
+                case "NS": stateprovid=91;
+                            break;
+                case "NB": stateprovid=92;
+                            break;
+                case "MB": stateprovid=93;
+                            break;
+                case "PE": stateprovid=95;
+                            break;
+                case "SK": stateprovid=96;
+                            break;
+                case "AB": stateprovid=97;
+                            break;
+                case "NT": stateprovid=99;
+                            break;
+                case "YT": stateprovid=100;
+                            break;
+                case "NU": stateprovid=101;
+            }
+            
+             int countryid = 0;
+            switch (cid.getSelectedItem().toString()){
+                case "CN": countryid=1;
+                            break;
+                case "IN": countryid=2;
+                            break;
+                case "US": countryid=3;
+                            break;
+                case "ID": countryid=4;
+                            break;
+                case "BR": countryid=5;
+                            break;
+                case "PK": countryid=6;
+                            break;
+                case "NG": countryid=7;
+                            break;
+                case "BD": countryid=8;
+                            break;
+                case "RU": countryid=9;
+                            break;
+                case "JP": countryid=10;
+                            break;
+                case "MX": countryid=11;
+                            break;
+                case "PH": countryid=12;
+                            break;
+                case "VN": countryid=13;
+                            break;
+                case "ET": countryid=14;
+                            break;
+                case "EG": countryid=15;
+                            break;
+                case "DE": countryid=16;
+                            break;
+                case "IR": countryid=17;
+                            break;
+                case "TR": countryid=18;
+                            break;
+                case "CD": countryid=19;
+                            break;
+                case "TH": countryid=20;
+                            break;
+            }
+                   int customerstatusid = 0;
+            switch (statusid.getSelectedItem().toString()){
+                case "No Work Order": customerstatusid=1;
+                            break;
+                case "Quote Reuested": customerstatusid=2;
+                            break;
+                case "Quote Pending": customerstatusid=3;
+                            break;
+                case "Work Order In Progress": customerstatusid=4;
+                            break;
+                case "Meeting Scheduled": customerstatusid=5;
+                            break;
+                case "Work Orders Completed": customerstatusid=6;
+                            break;
+            }
+            
+            int referralid = 0;
+            switch (statusid.getSelectedItem().toString()){
+                case "Word of Mouth": referralid=1;
+                            break;
+                case "Website": referralid=2;
+                            break;
+                case "Email": referralid=3;
+                            break;
+                case "Phone": referralid=4;
+                            break;
+                case "Advertisement": referralid=5;
+                            break;
+                case "Social Media": referralid=6;
+                            break;
+                case "Radio": referralid=7;
+                            break;
+                 case "Search Engine": referralid=8;
+                            break;
+                 case "Employee": referralid=9;
+                            break;
+                  case "Other": referralid=10;
+                            break;
+            } 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                    
                     pst.setString(1,date.getText());
                     pst.setString(2,last.getText());
@@ -718,11 +1313,11 @@ public class customer extends javax.swing.JFrame {
                     pst.setString(8,cphone.getText());
                     pst.setString(9,maddress.getText());
                     pst.setString(10,mcity.getText());
-                    pst.setString(11,pid.getText());
+                    pst.setString(11,String.valueOf(stateprovid));
                     pst.setString(12,zcode.getText());
-                    pst.setString(13,countryid.getText());
-                    pst.setString(14,statusid.getText());
-                    pst.setString(15,rid.getText());
+                    pst.setString(13,String.valueOf(countryid));
+                    pst.setString(14,String.valueOf(customerstatusid ));
+                    pst.setString(15,String.valueOf(referralid));
                      pst.setString(16,id.getText());
                     pst.executeUpdate();
                     JOptionPane.showMessageDialog(this,"Upate Successfully");
@@ -772,10 +1367,6 @@ public class customer extends javax.swing.JFrame {
     private void zcodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zcodeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_zcodeActionPerformed
-
-    private void countryidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_countryidActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_countryidActionPerformed
 
     private void jMenuItem29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem29ActionPerformed
         // TODO add your handling code here:
@@ -926,6 +1517,10 @@ public class customer extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jMenuItem28ActionPerformed
 
+    private void pidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pidActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pidActionPerformed
+
     
                                          
     
@@ -982,8 +1577,8 @@ public class customer extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> cid;
     private javax.swing.JTextField cname;
-    private javax.swing.JTextField countryid;
     private javax.swing.JTextField cphone;
     private javax.swing.JTable ctable;
     private javax.swing.JTextField date;
@@ -1053,9 +1648,9 @@ public class customer extends javax.swing.JFrame {
     private javax.swing.JTextField mcity;
     private javax.swing.JTextField phone1;
     private javax.swing.JTextField phone2;
-    private javax.swing.JTextField pid;
-    private javax.swing.JTextField rid;
-    private javax.swing.JTextField statusid;
+    private javax.swing.JComboBox<String> pid;
+    private javax.swing.JComboBox<String> rid;
+    private javax.swing.JComboBox<String> statusid;
     private javax.swing.JTextField zcode;
     // End of variables declaration//GEN-END:variables
 }
