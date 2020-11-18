@@ -662,7 +662,7 @@ public class Subcontractor extends javax.swing.JFrame {
             PreparedStatement pst = con.prepareStatement(sql);
             ResultSet rs=pst.executeQuery();
             while(rs.next()){
-                Countrycombo.addItem(rs.getString("SubContractorStatusName"));
+                SubStatuscombo.addItem(rs.getString("SubContractorStatusName"));
             }
             
         }
