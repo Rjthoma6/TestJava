@@ -26,7 +26,7 @@ public class HOARequest extends javax.swing.JFrame {
         updateHOAReqStatusCombo();
     }
         String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        String url="jdbc:sqlserver://DESKTOP-OUTBSKJ:1433;databaseName=CIS3365-06-Shasta Analysts";
+        String url="jdbc:sqlserver://DESKTOP-RQELHUF\\:1433;databaseName=CIS3365 Shasta Analysts";
         String user="shasta";
         String pass="admin";
     /**
@@ -686,7 +686,8 @@ public class HOARequest extends javax.swing.JFrame {
         {
          
                Connection con=DriverManager.getConnection(url,user,pass);
-               String sql="select * from HOARequest";
+               String sql="select * from HOARequest"
+                       + " inner join HOARequestStatus on HOARequest.HOARequestStatusID = HOARequestStatus.HOARequestStatusID";
                PreparedStatement pst=con.prepareStatement(sql);
                ResultSet rs=pst.executeQuery();
                DefaultTableModel HOARTM=(DefaultTableModel)HOAReqtable.getModel();
@@ -694,7 +695,7 @@ public class HOARequest extends javax.swing.JFrame {
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("HOARequestID"),rs.getString("RequestSentDate"),rs.getString("HOARequestStatusID"),rs.getString("HOAID"),rs.getString("WorkOrderLineFormID")};
+                   Object o[]={rs.getString("HOARequestID"),rs.getString("RequestSentDate"),rs.getString("HOARequestStatusName"),rs.getString("HOAID"),rs.getString("WorkOrderLineFormID")};
                    HOARTM.addRow(o);
                }
         }
