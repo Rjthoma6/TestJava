@@ -27,7 +27,7 @@ public class SZA extends javax.swing.JFrame {
         
     }
         String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        String url="jdbc:sqlserver://DESKTOP-592B8RA\\SQLEXPRESS:1433;databaseName=CIS3365 Shasta Analysts";
+        String url="jdbc:sqlserver://DESKTOP-RQELHUF\\:1433;databaseName=CIS3365 Shasta Analysts";
         String user="shasta";
         String pass="admin";
     /**
@@ -162,7 +162,7 @@ public class SZA extends javax.swing.JFrame {
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("Zone"),rs.getString(""),rs.getString("Sub Contractor ID"),rs.getString("Sub Contractor Status"), rs.getString("Last Name"), rs.getString("First Name"),  rs.getString("Contact Number"),  rs.getString("Email"),  rs.getString("State Province"),  rs.getString("State Province"),  rs.getString("Country")};
+                   Object o[]={rs.getString("Zone"),rs.getString("WorkOrderID"),rs.getString("Sub Contractor ID"),rs.getString("Sub Contractor Status"), rs.getString("Last Name"), rs.getString("First Name"),  rs.getString("Contact Number"),  rs.getString("Email"),  rs.getString("State Province"),  rs.getString("Country")};
                    ReportTM.addRow(o);
                }
         }

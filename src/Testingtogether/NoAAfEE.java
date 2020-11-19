@@ -27,7 +27,7 @@ public class NoAAfEE extends javax.swing.JFrame {
         
     }
         String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        String url="jdbc:sqlserver://DESKTOP-592B8RA\\SQLEXPRESS:1433;databaseName=CIS3365 Shasta Analysts";
+        String url="jdbc:sqlserver://DESKTOP-RQELHUF\\:1433;databaseName=CIS3365 Shasta Analysts";
         String user="shasta";
         String pass="admin";
     /**
@@ -125,7 +125,7 @@ public class NoAAfEE extends javax.swing.JFrame {
          
                Connection con=DriverManager.getConnection(url,user,pass);
                String sql="SELECT Distinct " +
-"Employee.EmployeeID AS 'Employee Last Name', " +
+"Employee.EmployeeID AS 'Employee ID', " +
 "Employee.Lastname AS 'Employee Last Name', " +
 "Employee.Firstname AS 'Employee First Name', " +
 "Employee.Address AS 'Office Address', " +
@@ -156,7 +156,7 @@ public class NoAAfEE extends javax.swing.JFrame {
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("Employee Last Name"),rs.getString("Employee Last Name"),rs.getString("Employee First Name"),rs.getString("Office Address"), rs.getString("City"), rs.getString("State"),  rs.getString("Zip Code"),  rs.getString("Country"),  rs.getString("Number of Active Assignments")};
+                   Object o[]={rs.getString("Employee ID"),rs.getString("Employee Last Name"),rs.getString("Employee First Name"),rs.getString("Office Address"), rs.getString("City"), rs.getString("State"),  rs.getString("Zip Code"),  rs.getString("Country"),  rs.getString("Number of Active Assignments")};
                    ReportTM.addRow(o);
                }
         }
