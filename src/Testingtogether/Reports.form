@@ -322,19 +322,45 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="251" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
                               <Component id="Warranty" max="32767" attributes="0"/>
                               <Component id="Decision" alignment="0" max="32767" attributes="0"/>
                               <Component id="Modification" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                              <Component id="Warranty1" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="Template" max="32767" attributes="0"/>
                               <Component id="WorkOrderLineForm" min="-2" pref="115" max="-2" attributes="0"/>
+                              <Component id="PurchaseOrder" min="-2" pref="115" max="-2" attributes="0"/>
+                              <Component id="SubContractorService" min="-2" pref="115" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="GovernmentAgency" min="-2" pref="115" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="PermitRequest1" min="-2" pref="115" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="GovernmentAgency1" min="-2" pref="115" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="PermitRequest3" min="-2" pref="115" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="GovernmentAgency2" min="-2" pref="115" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="PermitRequest2" min="-2" pref="115" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="GovernmentAgency3" min="-2" pref="115" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="PermitRequest4" min="-2" pref="115" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -345,62 +371,54 @@
                               <Component id="Feedback" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="HOARequest" min="-2" pref="115" max="-2" attributes="0"/>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="Mileage" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="WorkOrder" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="WorkOrderLine" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="WorkOrderLineAssignment" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="SubContractor" min="-2" pref="115" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="Service" min="-2" pref="115" max="-2" attributes="0"/>
-                                              <Component id="SubContractorService" alignment="1" min="-2" pref="115" max="-2" attributes="0"/>
-                                              <Component id="PurchaseOrder" alignment="1" min="-2" pref="115" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="Mileage" alignment="0" max="32767" attributes="0"/>
+                              <Component id="WorkOrder" alignment="0" max="32767" attributes="0"/>
+                              <Component id="WorkOrderLine" alignment="0" max="32767" attributes="0"/>
+                              <Component id="WorkOrderLineAssignment" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="EmployeeAssignment" max="32767" attributes="0"/>
-                                      <Component id="Employee" max="32767" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                                  <Component id="HOA" min="-2" pref="115" max="-2" attributes="0"/>
+                                  <Component id="SubContractor" min="-2" pref="115" max="-2" attributes="0"/>
                               </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Component id="Service" min="-2" pref="115" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="EmployeeAssignment" alignment="1" min="-2" pref="115" max="-2" attributes="0"/>
+                                      <Component id="Inspection" alignment="1" min="-2" pref="115" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="HOARequest" max="32767" attributes="0"/>
+                              <Component id="HOA" max="32767" attributes="0"/>
+                              <Component id="PermitRequest" max="32767" attributes="0"/>
+                              <Component id="Employee" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="GovernmentAgency" alignment="0" max="32767" attributes="0"/>
-                      <Component id="Inspection" alignment="0" max="32767" attributes="0"/>
-                      <Component id="PermitRequest" alignment="0" pref="115" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="129" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="259" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel1" min="-2" pref="269" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="315" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
                           <Component id="jLabel2" min="-2" pref="269" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="351" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="Reports" min="-2" pref="115" max="-2" attributes="0"/>
+                          <Component id="Forms" min="-2" pref="115" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="452" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="jLabel1" min="-2" pref="269" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="308" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -409,65 +427,76 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" pref="80" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="Customer" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="WorkOrder" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="SubContractor" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="Employee" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="Appointment" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="Mileage" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="Service" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="HOARequest" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="Customer" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                              <Component id="WorkOrder" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                              <Component id="SubContractor" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                              <Component id="Employee" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                              <Component id="HOA" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="Appointment" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                              <Component id="Mileage" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                              <Component id="Service" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                              <Component id="EmployeeAssignment" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                              <Component id="HOARequest" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="CustomerRequest" alignment="0" min="-2" pref="35" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="SubContractorService" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                                  <Component id="WorkOrderLine" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="Feedback" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                              <Component id="WorkOrderLineAssignment" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                              <Component id="PurchaseOrder" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="GovernmentAgency" min="-2" pref="34" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Inspection" min="-2" pref="34" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                          <Component id="PermitRequest" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="CustomerRequest" alignment="0" min="-2" pref="35" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="WorkOrderLine" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="EmployeeAssignment" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="HOA" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="Template" alignment="1" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Feedback" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="WorkOrderLineAssignment" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                          <Component id="PermitRequest" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="Inspection" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                          <Component id="Template" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="GovernmentAgency" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="PermitRequest1" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      </Group>
                       <Component id="Decision" min="-2" pref="34" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="Modification" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="WorkOrderLineForm" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="GovernmentAgency1" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="PermitRequest3" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="Warranty" min="-2" pref="34" max="-2" attributes="0"/>
-                  <EmptySpace pref="191" max="32767" attributes="0"/>
-                  <Component id="Reports" min="-2" pref="34" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="Warranty" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="PurchaseOrder" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="GovernmentAgency2" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="PermitRequest2" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="Warranty1" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="SubContractorService" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="GovernmentAgency3" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="PermitRequest4" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="146" max="32767" attributes="0"/>
+                  <Component id="Forms" min="-2" pref="34" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -685,15 +714,79 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="            Forms"/>
+            <Property name="text" type="java.lang.String" value="            Reports"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="Reports">
+        <Component class="javax.swing.JButton" name="Forms">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Reports"/>
+            <Property name="text" type="java.lang.String" value="Forms"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ReportsActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="FormsActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="Warranty1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Warranty"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Warranty1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="GovernmentAgency1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Gov&apos;t Agency"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="GovernmentAgency1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="GovernmentAgency2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Gov&apos;t Agency"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="GovernmentAgency2ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="GovernmentAgency3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Gov&apos;t Agency"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="GovernmentAgency3ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="PermitRequest1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Permit Request"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PermitRequest1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="PermitRequest2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Permit Request"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PermitRequest2ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="PermitRequest3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Permit Request"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PermitRequest3ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="PermitRequest4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Permit Request"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PermitRequest4ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
