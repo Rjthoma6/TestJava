@@ -86,6 +86,11 @@ public class PPCbTaaGA extends javax.swing.JFrame {
         });
 
         Reports2.setText("Reports");
+        Reports2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Reports2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -168,6 +173,11 @@ public class PPCbTaaGA extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_btnNewActionPerformed
+
+    private void Reports2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Reports2ActionPerformed
+new Reports().setVisible(true);
+        this.setVisible(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_Reports2ActionPerformed
 
     /**
      * @param args the command line arguments

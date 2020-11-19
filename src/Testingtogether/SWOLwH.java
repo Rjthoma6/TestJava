@@ -86,6 +86,11 @@ public class SWOLwH extends javax.swing.JFrame {
         });
 
         Reports3.setText("Reports");
+        Reports3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Reports3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -172,6 +177,11 @@ public class SWOLwH extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_btnNewActionPerformed
+
+    private void Reports3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Reports3ActionPerformed
+new Reports().setVisible(true);
+        this.setVisible(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_Reports3ActionPerformed
 
     /**
      * @param args the command line arguments

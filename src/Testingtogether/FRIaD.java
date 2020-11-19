@@ -89,6 +89,11 @@ public class FRIaD extends javax.swing.JFrame {
         Reports3.setText("Reports");
 
         Reports4.setText("Reports");
+        Reports4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Reports4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -190,6 +195,11 @@ public class FRIaD extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_btnNewActionPerformed
+
+    private void Reports4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Reports4ActionPerformed
+new Reports().setVisible(true);
+        this.setVisible(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_Reports4ActionPerformed
 
     /**
      * @param args the command line arguments
