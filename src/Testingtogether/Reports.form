@@ -337,7 +337,7 @@
                               <Component id="RP" max="32767" attributes="0"/>
                               <Component id="SI" min="-2" pref="115" max="-2" attributes="0"/>
                               <Component id="FRIaD" min="-2" pref="115" max="-2" attributes="0"/>
-                              <Component id="SubContractorService" min="-2" pref="115" max="-2" attributes="0"/>
+                              <Component id="CRi2019aWOCtY" min="-2" pref="115" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -491,7 +491,7 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="AbMA" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                      <Component id="SubContractorService" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="CRi2019aWOCtY" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="GovernmentAgency3" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="PermitRequest4" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                   </Group>
@@ -626,12 +626,12 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SubContractorActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="SubContractorService">
+        <Component class="javax.swing.JButton" name="CRi2019aWOCtY">
           <Properties>
-            <Property name="text" type="java.lang.String" value="SC Service"/>
+            <Property name="text" type="java.lang.String" value="CRi2019aWOCtY"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SubContractorServiceActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CRi2019aWOCtYActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Service">

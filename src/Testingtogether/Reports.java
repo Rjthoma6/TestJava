@@ -47,7 +47,7 @@ public class Reports extends javax.swing.JFrame {
         SWOLwH = new javax.swing.JButton();
         SI = new javax.swing.JButton();
         SubContractor = new javax.swing.JButton();
-        SubContractorService = new javax.swing.JButton();
+        CRi2019aWOCtY = new javax.swing.JButton();
         Service = new javax.swing.JButton();
         Employee = new javax.swing.JButton();
         HOA = new javax.swing.JButton();
@@ -211,10 +211,10 @@ public class Reports extends javax.swing.JFrame {
             }
         });
 
-        SubContractorService.setText("SC Service");
-        SubContractorService.addActionListener(new java.awt.event.ActionListener() {
+        CRi2019aWOCtY.setText("CRi2019aWOCtY");
+        CRi2019aWOCtY.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SubContractorServiceActionPerformed(evt);
+                CRi2019aWOCtYActionPerformed(evt);
             }
         });
 
@@ -366,7 +366,7 @@ public class Reports extends javax.swing.JFrame {
                             .addComponent(RP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(SI, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(FRIaD, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(SubContractorService, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(CRi2019aWOCtY, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -485,7 +485,7 @@ public class Reports extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AbMA, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SubContractorService, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CRi2019aWOCtY, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(GovernmentAgency3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PermitRequest4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 146, Short.MAX_VALUE)
@@ -770,11 +770,11 @@ public class Reports extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_ServiceActionPerformed
 
-    private void SubContractorServiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubContractorServiceActionPerformed
+    private void CRi2019aWOCtYActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CRi2019aWOCtYActionPerformed
         // TODO add your handling code here:
-        new SubcontractorService().setVisible(true);
+        new CRi2019aWOCtY().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_SubContractorServiceActionPerformed
+    }//GEN-LAST:event_CRi2019aWOCtYActionPerformed
 
     private void HOARequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HOARequestActionPerformed
         // TODO add your handling code here:
@@ -1121,6 +1121,7 @@ public class Reports extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ARpHOA;
     private javax.swing.JButton AbMA;
+    private javax.swing.JButton CRi2019aWOCtY;
     private javax.swing.JButton CustomerRequest;
     private javax.swing.JButton Employee;
     private javax.swing.JButton EmployeeAssignment;
@@ -1149,7 +1150,6 @@ public class Reports extends javax.swing.JFrame {
     private javax.swing.JButton SWOLwH;
     private javax.swing.JButton Service;
     private javax.swing.JButton SubContractor;
-    private javax.swing.JButton SubContractorService;
     private javax.swing.JButton WOIPIAZ;
     private javax.swing.JButton WObSTP;
     private javax.swing.JLabel jLabel1;

@@ -43,6 +43,7 @@ public class WorkOrdersInProgressInAllZones extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         Appointmenttable = new javax.swing.JTable();
         btnNew = new javax.swing.JButton();
+        Reports2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,6 +85,13 @@ public class WorkOrdersInProgressInAllZones extends javax.swing.JFrame {
             }
         });
 
+        Reports2.setText("Reports");
+        Reports2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Reports2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -98,13 +106,15 @@ public class WorkOrdersInProgressInAllZones extends javax.swing.JFrame {
                         .addComponent(btnNew))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(357, 357, 357)
-                        .addComponent(jLabel5)))
+                        .addComponent(jLabel5))
+                    .addComponent(Reports2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(39, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(54, Short.MAX_VALUE)
+                .addComponent(Reports2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnNew)
@@ -171,6 +181,12 @@ public class WorkOrdersInProgressInAllZones extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnNewActionPerformed
 
+    private void Reports2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Reports2ActionPerformed
+        // TODO add your handling code here:
+        new Reports().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_Reports2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -215,6 +231,9 @@ public class WorkOrdersInProgressInAllZones extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable Appointmenttable;
+    private javax.swing.JButton Reports;
+    private javax.swing.JButton Reports1;
+    private javax.swing.JButton Reports2;
     private javax.swing.JButton btnNew;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
