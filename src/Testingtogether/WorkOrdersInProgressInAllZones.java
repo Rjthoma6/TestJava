@@ -124,13 +124,31 @@ public class WorkOrdersInProgressInAllZones extends javax.swing.JFrame {
         {
          
                Connection con=DriverManager.getConnection(url,user,pass);
-               String sql="Select * from Customer"
-    +" Join WorkOrder ON WorkOrder.CustomerID = Customer.CustomerID"
-    +" Join EmployeeAssignment ON EmployeeAssignment.WorkOrderID = WorkOrder.WorkOrderID"
-    +" Join Employee ON Employee.EmployeeID = EmployeeAssignment.EmployeeID"
-    +" Join WorkOrderStatus ON WorkOrderStatus.WorkOrderStatusID = WorkOrder.WorkOrderStatusID"
-    +" Join Zone ON Zone.ZoneID = WorkOrder.ZoneID"
-                       +" where WorkOrderStatus.WorkOrderStatusName = 'In-Progress'";
+               String sql="Select Distinct"
++" WorkOrderStatus.WorkOrderStatusName AS 'Work Order Status',"
++" WorkOrder.WorkOrderDate AS 'Date',"
++" WorkOrder.WorkOrderID AS 'Work Order ID',"
++" Customer.CustomerID AS 'Customer ID',"
++" Customer.LastName AS 'Last Name',"
++" Customer.FirstName AS 'First Name',"
++" Customer.Phone1 AS 'Phone Number',"
++" Zone.ZoneName AS 'Zone',"  
++" WorkOrder.SiteLocation AS 'Site Location',"
++" WorkOrder.StateProvinceID AS 'State Province'," 
++" WorkOrder.City AS 'Zip Code',"
++" WorkOrder.CountryID AS 'Country',"
++" Employee.Firstname AS 'Employee First Name',"
++" Employee.Lastname AS 'Employee Last Name'"
++" From Customer"
++" Join WorkOrder ON WorkOrder.CustomerID = Customer.CustomerID"
++" Join EmployeeAssignment ON EmployeeAssignment.WorkOrderID = WorkOrder.WorkOrderID"
++" Join Employee ON Employee.EmployeeID = EmployeeAssignment.EmployeeID"
++" Join WorkOrderStatus ON WorkOrderStatus.WorkOrderStatusID = WorkOrder.WorkOrderStatusID"
++" Join Zone ON Zone.ZoneID = WorkOrder.ZoneID"
+
++" WHERE WorkOrderStatus.WorkOrderStatusName = 'In-Progress'"
+ 
++" ORDER BY [Work Order ID]";
                
 
                       
@@ -141,7 +159,7 @@ public class WorkOrdersInProgressInAllZones extends javax.swing.JFrame {
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("WorkOrderStatusName"),rs.getString("WorkOrderDate"),rs.getString("WorkOrderID"),rs.getString("CustomerID"), rs.getString("LastName"), rs.getString("FirstName"),  rs.getString("Phone1"),  rs.getString("ZoneName"),  rs.getString("SiteLocation"),  rs.getString("StateProvinceID"),  rs.getString("City"),  rs.getString("CountryID"),  rs.getString("Firstname"),  rs.getString("Lastname")};
+                   Object o[]={rs.getString("Work Order Status"),rs.getString("Date"),rs.getString("Work Order ID"),rs.getString("Customer ID"), rs.getString("Last Name"), rs.getString("First Name"),  rs.getString("Phone Number"),  rs.getString("Zone"),  rs.getString("Site Location"),  rs.getString("State Province"),  rs.getString("Zip Code"),  rs.getString("Country"),  rs.getString("Employee First Name"),  rs.getString("Employee Last Name")};
                    AppointmentTM.addRow(o);
                }
         }

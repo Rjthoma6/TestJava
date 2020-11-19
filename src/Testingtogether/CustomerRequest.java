@@ -17,12 +17,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Andrew Choe
  */
-public class SCoWO extends javax.swing.JFrame {
+public class CustomerRequest extends javax.swing.JFrame {
 
     /**
      * Creates new form Assignment
      */
-    public SCoWO() {
+    public CustomerRequest() {
         initComponents();
         
     }
@@ -48,27 +48,27 @@ public class SCoWO extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel5.setText("Sub Contractor on Work Order");
+        jLabel5.setText("Customer Request");
 
         Appointmenttable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Sub Contractor ID", "Service Name", "Last Name", "First Name", "Work Order ID", "Customer ID", "Last Name", "First Name", "Phone Number"
+                "Customer Request ID", "Request Document", "Work Order ID", "Customer ID", "Customer Last Name", "Customer First Name", "Customer Phone", "Customer Email", "Employee ID", "Employee Last Name", "Employee First Name", "Employee Phone", "Employee First Name"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Integer.class, java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -97,7 +97,7 @@ public class SCoWO extends javax.swing.JFrame {
                         .addGap(430, 430, 430)
                         .addComponent(btnNew))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(374, 374, 374)
+                        .addGap(416, 416, 416)
                         .addComponent(jLabel5)))
                 .addContainerGap(39, Short.MAX_VALUE))
         );
@@ -125,26 +125,29 @@ public class SCoWO extends javax.swing.JFrame {
          
                Connection con=DriverManager.getConnection(url,user,pass);
                String sql="Select Distinct"
-+" SubContractor.SubContractorID AS 'Sub Contractor ID',"
-+" Service.ServiceName AS 'Service Name',"
-+" SubContractor.LastName AS 'Last Name',"
-+" SubContractor.FirstName AS 'First Name',"
+                       + " CustomerRequest.CustomerRequestID AS 'Customer Request ID',"
++" CustomerRequest.Document AS 'Request Document',"
 +" WorkOrder.WorkOrderID AS 'Work Order ID',"
 +" Customer.CustomerID AS 'Customer ID',"
-+" Customer.LastName AS 'Customer Last Name',"
-+" Customer.FirstName AS 'Customer First Name',"
-+" Customer.Phone1 AS 'Phone Number'"
++" Customer.Lastname AS 'Customer Last Name',"
++" Customer.Firstname AS 'Customer First Name',"
++" Customer.Phone1 AS 'Customer Phone',"
++" Customer.Email AS 'Customer Email',"
++" Employee.EmployeeID AS 'Employee ID',"
++" Employee.Lastname AS 'Employee Last Name',"
++" Employee.Firstname AS 'Employee First Name',"
++" Employee.Phone1 AS 'Employee Phone',"
++" Employee.Email AS 'Employee Email'"
 
-                       
-                       +" from SubContractor"
-                       +" JOIN SubContractorService ON SubContractorService.SubContractorID = SubContractor.SubContractorID"
-+" JOIN Service ON Service.ServiceID = SubContractorService.ServiceID"
-+" JOIN WorkOrderLine ON WorkOrderLine.SubContractorServiceID = SubContractorService.ServiceID"
-+" Join WorkOrder ON WorkOrder.WorkOrderID = WorkOrderLine.WorkOrderID"
-+" Join Customer ON Customer.CustomerID = WorkOrder.CustomerID"
-+" ORDER BY [Sub Contractor ID]";
++" From CustomerRequest"
++" Join Customer ON Customer.CustomerID = CustomerRequest.CustomerID"
++" Join WorkOrder ON Customer.CustomerID = WorkOrder.CustomerID"
++" Join EmployeeAssignment ON EmployeeAssignment.WorkOrderID = WorkOrder.WorkOrderID"
++" Join Employee ON Employee.EmployeeID = EmployeeAssignment.EmployeeID"
 
-                       
++" GROUP BY CustomerRequest.CustomerRequestID, CustomerRequest.Document,WorkOrder.WorkOrderID, Customer.CustomerID, Customer.Lastname, Customer.Firstname, Customer.Phone1, Customer.Email, Employee.EmployeeID, Employee.Lastname, Employee.Firstname, Employee.Phone1, Employee.Email";
+
+               
 
                       
                PreparedStatement pst=con.prepareStatement(sql);
@@ -154,7 +157,7 @@ public class SCoWO extends javax.swing.JFrame {
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("Sub Contractor ID"),rs.getString("Service Name"),rs.getString("Last Name"),rs.getString("First Name"),rs.getString("Work Order ID"), rs.getString("Customer ID"), rs.getString("Customer Last Name"),  rs.getString("Customer First Name"),  rs.getString("Phone Number")};
+                   Object o[]={rs.getString("Customer Request ID"),rs.getString("Request Document"),rs.getString("Work Order ID"),rs.getString("Customer ID"), rs.getString("Customer Last Name"), rs.getString("Customer First Name"),  rs.getString("Customer Phone"),  rs.getString("Customer Email"),  rs.getString("Employee ID"),  rs.getString("Employee Last Name"),  rs.getString("Employee First Name"),  rs.getString("Employee Phone"),  rs.getString("Employee Email")};
                    AppointmentTM.addRow(o);
                }
         }
@@ -183,13 +186,13 @@ public class SCoWO extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SCoWO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CustomerRequest.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SCoWO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CustomerRequest.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SCoWO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CustomerRequest.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SCoWO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CustomerRequest.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -211,7 +214,7 @@ public class SCoWO extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SCoWO().setVisible(true);
+                new CustomerRequest().setVisible(true);
             }
         });
     }

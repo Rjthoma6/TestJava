@@ -124,14 +124,29 @@ public class SCP extends javax.swing.JFrame {
         {
          
                Connection con=DriverManager.getConnection(url,user,pass);
-               String sql="Select * from PurchaseOrder"
+               String sql="Select Distinct"
++" PurchaseOrder.PurchaseOrderID AS 'Purchase Order ID',"
++" PurchaseOrder.Receipt AS 'Receipt',"
++" SubContractor.SubContractorID AS 'Sub Contractor ID',"
++" SubContractor.LastName AS 'Last Name',"
++" SubContractor.FirstName AS 'First Name',"
++" WorkOrderStatus.WorkOrderStatusName AS 'Work Order Status',"
++" WorkOrder.WorkOrderID AS 'Work Order ID',"
++" WorkOrderLine.WorkOrderLineID AS 'Work Order Line ID',"
++" WorkOrderLineAssignment.WorkOrderLineAssignmentID AS 'Work Order Line Assignment ID'"
+
+                       +" From PurchaseOrder"
     +" Join SubContractor ON SubContractor.SubContractorID = PurchaseOrder.SubContractorID"
 +" JOIN WorkOrderLineAssignment ON WorkOrderLineAssignment.SubContractorID = SubContractor.SubContractorID"
 +" JOIN WorkOrderLine ON WorkOrderLine.WorkOrderLineID = WorkOrderLineAssignment.WorkOrderLineID"
 +" JOIN WorkOrder ON WorkOrder.WorkOrderID = WorkOrderLine.WorkOrderID"
 +" Join WorkOrderStatus ON WorkOrder.WorkOrderStatusID = WorkOrderStatus.WorkOrderStatusID"
                        +" WHERE WorkOrderStatus.WorkOrderStatusName = 'In-Progress'"
-                       +" ORDER BY [PurchaseOrderID]";
+
++" GROUP By PurchaseOrder.PurchaseOrderID, PurchaseOrder.Receipt, SubContractor.SubContractorID, SubContractor.LastName, SubContractor.FirstName, WorkOrderStatus.WorkOrderStatusName, WorkOrder.WorkOrderID, WorkOrderLine.WorkOrderLineID, WorkOrderLineAssignment.WorkOrderLineAssignmentID"
+
++" ORDER BY [PurchaseOrderID]";
+
 
                
 
@@ -143,7 +158,7 @@ public class SCP extends javax.swing.JFrame {
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("PurchaseOrderID"),rs.getString("Receipt"),rs.getString("SubContractorID"),rs.getString("LastName"), rs.getString("FirstName"), rs.getString("WorkOrderStatusName"),  rs.getString("WorkOrderID"),  rs.getString("WorkOrderLineID"),  rs.getString("WorkOrderLineAssignmentID")};
+                   Object o[]={rs.getString("Purchase Order ID"),rs.getString("Receipt"),rs.getString("Sub Contractor ID"),rs.getString("Last Name"), rs.getString("First Name"), rs.getString("Work Order Status"),  rs.getString("Work Order ID"),  rs.getString("Work Order Line ID"),  rs.getString("Work Order Line Assignment ID")};
                    AppointmentTM.addRow(o);
                }
         }

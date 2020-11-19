@@ -17,12 +17,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Andrew Choe
  */
-public class SCoWO extends javax.swing.JFrame {
+public class WObSTP extends javax.swing.JFrame {
 
     /**
      * Creates new form Assignment
      */
-    public SCoWO() {
+    public WObSTP() {
         initComponents();
         
     }
@@ -48,7 +48,7 @@ public class SCoWO extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel5.setText("Sub Contractor on Work Order");
+        jLabel5.setText("Work Orders by Service Type (Pool)");
 
         Appointmenttable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -64,7 +64,7 @@ public class SCoWO extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Sub Contractor ID", "Service Name", "Last Name", "First Name", "Work Order ID", "Customer ID", "Last Name", "First Name", "Phone Number"
+                "Service", "Work Order ID", "Work Order Line ID", "Subcontractor First Name", "Customer ID", "Last Name", "First Name", "Phone Number", "Email"
             }
         ) {
             Class[] types = new Class [] {
@@ -97,7 +97,7 @@ public class SCoWO extends javax.swing.JFrame {
                         .addGap(430, 430, 430)
                         .addComponent(btnNew))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(374, 374, 374)
+                        .addGap(357, 357, 357)
                         .addComponent(jLabel5)))
                 .addContainerGap(39, Short.MAX_VALUE))
         );
@@ -124,27 +124,26 @@ public class SCoWO extends javax.swing.JFrame {
         {
          
                Connection con=DriverManager.getConnection(url,user,pass);
-               String sql="Select Distinct"
-+" SubContractor.SubContractorID AS 'Sub Contractor ID',"
-+" Service.ServiceName AS 'Service Name',"
-+" SubContractor.LastName AS 'Last Name',"
-+" SubContractor.FirstName AS 'First Name',"
+               String sql="SELECT"
++" Service.ServiceName AS 'Service',"
 +" WorkOrder.WorkOrderID AS 'Work Order ID',"
++" WorkOrderLine.WorkOrderLineID AS 'Work Order Line ID',"
++" Subcontractor.Firstname AS 'Subcontractor First Name',"
 +" Customer.CustomerID AS 'Customer ID',"
-+" Customer.LastName AS 'Customer Last Name',"
-+" Customer.FirstName AS 'Customer First Name',"
-+" Customer.Phone1 AS 'Phone Number'"
++" Customer.Lastname AS 'Last Name',"
++" Customer.Firstname AS 'First Name',"
++" Customer.Phone1 AS 'Phone Number',"
++" Customer.Email AS 'Email'"
 
-                       
-                       +" from SubContractor"
-                       +" JOIN SubContractorService ON SubContractorService.SubContractorID = SubContractor.SubContractorID"
-+" JOIN Service ON Service.ServiceID = SubContractorService.ServiceID"
-+" JOIN WorkOrderLine ON WorkOrderLine.SubContractorServiceID = SubContractorService.ServiceID"
-+" Join WorkOrder ON WorkOrder.WorkOrderID = WorkOrderLine.WorkOrderID"
-+" Join Customer ON Customer.CustomerID = WorkOrder.CustomerID"
-+" ORDER BY [Sub Contractor ID]";
-
-                       
++" FROM Service"
++" Join SubcontractorService ON SubContractorService.ServiceID = Service.ServiceID"
++" JOIN SubContractor ON SubContractorService.SubContractorID = SubContractor.SubContractorID"
++" JOIN WorkOrderLine ON WorkOrderLine.SubContractorServiceID = SubContractorService.SubContractorServiceID"
++" JOIN WorkOrder ON WorkOrder.WorkOrderID = WorkOrderLine.WorkOrderID"
++" join Customer on Customer.CustomerID = WorkOrder.CustomerID"
+ 
++" Where Service.ServiceName = 'Pool'"
++" GROUP BY Service.ServiceName, WorkOrder.WorkOrderID, WorkOrderLine.WorkOrderLineID, Subcontractor.Firstname, Customer.CustomerID, Customer.Lastname, Customer.Firstname, Customer.Phone1, Customer.Email";
 
                       
                PreparedStatement pst=con.prepareStatement(sql);
@@ -154,7 +153,7 @@ public class SCoWO extends javax.swing.JFrame {
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("Sub Contractor ID"),rs.getString("Service Name"),rs.getString("Last Name"),rs.getString("First Name"),rs.getString("Work Order ID"), rs.getString("Customer ID"), rs.getString("Customer Last Name"),  rs.getString("Customer First Name"),  rs.getString("Phone Number")};
+                   Object o[]={rs.getString("Service"),rs.getString("Work Order ID"),rs.getString("Work Order Line ID"),rs.getString("Subcontractor First Name"), rs.getString("Customer ID"), rs.getString("Last Name"),  rs.getString("First Name"),  rs.getString("Phone Number"),  rs.getString("Email")};
                    AppointmentTM.addRow(o);
                }
         }
@@ -183,13 +182,13 @@ public class SCoWO extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SCoWO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(WObSTP.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SCoWO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(WObSTP.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SCoWO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(WObSTP.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SCoWO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(WObSTP.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -211,7 +210,7 @@ public class SCoWO extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SCoWO().setVisible(true);
+                new WObSTP().setVisible(true);
             }
         });
     }

@@ -328,7 +328,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
                               <Component id="Warranty" max="32767" attributes="0"/>
-                              <Component id="Decision" alignment="0" max="32767" attributes="0"/>
+                              <Component id="WObSTP" alignment="0" max="32767" attributes="0"/>
                               <Component id="Modification" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
                               <Component id="Warranty1" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
                           </Group>
@@ -365,10 +365,10 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="Customer" max="32767" attributes="0"/>
-                              <Component id="Appointment" max="32767" attributes="0"/>
-                              <Component id="CustomerRequest" alignment="0" max="32767" attributes="0"/>
-                              <Component id="Feedback" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                              <Component id="WOIPIAZ" max="32767" attributes="0"/>
+                              <Component id="SCoWO" max="32767" attributes="0"/>
+                              <Component id="SCP" alignment="0" max="32767" attributes="0"/>
+                              <Component id="CustomerRequest" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -433,21 +433,21 @@
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="Customer" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="WOIPIAZ" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="WorkOrder" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="SubContractor" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="Employee" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="Appointment" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="SCoWO" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="Mileage" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="Service" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="HOARequest" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="CustomerRequest" alignment="0" min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="SCP" alignment="0" min="-2" pref="35" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="WorkOrderLine" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                           <Component id="EmployeeAssignment" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
@@ -457,7 +457,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="Feedback" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="CustomerRequest" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                           <Component id="WorkOrderLineAssignment" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
@@ -472,7 +472,7 @@
                           <Component id="GovernmentAgency" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                           <Component id="PermitRequest1" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="Decision" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="WObSTP" min="-2" pref="34" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -514,28 +514,28 @@
             <Property name="text" type="java.lang.String" value="Home Page"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="Appointment">
+        <Component class="javax.swing.JButton" name="SCoWO">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Appointment"/>
+            <Property name="text" type="java.lang.String" value="SCoWO"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AppointmentActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SCoWOActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="Feedback">
+        <Component class="javax.swing.JButton" name="CustomerRequest">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Feedback"/>
+            <Property name="text" type="java.lang.String" value="CR"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="FeedbackActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustomerRequestActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="Decision">
+        <Component class="javax.swing.JButton" name="WObSTP">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Decision"/>
+            <Property name="text" type="java.lang.String" value="WObSTP"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DecisionActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="WObSTPActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Modification">
@@ -554,20 +554,20 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="WarrantyActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="CustomerRequest">
+        <Component class="javax.swing.JButton" name="SCP">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Customer Req."/>
+            <Property name="text" type="java.lang.String" value="SCP"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustomerRequestActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SCPActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="Customer">
+        <Component class="javax.swing.JButton" name="WOIPIAZ">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Customer"/>
+            <Property name="text" type="java.lang.String" value="WOIPIAZ"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustomerActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="WOIPIAZActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Mileage">

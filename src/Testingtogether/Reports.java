@@ -33,13 +33,13 @@ public class Reports extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        Appointment = new javax.swing.JButton();
-        Feedback = new javax.swing.JButton();
-        Decision = new javax.swing.JButton();
+        SCoWO = new javax.swing.JButton();
+        CustomerRequest = new javax.swing.JButton();
+        WObSTP = new javax.swing.JButton();
         Modification = new javax.swing.JButton();
         Warranty = new javax.swing.JButton();
-        CustomerRequest = new javax.swing.JButton();
-        Customer = new javax.swing.JButton();
+        SCP = new javax.swing.JButton();
+        WOIPIAZ = new javax.swing.JButton();
         Mileage = new javax.swing.JButton();
         WorkOrderLine = new javax.swing.JButton();
         WorkOrderLineAssignment = new javax.swing.JButton();
@@ -113,24 +113,24 @@ public class Reports extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Home Page");
 
-        Appointment.setText("Appointment");
-        Appointment.addActionListener(new java.awt.event.ActionListener() {
+        SCoWO.setText("SCoWO");
+        SCoWO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AppointmentActionPerformed(evt);
+                SCoWOActionPerformed(evt);
             }
         });
 
-        Feedback.setText("Feedback");
-        Feedback.addActionListener(new java.awt.event.ActionListener() {
+        CustomerRequest.setText("CR");
+        CustomerRequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FeedbackActionPerformed(evt);
+                CustomerRequestActionPerformed(evt);
             }
         });
 
-        Decision.setText("Decision");
-        Decision.addActionListener(new java.awt.event.ActionListener() {
+        WObSTP.setText("WObSTP");
+        WObSTP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DecisionActionPerformed(evt);
+                WObSTPActionPerformed(evt);
             }
         });
 
@@ -148,17 +148,17 @@ public class Reports extends javax.swing.JFrame {
             }
         });
 
-        CustomerRequest.setText("Customer Req.");
-        CustomerRequest.addActionListener(new java.awt.event.ActionListener() {
+        SCP.setText("SCP");
+        SCP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CustomerRequestActionPerformed(evt);
+                SCPActionPerformed(evt);
             }
         });
 
-        Customer.setText("Customer");
-        Customer.addActionListener(new java.awt.event.ActionListener() {
+        WOIPIAZ.setText("WOIPIAZ");
+        WOIPIAZ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CustomerActionPerformed(evt);
+                WOIPIAZActionPerformed(evt);
             }
         });
 
@@ -358,7 +358,7 @@ public class Reports extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(Warranty, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Decision, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(WObSTP, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(Modification, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Warranty1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
@@ -387,10 +387,10 @@ public class Reports extends javax.swing.JFrame {
                                 .addComponent(PermitRequest4, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(Customer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Appointment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(CustomerRequest, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Feedback, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(WOIPIAZ, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(SCoWO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(SCP, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(CustomerRequest, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(Mileage, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -438,19 +438,19 @@ public class Reports extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Customer, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(WOIPIAZ, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(WorkOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SubContractor, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Employee, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Appointment, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SCoWO, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Mileage, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Service, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(HOARequest, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(7, 7, 7)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CustomerRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SCP, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(WorkOrderLine, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(EmployeeAssignment, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -458,7 +458,7 @@ public class Reports extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(Feedback, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CustomerRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(WorkOrderLineAssignment, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(PermitRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -469,7 +469,7 @@ public class Reports extends javax.swing.JFrame {
                         .addComponent(Template, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(GovernmentAgency, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(PermitRequest1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(Decision, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(WObSTP, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Modification, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -784,7 +784,7 @@ public class Reports extends javax.swing.JFrame {
 
     private void WorkOrderLineAssignmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WorkOrderLineAssignmentActionPerformed
         // TODO add your handling code here:
-        new Work_Order_Line_Assignment().setVisible(true);
+        new WorkOrdersInProgressInAllZones().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_WorkOrderLineAssignmentActionPerformed
 
@@ -795,35 +795,35 @@ public class Reports extends javax.swing.JFrame {
         
     }//GEN-LAST:event_GovernmentAgencyActionPerformed
 
-    private void CustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustomerActionPerformed
+    private void WOIPIAZActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WOIPIAZActionPerformed
         // TODO add your handling code here:
-        new customer().setVisible(true);
+        new WorkOrdersInProgressInAllZones().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_CustomerActionPerformed
+    }//GEN-LAST:event_WOIPIAZActionPerformed
 
-    private void AppointmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AppointmentActionPerformed
+    private void SCoWOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SCoWOActionPerformed
         // TODO add your handling code here:
-        new Appointment().setVisible(true);
+        new SCoWO().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_AppointmentActionPerformed
+    }//GEN-LAST:event_SCoWOActionPerformed
+
+    private void SCPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SCPActionPerformed
+        // TODO add your handling code here:
+        new SCP().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_SCPActionPerformed
 
     private void CustomerRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustomerRequestActionPerformed
         // TODO add your handling code here:
-        new Customer_Request().setVisible(true);
+        new CustomerRequest().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_CustomerRequestActionPerformed
 
-    private void FeedbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FeedbackActionPerformed
+    private void WObSTPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WObSTPActionPerformed
         // TODO add your handling code here:
-        new Feedback().setVisible(true);
+        new WObSTP().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_FeedbackActionPerformed
-
-    private void DecisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DecisionActionPerformed
-        // TODO add your handling code here:
-        new Decision().setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_DecisionActionPerformed
+    }//GEN-LAST:event_WObSTPActionPerformed
 
     private void ModificationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificationActionPerformed
         // TODO add your handling code here:
@@ -1117,13 +1117,9 @@ public class Reports extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Appointment;
-    private javax.swing.JButton Customer;
     private javax.swing.JButton CustomerRequest;
-    private javax.swing.JButton Decision;
     private javax.swing.JButton Employee;
     private javax.swing.JButton EmployeeAssignment;
-    private javax.swing.JButton Feedback;
     private javax.swing.JButton Forms;
     private javax.swing.JButton GovernmentAgency;
     private javax.swing.JButton GovernmentAgency1;
@@ -1140,10 +1136,14 @@ public class Reports extends javax.swing.JFrame {
     private javax.swing.JButton PermitRequest3;
     private javax.swing.JButton PermitRequest4;
     private javax.swing.JButton PurchaseOrder;
+    private javax.swing.JButton SCP;
+    private javax.swing.JButton SCoWO;
     private javax.swing.JButton Service;
     private javax.swing.JButton SubContractor;
     private javax.swing.JButton SubContractorService;
     private javax.swing.JButton Template;
+    private javax.swing.JButton WOIPIAZ;
+    private javax.swing.JButton WObSTP;
     private javax.swing.JButton Warranty;
     private javax.swing.JButton Warranty1;
     private javax.swing.JButton WorkOrder;
