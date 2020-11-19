@@ -1205,8 +1205,8 @@ public class HOA extends javax.swing.JFrame {
          
                Connection con=DriverManager.getConnection(url,user,pass);
                String sql="select * from HOA"
-                       + " inner join StateProvince on HOA.StateProvinceID = StateProvince.StateProvinceID"
-                       + " inner join Country on StateProvince.CountryID = Country.CountryID";
+                       + " join StateProvince on HOA.StateProvinceID = StateProvince.StateProvinceID"
+                       + " join Country on StateProvince.CountryID = Country.CountryID";
                PreparedStatement pst=con.prepareStatement(sql);
                ResultSet rs=pst.executeQuery();
                DefaultTableModel hoaTM=(DefaultTableModel)HOAtable.getModel();
