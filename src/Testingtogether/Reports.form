@@ -336,7 +336,7 @@
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="RP" max="32767" attributes="0"/>
                               <Component id="SI" min="-2" pref="115" max="-2" attributes="0"/>
-                              <Component id="PurchaseOrder" min="-2" pref="115" max="-2" attributes="0"/>
+                              <Component id="FRIaD" min="-2" pref="115" max="-2" attributes="0"/>
                               <Component id="SubContractorService" min="-2" pref="115" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -484,7 +484,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="PwM" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                      <Component id="PurchaseOrder" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="FRIaD" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="GovernmentAgency2" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="PermitRequest2" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                   </Group>
@@ -690,12 +690,12 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="InspectionActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="PurchaseOrder">
+        <Component class="javax.swing.JButton" name="FRIaD">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Purchase Order"/>
+            <Property name="text" type="java.lang.String" value="FRIaD"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PurchaseOrderActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="FRIaDActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="PermitRequest">

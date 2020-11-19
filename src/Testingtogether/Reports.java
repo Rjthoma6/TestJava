@@ -55,7 +55,7 @@ public class Reports extends javax.swing.JFrame {
         HOARequest = new javax.swing.JButton();
         GovernmentAgency = new javax.swing.JButton();
         Inspection = new javax.swing.JButton();
-        PurchaseOrder = new javax.swing.JButton();
+        FRIaD = new javax.swing.JButton();
         PermitRequest = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         Forms = new javax.swing.JButton();
@@ -267,10 +267,10 @@ public class Reports extends javax.swing.JFrame {
             }
         });
 
-        PurchaseOrder.setText("Purchase Order");
-        PurchaseOrder.addActionListener(new java.awt.event.ActionListener() {
+        FRIaD.setText("FRIaD");
+        FRIaD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PurchaseOrderActionPerformed(evt);
+                FRIaDActionPerformed(evt);
             }
         });
 
@@ -365,7 +365,7 @@ public class Reports extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(RP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(SI, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(PurchaseOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(FRIaD, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(SubContractorService, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -479,7 +479,7 @@ public class Reports extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PwM, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PurchaseOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(FRIaD, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(GovernmentAgency2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PermitRequest2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -855,11 +855,11 @@ public class Reports extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_SubContractorActionPerformed
 
-    private void PurchaseOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PurchaseOrderActionPerformed
+    private void FRIaDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FRIaDActionPerformed
         // TODO add your handling code here:
-        new PurchaseOrder().setVisible(true);
+        new FRIaD().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_PurchaseOrderActionPerformed
+    }//GEN-LAST:event_FRIaDActionPerformed
 
     private void EmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmployeeActionPerformed
         // TODO add your handling code here:
@@ -1124,6 +1124,7 @@ public class Reports extends javax.swing.JFrame {
     private javax.swing.JButton CustomerRequest;
     private javax.swing.JButton Employee;
     private javax.swing.JButton EmployeeAssignment;
+    private javax.swing.JButton FRIaD;
     private javax.swing.JButton Forms;
     private javax.swing.JButton GovernmentAgency;
     private javax.swing.JButton GovernmentAgency1;
@@ -1140,7 +1141,6 @@ public class Reports extends javax.swing.JFrame {
     private javax.swing.JButton PermitRequest2;
     private javax.swing.JButton PermitRequest3;
     private javax.swing.JButton PermitRequest4;
-    private javax.swing.JButton PurchaseOrder;
     private javax.swing.JButton PwM;
     private javax.swing.JButton RP;
     private javax.swing.JButton SCP;
