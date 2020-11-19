@@ -43,6 +43,7 @@ public class SCoWO extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         Appointmenttable = new javax.swing.JTable();
         btnNew = new javax.swing.JButton();
+        Reports2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,6 +85,8 @@ public class SCoWO extends javax.swing.JFrame {
             }
         });
 
+        Reports2.setText("Reports");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -91,20 +94,22 @@ public class SCoWO extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 929, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(430, 430, 430)
                         .addComponent(btnNew))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(374, 374, 374)
-                        .addComponent(jLabel5)))
+                        .addComponent(jLabel5))
+                    .addComponent(Reports2)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 926, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(39, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(54, Short.MAX_VALUE)
+                .addComponent(Reports2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnNew)
@@ -218,6 +223,7 @@ public class SCoWO extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable Appointmenttable;
+    private javax.swing.JButton Reports2;
     private javax.swing.JButton btnNew;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;

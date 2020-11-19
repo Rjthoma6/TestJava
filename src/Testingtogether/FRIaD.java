@@ -43,6 +43,8 @@ public class FRIaD extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         Appointmenttable = new javax.swing.JTable();
         btnNew = new javax.swing.JButton();
+        Reports3 = new javax.swing.JButton();
+        Reports4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,6 +86,10 @@ public class FRIaD extends javax.swing.JFrame {
             }
         });
 
+        Reports3.setText("Reports");
+
+        Reports4.setText("Reports");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -98,19 +104,31 @@ public class FRIaD extends javax.swing.JFrame {
                         .addComponent(btnNew))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(366, 366, 366)
-                        .addComponent(jLabel5)))
+                        .addComponent(jLabel5))
+                    .addComponent(Reports4))
                 .addContainerGap(39, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Reports3)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(54, Short.MAX_VALUE)
+                .addComponent(Reports4, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnNew)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 564, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Reports3)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
@@ -273,6 +291,8 @@ public class FRIaD extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable Appointmenttable;
+    private javax.swing.JButton Reports3;
+    private javax.swing.JButton Reports4;
     private javax.swing.JButton btnNew;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
