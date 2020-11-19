@@ -34,7 +34,7 @@ public class Testinter extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 102, 51));
+        jPanel1.setBackground(new java.awt.Color(153, 0, 51));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 10));
         jPanel1.setForeground(new java.awt.Color(10, 10, 10));
         jPanel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
