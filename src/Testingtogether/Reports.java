@@ -46,27 +46,27 @@ public class Reports extends javax.swing.JFrame {
         RP = new javax.swing.JButton();
         SWOLwH = new javax.swing.JButton();
         SI = new javax.swing.JButton();
-        SubContractor = new javax.swing.JButton();
+        IPWOL = new javax.swing.JButton();
         CRi2019aWOCtY = new javax.swing.JButton();
-        Service = new javax.swing.JButton();
-        Employee = new javax.swing.JButton();
-        HOA = new javax.swing.JButton();
-        EmployeeAssignment = new javax.swing.JButton();
-        HOARequest = new javax.swing.JButton();
-        GovernmentAgency = new javax.swing.JButton();
-        Inspection = new javax.swing.JButton();
+        FWOCMA = new javax.swing.JButton();
+        EWI2020 = new javax.swing.JButton();
+        IoAT = new javax.swing.JButton();
+        NoAAfEE = new javax.swing.JButton();
+        HRSD = new javax.swing.JButton();
+        MTpWO = new javax.swing.JButton();
+        ASfWOD = new javax.swing.JButton();
         FRIaD = new javax.swing.JButton();
-        PermitRequest = new javax.swing.JButton();
+        SToS = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         Forms = new javax.swing.JButton();
         AbMA = new javax.swing.JButton();
-        GovernmentAgency1 = new javax.swing.JButton();
-        GovernmentAgency2 = new javax.swing.JButton();
-        GovernmentAgency3 = new javax.swing.JButton();
-        PermitRequest1 = new javax.swing.JButton();
-        PermitRequest2 = new javax.swing.JButton();
-        PermitRequest3 = new javax.swing.JButton();
-        PermitRequest4 = new javax.swing.JButton();
+        GPR = new javax.swing.JButton();
+        HSPRAI = new javax.swing.JButton();
+        SZA = new javax.swing.JButton();
+        CoSCtWO = new javax.swing.JButton();
+        FoWO = new javax.swing.JButton();
+        FI = new javax.swing.JButton();
+        PR = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu10 = new javax.swing.JMenu();
         jMenuItem29 = new javax.swing.JMenuItem();
@@ -204,10 +204,10 @@ public class Reports extends javax.swing.JFrame {
             }
         });
 
-        SubContractor.setText("Sub-Contractor");
-        SubContractor.addActionListener(new java.awt.event.ActionListener() {
+        IPWOL.setText("IPWOL");
+        IPWOL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SubContractorActionPerformed(evt);
+                IPWOLActionPerformed(evt);
             }
         });
 
@@ -218,52 +218,52 @@ public class Reports extends javax.swing.JFrame {
             }
         });
 
-        Service.setText("Service");
-        Service.addActionListener(new java.awt.event.ActionListener() {
+        FWOCMA.setText("FWOCMA");
+        FWOCMA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ServiceActionPerformed(evt);
+                FWOCMAActionPerformed(evt);
             }
         });
 
-        Employee.setText("Employee");
-        Employee.addActionListener(new java.awt.event.ActionListener() {
+        EWI2020.setText("EWI2020");
+        EWI2020.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EmployeeActionPerformed(evt);
+                EWI2020ActionPerformed(evt);
             }
         });
 
-        HOA.setText("HOA");
-        HOA.addActionListener(new java.awt.event.ActionListener() {
+        IoAT.setText("IoAT");
+        IoAT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HOAActionPerformed(evt);
+                IoATActionPerformed(evt);
             }
         });
 
-        EmployeeAssignment.setText("Employee Assign.");
-        EmployeeAssignment.addActionListener(new java.awt.event.ActionListener() {
+        NoAAfEE.setText("NoAAfEE");
+        NoAAfEE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EmployeeAssignmentActionPerformed(evt);
+                NoAAfEEActionPerformed(evt);
             }
         });
 
-        HOARequest.setText("HOA Request");
-        HOARequest.addActionListener(new java.awt.event.ActionListener() {
+        HRSD.setText("HRSD");
+        HRSD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HOARequestActionPerformed(evt);
+                HRSDActionPerformed(evt);
             }
         });
 
-        GovernmentAgency.setText("Gov't Agency");
-        GovernmentAgency.addActionListener(new java.awt.event.ActionListener() {
+        MTpWO.setText("MTpWO");
+        MTpWO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GovernmentAgencyActionPerformed(evt);
+                MTpWOActionPerformed(evt);
             }
         });
 
-        Inspection.setText("Inspection");
-        Inspection.addActionListener(new java.awt.event.ActionListener() {
+        ASfWOD.setText("ASfWOD");
+        ASfWOD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                InspectionActionPerformed(evt);
+                ASfWODActionPerformed(evt);
             }
         });
 
@@ -274,10 +274,10 @@ public class Reports extends javax.swing.JFrame {
             }
         });
 
-        PermitRequest.setText("Permit Request");
-        PermitRequest.addActionListener(new java.awt.event.ActionListener() {
+        SToS.setText("SToS");
+        SToS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PermitRequestActionPerformed(evt);
+                SToSActionPerformed(evt);
             }
         });
 
@@ -299,52 +299,52 @@ public class Reports extends javax.swing.JFrame {
             }
         });
 
-        GovernmentAgency1.setText("Gov't Agency");
-        GovernmentAgency1.addActionListener(new java.awt.event.ActionListener() {
+        GPR.setText("GPR");
+        GPR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GovernmentAgency1ActionPerformed(evt);
+                GPRActionPerformed(evt);
             }
         });
 
-        GovernmentAgency2.setText("Gov't Agency");
-        GovernmentAgency2.addActionListener(new java.awt.event.ActionListener() {
+        HSPRAI.setText("HOASPRAI");
+        HSPRAI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GovernmentAgency2ActionPerformed(evt);
+                HSPRAIActionPerformed(evt);
             }
         });
 
-        GovernmentAgency3.setText("Gov't Agency");
-        GovernmentAgency3.addActionListener(new java.awt.event.ActionListener() {
+        SZA.setText("SZA");
+        SZA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GovernmentAgency3ActionPerformed(evt);
+                SZAActionPerformed(evt);
             }
         });
 
-        PermitRequest1.setText("Permit Request");
-        PermitRequest1.addActionListener(new java.awt.event.ActionListener() {
+        CoSCtWO.setText("CoSCtWO");
+        CoSCtWO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PermitRequest1ActionPerformed(evt);
+                CoSCtWOActionPerformed(evt);
             }
         });
 
-        PermitRequest2.setText("Permit Request");
-        PermitRequest2.addActionListener(new java.awt.event.ActionListener() {
+        FoWO.setText("FoWO");
+        FoWO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PermitRequest2ActionPerformed(evt);
+                FoWOActionPerformed(evt);
             }
         });
 
-        PermitRequest3.setText("Permit Request");
-        PermitRequest3.addActionListener(new java.awt.event.ActionListener() {
+        FI.setText("FI");
+        FI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PermitRequest3ActionPerformed(evt);
+                FIActionPerformed(evt);
             }
         });
 
-        PermitRequest4.setText("Permit Request");
-        PermitRequest4.addActionListener(new java.awt.event.ActionListener() {
+        PR.setText("PR");
+        PR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PermitRequest4ActionPerformed(evt);
+                PRActionPerformed(evt);
             }
         });
 
@@ -370,21 +370,21 @@ public class Reports extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(GovernmentAgency, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(MTpWO, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(PermitRequest1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(CoSCtWO, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(GovernmentAgency1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(GPR, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(PermitRequest3, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(FI, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(GovernmentAgency2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(HSPRAI, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(PermitRequest2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(FoWO, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(GovernmentAgency3, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(SZA, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(PermitRequest4, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(PR, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(WOIPIAZ, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -400,21 +400,21 @@ public class Reports extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(SubContractor, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(IPWOL, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(Service, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(FWOCMA, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(EmployeeAssignment, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Inspection, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(NoAAfEE, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(ASfWOD, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(HOARequest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(HOA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(PermitRequest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Employee, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(HRSD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(IoAT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(SToS, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(EWI2020, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(0, 259, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -440,54 +440,54 @@ public class Reports extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(WOIPIAZ, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SWOLwH, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SubContractor, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Employee, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(IPWOL, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(EWI2020, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SCoWO, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LoASCiT, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Service, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(HOARequest, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(FWOCMA, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(HRSD, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(7, 7, 7)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(SCP, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(LoCwCWO, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(EmployeeAssignment, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(HOA, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(NoAAfEE, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(IoAT, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(CustomerRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(PPCbTaaGA, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(PermitRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(Inspection, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(SToS, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ASfWOD, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(RP, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(GovernmentAgency, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(PermitRequest1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(MTpWO, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CoSCtWO, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(WObSTP, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ARpHOA, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SI, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(GovernmentAgency1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PermitRequest3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(GPR, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(FI, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PwM, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(FRIaD, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(GovernmentAgency2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PermitRequest2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(HSPRAI, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(FoWO, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AbMA, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CRi2019aWOCtY, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(GovernmentAgency3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PermitRequest4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(SZA, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PR, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 146, Short.MAX_VALUE)
                 .addComponent(Forms, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36))
@@ -764,11 +764,11 @@ public class Reports extends javax.swing.JFrame {
         
     }//GEN-LAST:event_RPActionPerformed
 
-    private void ServiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ServiceActionPerformed
+    private void FWOCMAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FWOCMAActionPerformed
         // TODO add your handling code here:
-        new Service().setVisible(true);
+        new FWOCMA().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_ServiceActionPerformed
+    }//GEN-LAST:event_FWOCMAActionPerformed
 
     private void CRi2019aWOCtYActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CRi2019aWOCtYActionPerformed
         // TODO add your handling code here:
@@ -776,11 +776,11 @@ public class Reports extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_CRi2019aWOCtYActionPerformed
 
-    private void HOARequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HOARequestActionPerformed
+    private void HRSDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HRSDActionPerformed
         // TODO add your handling code here:
-        new HOARequest().setVisible(true);
+        new HRSD().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_HOARequestActionPerformed
+    }//GEN-LAST:event_HRSDActionPerformed
 
     private void PPCbTaaGAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PPCbTaaGAActionPerformed
         // TODO add your handling code here:
@@ -788,12 +788,12 @@ public class Reports extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_PPCbTaaGAActionPerformed
 
-    private void GovernmentAgencyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GovernmentAgencyActionPerformed
+    private void MTpWOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MTpWOActionPerformed
         // TODO add your handling code here:
-        new GovernmentAgency().setVisible(true);
+        new MTpWO().setVisible(true);
         this.setVisible(false);
         
-    }//GEN-LAST:event_GovernmentAgencyActionPerformed
+    }//GEN-LAST:event_MTpWOActionPerformed
 
     private void WOIPIAZActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WOIPIAZActionPerformed
         // TODO add your handling code here:
@@ -849,11 +849,11 @@ public class Reports extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_SIActionPerformed
 
-    private void SubContractorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubContractorActionPerformed
+    private void IPWOLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IPWOLActionPerformed
         // TODO add your handling code here:
-        new Subcontractor().setVisible(true);
+        new IPWOL().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_SubContractorActionPerformed
+    }//GEN-LAST:event_IPWOLActionPerformed
 
     private void FRIaDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FRIaDActionPerformed
         // TODO add your handling code here:
@@ -861,35 +861,35 @@ public class Reports extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_FRIaDActionPerformed
 
-    private void EmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmployeeActionPerformed
+    private void EWI2020ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EWI2020ActionPerformed
         // TODO add your handling code here:
-        new Employee().setVisible(true);
+        new EWi2020().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_EmployeeActionPerformed
+    }//GEN-LAST:event_EWI2020ActionPerformed
 
-    private void EmployeeAssignmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmployeeAssignmentActionPerformed
+    private void NoAAfEEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NoAAfEEActionPerformed
         // TODO add your handling code here:
-        new employee_assignment().setVisible(true);
+        new NoAAfEE().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_EmployeeAssignmentActionPerformed
+    }//GEN-LAST:event_NoAAfEEActionPerformed
 
-    private void HOAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HOAActionPerformed
+    private void IoATActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IoATActionPerformed
         // TODO add your handling code here:
-        new HOA().setVisible(true);
+        new IoAT().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_HOAActionPerformed
+    }//GEN-LAST:event_IoATActionPerformed
 
-    private void InspectionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InspectionActionPerformed
+    private void ASfWODActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ASfWODActionPerformed
         // TODO add your handling code here:
-        new Inspection().setVisible(true);
+        new ASfWOD().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_InspectionActionPerformed
+    }//GEN-LAST:event_ASfWODActionPerformed
 
-    private void PermitRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PermitRequestActionPerformed
+    private void SToSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SToSActionPerformed
         // TODO add your handling code here:
-        new PermitRequest().setVisible(true);
+        new SToS().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_PermitRequestActionPerformed
+    }//GEN-LAST:event_SToSActionPerformed
 
     private void jMenuItem29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem29ActionPerformed
         // TODO add your handling code here:
@@ -1052,33 +1052,42 @@ public class Reports extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_AbMAActionPerformed
 
-    private void GovernmentAgency1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GovernmentAgency1ActionPerformed
+    private void GPRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GPRActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_GovernmentAgency1ActionPerformed
+        new GPR().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_GPRActionPerformed
 
-    private void GovernmentAgency2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GovernmentAgency2ActionPerformed
+    private void HSPRAIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HSPRAIActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_GovernmentAgency2ActionPerformed
+        new HSRRAI().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_HSPRAIActionPerformed
 
-    private void GovernmentAgency3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GovernmentAgency3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_GovernmentAgency3ActionPerformed
+    private void SZAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SZAActionPerformed
+ new SZA().setVisible(true);
+        this.setVisible(false);       // TODO add your handling code here:
+    }//GEN-LAST:event_SZAActionPerformed
 
-    private void PermitRequest1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PermitRequest1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PermitRequest1ActionPerformed
+    private void CoSCtWOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CoSCtWOActionPerformed
+new CoSCtWO().setVisible(true);
+        this.setVisible(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_CoSCtWOActionPerformed
 
-    private void PermitRequest2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PermitRequest2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PermitRequest2ActionPerformed
+    private void FoWOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FoWOActionPerformed
+new FoWO().setVisible(true);
+        this.setVisible(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_FoWOActionPerformed
 
-    private void PermitRequest3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PermitRequest3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PermitRequest3ActionPerformed
+    private void FIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FIActionPerformed
+new FI().setVisible(true);
+        this.setVisible(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_FIActionPerformed
 
-    private void PermitRequest4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PermitRequest4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PermitRequest4ActionPerformed
+    private void PRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PRActionPerformed
+new PR().setVisible(true);
+        this.setVisible(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_PRActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1120,36 +1129,36 @@ public class Reports extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ARpHOA;
+    private javax.swing.JButton ASfWOD;
     private javax.swing.JButton AbMA;
     private javax.swing.JButton CRi2019aWOCtY;
+    private javax.swing.JButton CoSCtWO;
     private javax.swing.JButton CustomerRequest;
-    private javax.swing.JButton Employee;
-    private javax.swing.JButton EmployeeAssignment;
+    private javax.swing.JButton EWI2020;
+    private javax.swing.JButton FI;
     private javax.swing.JButton FRIaD;
+    private javax.swing.JButton FWOCMA;
+    private javax.swing.JButton FoWO;
     private javax.swing.JButton Forms;
-    private javax.swing.JButton GovernmentAgency;
-    private javax.swing.JButton GovernmentAgency1;
-    private javax.swing.JButton GovernmentAgency2;
-    private javax.swing.JButton GovernmentAgency3;
-    private javax.swing.JButton HOA;
-    private javax.swing.JButton HOARequest;
-    private javax.swing.JButton Inspection;
+    private javax.swing.JButton GPR;
+    private javax.swing.JButton HRSD;
+    private javax.swing.JButton HSPRAI;
+    private javax.swing.JButton IPWOL;
+    private javax.swing.JButton IoAT;
     private javax.swing.JButton LoASCiT;
     private javax.swing.JButton LoCwCWO;
+    private javax.swing.JButton MTpWO;
+    private javax.swing.JButton NoAAfEE;
     private javax.swing.JButton PPCbTaaGA;
-    private javax.swing.JButton PermitRequest;
-    private javax.swing.JButton PermitRequest1;
-    private javax.swing.JButton PermitRequest2;
-    private javax.swing.JButton PermitRequest3;
-    private javax.swing.JButton PermitRequest4;
+    private javax.swing.JButton PR;
     private javax.swing.JButton PwM;
     private javax.swing.JButton RP;
     private javax.swing.JButton SCP;
     private javax.swing.JButton SCoWO;
     private javax.swing.JButton SI;
+    private javax.swing.JButton SToS;
     private javax.swing.JButton SWOLwH;
-    private javax.swing.JButton Service;
-    private javax.swing.JButton SubContractor;
+    private javax.swing.JButton SZA;
     private javax.swing.JButton WOIPIAZ;
     private javax.swing.JButton WObSTP;
     private javax.swing.JLabel jLabel1;
