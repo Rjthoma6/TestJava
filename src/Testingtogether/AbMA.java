@@ -17,12 +17,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Andrew Choe
  */
-public class PwM extends javax.swing.JFrame {
+public class AbMA extends javax.swing.JFrame {
 
     /**
      * Creates new form Assignment
      */
-    public PwM() {
+    public AbMA() {
         initComponents();
         
     }
@@ -48,7 +48,7 @@ public class PwM extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel5.setText("Projects with Modification(s)");
+        jLabel5.setText("Appointments by Meeting Agenda");
 
         Appointmenttable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -64,7 +64,7 @@ public class PwM extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Modification", "Work Order ID", "Project Status", "Customer Number", "Last Name", "First Name", "Employee First Name", "Employee Last Name"
+                "Appointment Agenda", "Appointment Date", "Customer ID", "Last Name", "First Name", "Phone Number", "Customer Status", "Work Order ID"
             }
         ) {
             Class[] types = new Class [] {
@@ -97,7 +97,7 @@ public class PwM extends javax.swing.JFrame {
                         .addGap(430, 430, 430)
                         .addComponent(btnNew))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(393, 393, 393)
+                        .addGap(381, 381, 381)
                         .addComponent(jLabel5)))
                 .addContainerGap(39, Short.MAX_VALUE))
         );
@@ -124,22 +124,21 @@ public class PwM extends javax.swing.JFrame {
         {
          
                Connection con=DriverManager.getConnection(url,user,pass);
-               String sql="SELECT" +
-" Modification.ModificationName AS 'Modification'," +
-" WorkOrder.WorkOrderID  AS 'Work Order ID'," +
-" WorkOrderStatus.WorkOrderStatusName AS 'Project Status'," +
-" Customer.CustomerID  AS 'Customer Number'," +
-" Customer.Lastname  AS 'Last Name'," +
-" Customer.Firstname  AS 'First Name'," +
-" Employee.Firstname  AS 'Employee First Name'," +
-" Employee.Lastname  AS 'Employee Last Name'" +
-" FROM WorkOrder" +
-" JOIN Modification ON WorkOrder.WorkOrderID = Modification.WorkOrderID" +
-" JOIN Customer ON WorkOrder.CustomerID = Customer.CustomerID" +
-" JOIN WorkOrderStatus ON WorkOrder.WorkOrderStatusID = WorkOrderStatus.WorkOrderStatusID" +
-" JOIN EmployeeAssignment ON WorkOrder.WorkOrderID = EmployeeAssignment.WorkOrderID" +
-" JOIN Employee ON EmployeeAssignment.EmployeeID = Employee.EmployeeID" +
-" GROUP BY Modification.ModificationName, WorkOrder.WorkOrderID, WorkOrderStatus.WorkOrderStatusName, Customer.CustomerID, Customer.Lastname, Customer.Firstname, Employee.Firstname, Employee.Lastname";
+               String sql="SELECT " +
+"Appointment.AppointmentPurpose AS 'Appointment Agenda', " +
+"Appointment.AppointmentDate AS 'Appointment Date', " +
+"Customer.CustomerID AS 'Customer ID', " +
+"Customer.Lastname AS 'Last Name', " +
+"Customer.Firstname AS 'First Name', " +
+"Customer.Phone1 AS 'Phone Number', " +
+"CustomerStatus.CustomerStatusName AS 'Customer Status', " +
+"WorkOrder.WorkOrderID AS 'Work Order ID' " +
+"From WorkOrder " +
+"Join Appointment ON WorkOrder.WorkOrderID = Appointment.WorkOrderID " +
+"Join Customer ON WorkOrder.CustomerID = Customer.CustomerID " +
+"Join CustomerStatus ON Customer.CustomerStatusID = CustomerStatus.CustomerStatusID " +
+"WHERE Appointment.AppointmentPurpose= 'Final Walkthrough' " +
+"GROUP BY Appointment.AppointmentID, Appointment.AppointmentPurpose, Appointment.AppointmentDate, Customer.CustomerID, Customer.Lastname, Customer.Firstname, Customer.Phone1, CustomerStatus.CustomerStatusName, WorkOrder.WorkOrderID";
 
                
 
@@ -151,7 +150,7 @@ public class PwM extends javax.swing.JFrame {
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("Modification"),rs.getString("Work Order ID"),rs.getString("Project Status"),rs.getString("Customer Number"), rs.getString("Last Name"), rs.getString("First Name"),  rs.getString("Employee First Name"),  rs.getString("Employee Last Name")};
+                   Object o[]={rs.getString("Appointment Agenda"),rs.getString("Appointment Date"),rs.getString("Customer ID"),rs.getString("Last Name"), rs.getString("First Name"), rs.getString("Phone Number"),  rs.getString("Customer Status"),  rs.getString("Work Order ID")};
                    AppointmentTM.addRow(o);
                }
         }
@@ -180,13 +179,13 @@ public class PwM extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PwM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AbMA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PwM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AbMA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PwM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AbMA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PwM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AbMA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -224,7 +223,7 @@ public class PwM extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PwM().setVisible(true);
+                new AbMA().setVisible(true);
             }
         });
     }

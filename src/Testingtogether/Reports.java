@@ -36,8 +36,8 @@ public class Reports extends javax.swing.JFrame {
         SCoWO = new javax.swing.JButton();
         CustomerRequest = new javax.swing.JButton();
         WObSTP = new javax.swing.JButton();
-        Modification = new javax.swing.JButton();
-        Warranty = new javax.swing.JButton();
+        ARpHOA = new javax.swing.JButton();
+        PwM = new javax.swing.JButton();
         SCP = new javax.swing.JButton();
         WOIPIAZ = new javax.swing.JButton();
         Mileage = new javax.swing.JButton();
@@ -59,7 +59,7 @@ public class Reports extends javax.swing.JFrame {
         PermitRequest = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         Forms = new javax.swing.JButton();
-        Warranty1 = new javax.swing.JButton();
+        AbMA = new javax.swing.JButton();
         GovernmentAgency1 = new javax.swing.JButton();
         GovernmentAgency2 = new javax.swing.JButton();
         GovernmentAgency3 = new javax.swing.JButton();
@@ -134,17 +134,17 @@ public class Reports extends javax.swing.JFrame {
             }
         });
 
-        Modification.setText("Modification");
-        Modification.addActionListener(new java.awt.event.ActionListener() {
+        ARpHOA.setText("ARpHOA");
+        ARpHOA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModificationActionPerformed(evt);
+                ARpHOAActionPerformed(evt);
             }
         });
 
-        Warranty.setText("Warranty");
-        Warranty.addActionListener(new java.awt.event.ActionListener() {
+        PwM.setText("PwM");
+        PwM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                WarrantyActionPerformed(evt);
+                PwMActionPerformed(evt);
             }
         });
 
@@ -292,10 +292,10 @@ public class Reports extends javax.swing.JFrame {
             }
         });
 
-        Warranty1.setText("Warranty");
-        Warranty1.addActionListener(new java.awt.event.ActionListener() {
+        AbMA.setText("AbMA");
+        AbMA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Warranty1ActionPerformed(evt);
+                AbMAActionPerformed(evt);
             }
         });
 
@@ -357,10 +357,10 @@ public class Reports extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(Warranty, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(PwM, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(WObSTP, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Modification, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Warranty1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(ARpHOA, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(AbMA, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(Template, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -472,19 +472,19 @@ public class Reports extends javax.swing.JFrame {
                     .addComponent(WObSTP, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Modification, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ARpHOA, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(WorkOrderLineForm, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(GovernmentAgency1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PermitRequest3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Warranty, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PwM, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PurchaseOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(GovernmentAgency2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PermitRequest2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Warranty1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AbMA, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SubContractorService, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(GovernmentAgency3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PermitRequest4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -825,17 +825,17 @@ public class Reports extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_WObSTPActionPerformed
 
-    private void ModificationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificationActionPerformed
+    private void ARpHOAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ARpHOAActionPerformed
         // TODO add your handling code here:
-        new Modification().setVisible(true);
+        new ARpHOA().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_ModificationActionPerformed
+    }//GEN-LAST:event_ARpHOAActionPerformed
 
-    private void WarrantyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WarrantyActionPerformed
+    private void PwMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PwMActionPerformed
         // TODO add your handling code here:
-        new Warranty().setVisible(true);
+        new PwM().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_WarrantyActionPerformed
+    }//GEN-LAST:event_PwMActionPerformed
 
     private void WorkOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WorkOrderActionPerformed
         // TODO add your handling code here:
@@ -1046,9 +1046,11 @@ public class Reports extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_FormsActionPerformed
 
-    private void Warranty1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Warranty1ActionPerformed
+    private void AbMAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AbMAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Warranty1ActionPerformed
+        new AbMA().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_AbMAActionPerformed
 
     private void GovernmentAgency1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GovernmentAgency1ActionPerformed
         // TODO add your handling code here:
@@ -1117,6 +1119,8 @@ public class Reports extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ARpHOA;
+    private javax.swing.JButton AbMA;
     private javax.swing.JButton CustomerRequest;
     private javax.swing.JButton Employee;
     private javax.swing.JButton EmployeeAssignment;
@@ -1129,13 +1133,13 @@ public class Reports extends javax.swing.JFrame {
     private javax.swing.JButton HOARequest;
     private javax.swing.JButton Inspection;
     private javax.swing.JButton Mileage;
-    private javax.swing.JButton Modification;
     private javax.swing.JButton PermitRequest;
     private javax.swing.JButton PermitRequest1;
     private javax.swing.JButton PermitRequest2;
     private javax.swing.JButton PermitRequest3;
     private javax.swing.JButton PermitRequest4;
     private javax.swing.JButton PurchaseOrder;
+    private javax.swing.JButton PwM;
     private javax.swing.JButton SCP;
     private javax.swing.JButton SCoWO;
     private javax.swing.JButton Service;
@@ -1144,8 +1148,6 @@ public class Reports extends javax.swing.JFrame {
     private javax.swing.JButton Template;
     private javax.swing.JButton WOIPIAZ;
     private javax.swing.JButton WObSTP;
-    private javax.swing.JButton Warranty;
-    private javax.swing.JButton Warranty1;
     private javax.swing.JButton WorkOrder;
     private javax.swing.JButton WorkOrderLine;
     private javax.swing.JButton WorkOrderLineAssignment;

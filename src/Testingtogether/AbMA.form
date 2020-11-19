@@ -34,7 +34,7 @@
                       <Component id="btnNew" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="393" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="381" max="-2" attributes="0"/>
                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -65,7 +65,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Projects with Modification(s)"/>
+        <Property name="text" type="java.lang.String" value="Appointments by Meeting Agenda"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -79,14 +79,14 @@
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="8" rowCount="10">
-                <Column editable="true" title="Modification" type="java.lang.Integer"/>
-                <Column editable="true" title="Work Order ID" type="java.lang.Integer"/>
-                <Column editable="true" title="Project Status" type="java.lang.Object"/>
-                <Column editable="true" title="Customer Number" type="java.lang.Object"/>
+                <Column editable="true" title="Appointment Agenda" type="java.lang.Integer"/>
+                <Column editable="true" title="Appointment Date" type="java.lang.Integer"/>
+                <Column editable="true" title="Customer ID" type="java.lang.Object"/>
                 <Column editable="true" title="Last Name" type="java.lang.Object"/>
                 <Column editable="true" title="First Name" type="java.lang.Object"/>
-                <Column editable="true" title="Employee First Name" type="java.lang.Object"/>
-                <Column editable="true" title="Employee Last Name" type="java.lang.Object"/>
+                <Column editable="true" title="Phone Number" type="java.lang.Object"/>
+                <Column editable="true" title="Customer Status" type="java.lang.Object"/>
+                <Column editable="true" title="Work Order ID" type="java.lang.Object"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">

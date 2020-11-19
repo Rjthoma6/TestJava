@@ -327,10 +327,10 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="Warranty" max="32767" attributes="0"/>
+                              <Component id="PwM" max="32767" attributes="0"/>
                               <Component id="WObSTP" alignment="0" max="32767" attributes="0"/>
-                              <Component id="Modification" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
-                              <Component id="Warranty1" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                              <Component id="ARpHOA" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                              <Component id="AbMA" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -476,21 +476,21 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="Modification" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="ARpHOA" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="WorkOrderLineForm" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="GovernmentAgency1" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="PermitRequest3" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="Warranty" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="PwM" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="PurchaseOrder" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="GovernmentAgency2" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="PermitRequest2" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="Warranty1" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="AbMA" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="SubContractorService" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="GovernmentAgency3" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="PermitRequest4" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
@@ -538,20 +538,20 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="WObSTPActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="Modification">
+        <Component class="javax.swing.JButton" name="ARpHOA">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Modification"/>
+            <Property name="text" type="java.lang.String" value="ARpHOA"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ModificationActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ARpHOAActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="Warranty">
+        <Component class="javax.swing.JButton" name="PwM">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Warranty"/>
+            <Property name="text" type="java.lang.String" value="PwM"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="WarrantyActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PwMActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="SCP">
@@ -725,12 +725,12 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="FormsActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="Warranty1">
+        <Component class="javax.swing.JButton" name="AbMA">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Warranty"/>
+            <Property name="text" type="java.lang.String" value="AbMA"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Warranty1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AbMAActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="GovernmentAgency1">
