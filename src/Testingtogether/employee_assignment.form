@@ -288,7 +288,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
@@ -297,10 +297,7 @@
                                               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                                           </Group>
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Component id="jLabel10" min="-2" pref="174" max="-2" attributes="0"/>
-                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          </Group>
+                                          <Component id="jLabel10" alignment="1" min="-2" pref="174" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                                   </Group>
@@ -310,15 +307,15 @@
                                   </Group>
                               </Group>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="zonecombo" min="-2" max="-2" attributes="0"/>
-                                  <Component id="subcontractoridform" min="-2" pref="81" max="-2" attributes="0"/>
-                                  <Component id="easbox" min="-2" pref="82" max="-2" attributes="0"/>
+                                  <Component id="subcontractoridform" max="32767" attributes="0"/>
+                                  <Component id="zonecombo" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="easbox" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel7" min="-2" pref="174" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="employeeidtxt" min="-2" pref="82" max="-2" attributes="0"/>
+                              <Component id="employeeidtxt" min="-2" pref="103" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -344,9 +341,10 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="employeeatxt" min="-2" pref="39" max="-2" attributes="0"/>
-                          <Component id="workorderidtxt" min="-2" pref="107" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="workorderidtxt" pref="103" max="32767" attributes="0"/>
+                          <Component id="employeeatxt" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -481,7 +479,7 @@
                 <Column editable="true" title="Work Order ID" type="java.lang.Integer"/>
                 <Column editable="true" title="Employee ID" type="java.lang.Integer"/>
                 <Column editable="true" title="SubContractorID" type="java.lang.Integer"/>
-                <Column editable="true" title="ZoneID" type="java.lang.Integer"/>
+                <Column editable="true" title="Zone" type="java.lang.Integer"/>
                 <Column editable="true" title="Employee Assignment Status ID" type="java.lang.Integer"/>
               </Table>
             </Property>
