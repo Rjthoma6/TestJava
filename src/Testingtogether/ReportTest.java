@@ -48,27 +48,27 @@ public class ReportTest extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel5.setText("Report 1");
+        jLabel5.setText("Work Orders In Progress in All Zones");
 
         Appointmenttable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "CustomerID", "Last Name", "Phone", "Site Location", "State", "Country Name"
+                "Work Order Status", "Date", "Work Order ID", "Customer", "Last Name", "First Name", "Phone Number", "Zone", "Site Location", "State Province", "Zip Code", "Country", "Employee First Name", "Employee Last Name"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Integer.class, java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -89,29 +89,28 @@ public class ReportTest extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(89, 89, 89)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 684, Short.MAX_VALUE)
-                .addGap(327, 327, 327))
-            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(347, 347, 347)
+                        .addGap(36, 36, 36)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 929, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(430, 430, 430)
                         .addComponent(btnNew))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(364, 364, 364)
+                        .addGap(357, 357, 357)
                         .addComponent(jLabel5)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(49, Short.MAX_VALUE)
+                .addContainerGap(54, Short.MAX_VALUE)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnNew)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(390, 390, 390))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 564, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -126,9 +125,15 @@ public class ReportTest extends javax.swing.JFrame {
          
                Connection con=DriverManager.getConnection(url,user,pass);
                String sql="Select * from Customer"
-                       + " inner join WorkOrder on Customer.CustomerID = WorkOrder.CustomerID"
-                       + " inner join StateProvince on WorkOrder.StateProvinceID = StateProvince.StateProvinceID"
-                       + " inner join Country on StateProvince.CountryID = Country.CountryID";
+    +" Join WorkOrder ON WorkOrder.CustomerID = Customer.CustomerID"
+    +" Join EmployeeAssignment ON EmployeeAssignment.WorkOrderID = WorkOrder.WorkOrderID"
+    +" Join Employee ON Employee.EmployeeID = EmployeeAssignment.EmployeeID"
+    +" Join WorkOrderStatus ON WorkOrderStatus.WorkOrderStatusID = WorkOrder.WorkOrderStatusID"
+    +" Join Zone ON Zone.ZoneID = WorkOrder.ZoneID"
+                       +" where WorkOrderStatus.WorkOrderStatusName = 'In-Progress'";
+               
+
+                      
                PreparedStatement pst=con.prepareStatement(sql);
                ResultSet rs=pst.executeQuery();
                DefaultTableModel AppointmentTM=(DefaultTableModel)Appointmenttable.getModel();
@@ -136,7 +141,7 @@ public class ReportTest extends javax.swing.JFrame {
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("CustomerID"),rs.getString("LastName"),rs.getString("Phone1"),rs.getString("SiteLocation"), rs.getString("StateProvinceName"), rs.getString("CountryName")};
+                   Object o[]={rs.getString("WorkOrderStatusName"),rs.getString("WorkOrderDate"),rs.getString("WorkOrderID"),rs.getString("CustomerID"), rs.getString("LastName"), rs.getString("FirstName"),  rs.getString("Phone1"),  rs.getString("ZoneName"),  rs.getString("SiteLocation"),  rs.getString("StateProvinceID"),  rs.getString("City"),  rs.getString("CountryID"),  rs.getString("Firstname"),  rs.getString("Lastname")};
                    AppointmentTM.addRow(o);
                }
         }
