@@ -372,10 +372,10 @@
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="Mileage" alignment="0" max="32767" attributes="0"/>
-                              <Component id="WorkOrder" alignment="0" max="32767" attributes="0"/>
-                              <Component id="WorkOrderLine" alignment="0" max="32767" attributes="0"/>
-                              <Component id="WorkOrderLineAssignment" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                              <Component id="LoASCiT" alignment="0" max="32767" attributes="0"/>
+                              <Component id="SWOLwH" alignment="0" max="32767" attributes="0"/>
+                              <Component id="LoCwCWO" alignment="0" max="32767" attributes="0"/>
+                              <Component id="PPCbTaaGA" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
@@ -434,14 +434,14 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="WOIPIAZ" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                      <Component id="WorkOrder" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="SWOLwH" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="SubContractor" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="Employee" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="SCoWO" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                      <Component id="Mileage" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="LoASCiT" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="Service" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="HOARequest" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                   </Group>
@@ -449,7 +449,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="SCP" alignment="0" min="-2" pref="35" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="WorkOrderLine" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="LoCwCWO" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                           <Component id="EmployeeAssignment" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                           <Component id="HOA" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       </Group>
@@ -458,7 +458,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="CustomerRequest" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                          <Component id="WorkOrderLineAssignment" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="PPCbTaaGA" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                           <Component id="PermitRequest" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
@@ -570,28 +570,28 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="WOIPIAZActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="Mileage">
+        <Component class="javax.swing.JButton" name="LoASCiT">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Mileage"/>
+            <Property name="text" type="java.lang.String" value="LoASCiT"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MileageActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LoASCiTActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="WorkOrderLine">
+        <Component class="javax.swing.JButton" name="LoCwCWO">
           <Properties>
-            <Property name="text" type="java.lang.String" value="WOL"/>
+            <Property name="text" type="java.lang.String" value="LoCwCWO"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="WorkOrderLineActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LoCwCWOActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="WorkOrderLineAssignment">
+        <Component class="javax.swing.JButton" name="PPCbTaaGA">
           <Properties>
-            <Property name="text" type="java.lang.String" value="WOL Assign."/>
+            <Property name="text" type="java.lang.String" value="PPCbTaaGA"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="WorkOrderLineAssignmentActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PPCbTaaGAActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Template">
@@ -602,12 +602,12 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TemplateActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="WorkOrder">
+        <Component class="javax.swing.JButton" name="SWOLwH">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Work Order"/>
+            <Property name="text" type="java.lang.String" value="SWOLwH"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="WorkOrderActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SWOLwHActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="WorkOrderLineForm">

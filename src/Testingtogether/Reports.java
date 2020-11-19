@@ -40,11 +40,11 @@ public class Reports extends javax.swing.JFrame {
         PwM = new javax.swing.JButton();
         SCP = new javax.swing.JButton();
         WOIPIAZ = new javax.swing.JButton();
-        Mileage = new javax.swing.JButton();
-        WorkOrderLine = new javax.swing.JButton();
-        WorkOrderLineAssignment = new javax.swing.JButton();
+        LoASCiT = new javax.swing.JButton();
+        LoCwCWO = new javax.swing.JButton();
+        PPCbTaaGA = new javax.swing.JButton();
         Template = new javax.swing.JButton();
-        WorkOrder = new javax.swing.JButton();
+        SWOLwH = new javax.swing.JButton();
         WorkOrderLineForm = new javax.swing.JButton();
         SubContractor = new javax.swing.JButton();
         SubContractorService = new javax.swing.JButton();
@@ -162,24 +162,24 @@ public class Reports extends javax.swing.JFrame {
             }
         });
 
-        Mileage.setText("Mileage");
-        Mileage.addActionListener(new java.awt.event.ActionListener() {
+        LoASCiT.setText("LoASCiT");
+        LoASCiT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MileageActionPerformed(evt);
+                LoASCiTActionPerformed(evt);
             }
         });
 
-        WorkOrderLine.setText("WOL");
-        WorkOrderLine.addActionListener(new java.awt.event.ActionListener() {
+        LoCwCWO.setText("LoCwCWO");
+        LoCwCWO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                WorkOrderLineActionPerformed(evt);
+                LoCwCWOActionPerformed(evt);
             }
         });
 
-        WorkOrderLineAssignment.setText("WOL Assign.");
-        WorkOrderLineAssignment.addActionListener(new java.awt.event.ActionListener() {
+        PPCbTaaGA.setText("PPCbTaaGA");
+        PPCbTaaGA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                WorkOrderLineAssignmentActionPerformed(evt);
+                PPCbTaaGAActionPerformed(evt);
             }
         });
 
@@ -190,10 +190,10 @@ public class Reports extends javax.swing.JFrame {
             }
         });
 
-        WorkOrder.setText("Work Order");
-        WorkOrder.addActionListener(new java.awt.event.ActionListener() {
+        SWOLwH.setText("SWOLwH");
+        SWOLwH.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                WorkOrderActionPerformed(evt);
+                SWOLwHActionPerformed(evt);
             }
         });
 
@@ -393,10 +393,10 @@ public class Reports extends javax.swing.JFrame {
                             .addComponent(CustomerRequest, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(Mileage, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(WorkOrder, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(WorkOrderLine, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(WorkOrderLineAssignment, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(LoASCiT, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(SWOLwH, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(LoCwCWO, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(PPCbTaaGA, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
@@ -439,27 +439,27 @@ public class Reports extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(WOIPIAZ, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(WorkOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SWOLwH, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SubContractor, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Employee, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SCoWO, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Mileage, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LoASCiT, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Service, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(HOARequest, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(7, 7, 7)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(SCP, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(WorkOrderLine, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(LoCwCWO, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(EmployeeAssignment, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(HOA, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(CustomerRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(WorkOrderLineAssignment, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(PPCbTaaGA, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(PermitRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(Inspection, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -745,17 +745,17 @@ public class Reports extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void MileageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MileageActionPerformed
+    private void LoASCiTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoASCiTActionPerformed
         // TODO add your handling code here:
-        new Mileage().setVisible(true);
+        new LoASCiT().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_MileageActionPerformed
+    }//GEN-LAST:event_LoASCiTActionPerformed
 
-    private void WorkOrderLineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WorkOrderLineActionPerformed
+    private void LoCwCWOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoCwCWOActionPerformed
         // TODO add your handling code here:
-        new Work_Order_Line().setVisible(true);
+        new LoCwCWO().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_WorkOrderLineActionPerformed
+    }//GEN-LAST:event_LoCwCWOActionPerformed
 
     private void TemplateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TemplateActionPerformed
         // TODO add your handling code here:
@@ -782,11 +782,11 @@ public class Reports extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_HOARequestActionPerformed
 
-    private void WorkOrderLineAssignmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WorkOrderLineAssignmentActionPerformed
+    private void PPCbTaaGAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PPCbTaaGAActionPerformed
         // TODO add your handling code here:
-        new WorkOrdersInProgressInAllZones().setVisible(true);
+        new PPCbTaaGA().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_WorkOrderLineAssignmentActionPerformed
+    }//GEN-LAST:event_PPCbTaaGAActionPerformed
 
     private void GovernmentAgencyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GovernmentAgencyActionPerformed
         // TODO add your handling code here:
@@ -837,11 +837,11 @@ public class Reports extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_PwMActionPerformed
 
-    private void WorkOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WorkOrderActionPerformed
+    private void SWOLwHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SWOLwHActionPerformed
         // TODO add your handling code here:
-        new Work_Order().setVisible(true);
+        new SWOLwH().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_WorkOrderActionPerformed
+    }//GEN-LAST:event_SWOLwHActionPerformed
 
     private void WorkOrderLineFormActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WorkOrderLineFormActionPerformed
         // TODO add your handling code here:
@@ -1132,7 +1132,9 @@ public class Reports extends javax.swing.JFrame {
     private javax.swing.JButton HOA;
     private javax.swing.JButton HOARequest;
     private javax.swing.JButton Inspection;
-    private javax.swing.JButton Mileage;
+    private javax.swing.JButton LoASCiT;
+    private javax.swing.JButton LoCwCWO;
+    private javax.swing.JButton PPCbTaaGA;
     private javax.swing.JButton PermitRequest;
     private javax.swing.JButton PermitRequest1;
     private javax.swing.JButton PermitRequest2;
@@ -1142,15 +1144,13 @@ public class Reports extends javax.swing.JFrame {
     private javax.swing.JButton PwM;
     private javax.swing.JButton SCP;
     private javax.swing.JButton SCoWO;
+    private javax.swing.JButton SWOLwH;
     private javax.swing.JButton Service;
     private javax.swing.JButton SubContractor;
     private javax.swing.JButton SubContractorService;
     private javax.swing.JButton Template;
     private javax.swing.JButton WOIPIAZ;
     private javax.swing.JButton WObSTP;
-    private javax.swing.JButton WorkOrder;
-    private javax.swing.JButton WorkOrderLine;
-    private javax.swing.JButton WorkOrderLineAssignment;
     private javax.swing.JButton WorkOrderLineForm;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
