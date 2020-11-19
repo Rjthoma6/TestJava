@@ -43,6 +43,7 @@ public class MTpWO extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         Appointmenttable = new javax.swing.JTable();
         btnNew = new javax.swing.JButton();
+        Reports5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,28 +85,37 @@ public class MTpWO extends javax.swing.JFrame {
             }
         });
 
+        Reports5.setText("Reports");
+        Reports5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Reports5ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 407, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addGap(402, 402, 402))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 929, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(447, 447, 447)
+                        .addComponent(btnNew))
+                    .addComponent(Reports5)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(430, 430, 430)
-                        .addComponent(btnNew)))
-                .addContainerGap(39, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel5)
-                .addGap(402, 402, 402))
+                        .addGap(36, 36, 36)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 935, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(54, Short.MAX_VALUE)
+                .addComponent(Reports5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnNew)
@@ -161,6 +171,11 @@ public class MTpWO extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnNewActionPerformed
 
+    private void Reports5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Reports5ActionPerformed
+new Reports().setVisible(true);
+        this.setVisible(false);          // TODO add your handling code here:
+    }//GEN-LAST:event_Reports5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -205,6 +220,7 @@ public class MTpWO extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable Appointmenttable;
+    private javax.swing.JButton Reports5;
     private javax.swing.JButton btnNew;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;

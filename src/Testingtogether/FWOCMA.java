@@ -43,6 +43,7 @@ public class FWOCMA extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         Reporttable = new javax.swing.JTable();
         btnNew = new javax.swing.JButton();
+        Reports5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,6 +85,13 @@ public class FWOCMA extends javax.swing.JFrame {
             }
         });
 
+        Reports5.setText("Reports");
+        Reports5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Reports5ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -98,13 +106,15 @@ public class FWOCMA extends javax.swing.JFrame {
                         .addComponent(btnNew))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(357, 357, 357)
-                        .addComponent(jLabel5)))
+                        .addComponent(jLabel5))
+                    .addComponent(Reports5))
                 .addContainerGap(39, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(54, Short.MAX_VALUE)
+                .addComponent(Reports5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnNew)
@@ -165,6 +175,11 @@ public class FWOCMA extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnNewActionPerformed
 
+    private void Reports5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Reports5ActionPerformed
+new Reports().setVisible(true);
+        this.setVisible(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_Reports5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -208,6 +223,7 @@ public class FWOCMA extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Reports5;
     private javax.swing.JTable Reporttable;
     private javax.swing.JButton btnNew;
     private javax.swing.JLabel jLabel5;
