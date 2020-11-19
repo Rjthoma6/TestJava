@@ -94,11 +94,11 @@ public class SToS extends javax.swing.JFrame {
                         .addGap(36, 36, 36)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 929, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(430, 430, 430)
-                        .addComponent(btnNew))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(357, 357, 357)
-                        .addComponent(jLabel5)))
+                        .addComponent(jLabel5))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(394, 394, 394)
+                        .addComponent(btnNew)))
                 .addContainerGap(39, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -124,13 +124,28 @@ public class SToS extends javax.swing.JFrame {
         {
          
                Connection con=DriverManager.getConnection(url,user,pass);
-               String sql="Select * from Customer"
-    +" Join WorkOrder ON WorkOrder.CustomerID = Customer.CustomerID"
-    +" Join EmployeeAssignment ON EmployeeAssignment.WorkOrderID = WorkOrder.WorkOrderID"
-    +" Join Employee ON Employee.EmployeeID = EmployeeAssignment.EmployeeID"
-    +" Join WorkOrderStatus ON WorkOrderStatus.WorkOrderStatusID = WorkOrder.WorkOrderStatusID"
-    +" Join Zone ON Zone.ZoneID = WorkOrder.ZoneID"
-                       +" where WorkOrderStatus.WorkOrderStatusName = 'In-Progress'";
+               String sql="Select " +
+"Service.ServiceName AS 'Type of Service', " +
+"SubContractor.SubContractorID AS 'Sub Contractor ID', " +
+"SubContractorStatus.SubContractorStatusName AS 'Sub Contractor Status', " +
+"SubContractor.Lastname AS 'Last Name', " +
+"SubContractor.Firstname AS 'First Name', " +
+"SubContractor.Phone1 AS 'Phone', " +
+"SubContractor.SubContractorEmail AS 'Email', " +
+"SubContractor.BusinessAddress AS 'Business Address', " +
+"SubContractor.City AS 'City', " +
+"StateProvince.StateProvinceName AS 'State', " +
+"SubContractor.ZipCode AS 'Zip Code', " +
+"Country.CountryName AS 'Country' " +
+ 
+"From SubContractor " +
+"Join StateProvince ON StateProvince.StateProvinceID = SubContractor.StateProvinceID " +
+"Join Country ON Country.CountryID = StateProvince.CountryID " +
+"Join SubContractorService ON SubContractorService.SubContractorID = SubContractor.SubContractorID " +
+"Join Service ON Service.ServiceID = SubContractorService.ServiceID " +
+"Join SubContractorStatus ON SubContractor.SubContractorStatusID = SubContractorStatus.SubContractorStatusID " +
+
+"ORDER By [Type of Service] " ;
                
 
                       
@@ -141,7 +156,7 @@ public class SToS extends javax.swing.JFrame {
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("WorkOrderStatusName"),rs.getString("WorkOrderDate"),rs.getString("WorkOrderID"),rs.getString("CustomerID"), rs.getString("LastName"), rs.getString("FirstName"),  rs.getString("Phone1"),  rs.getString("ZoneName"),  rs.getString("SiteLocation"),  rs.getString("StateProvinceID"),  rs.getString("City"),  rs.getString("CountryID"),  rs.getString("Firstname"),  rs.getString("Lastname")};
+                   Object o[]={rs.getString("Type of Service"),rs.getString("Sub Contractor ID"),rs.getString("Sub Contractor Status"),rs.getString("Last Name"), rs.getString("First Name"), rs.getString("Phone"),  rs.getString("Email"),  rs.getString("Business Address"),  rs.getString("City"),  rs.getString("State"),  rs.getString("Zip Code"),  rs.getString("Country")};
                    ReportTM.addRow(o);
                }
         }
