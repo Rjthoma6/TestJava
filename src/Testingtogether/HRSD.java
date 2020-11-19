@@ -94,11 +94,12 @@ public class HRSD extends javax.swing.JFrame {
                         .addGap(36, 36, 36)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 929, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(430, 430, 430)
-                        .addComponent(btnNew))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(357, 357, 357)
-                        .addComponent(jLabel5)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(btnNew))
+                            .addComponent(jLabel5))))
                 .addContainerGap(39, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -106,9 +107,9 @@ public class HRSD extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(54, Short.MAX_VALUE)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(9, 9, 9)
                 .addComponent(btnNew)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 564, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -124,13 +125,28 @@ public class HRSD extends javax.swing.JFrame {
         {
          
                Connection con=DriverManager.getConnection(url,user,pass);
-               String sql="Select * from Customer"
-    +" Join WorkOrder ON WorkOrder.CustomerID = Customer.CustomerID"
-    +" Join EmployeeAssignment ON EmployeeAssignment.WorkOrderID = WorkOrder.WorkOrderID"
-    +" Join Employee ON Employee.EmployeeID = EmployeeAssignment.EmployeeID"
-    +" Join WorkOrderStatus ON WorkOrderStatus.WorkOrderStatusID = WorkOrder.WorkOrderStatusID"
-    +" Join Zone ON Zone.ZoneID = WorkOrder.ZoneID"
-                       +" where WorkOrderStatus.WorkOrderStatusName = 'In-Progress'";
+               String sql="Select " +
+"WorkOrder.WorkOrderID AS 'Work Order ID', " +
+"HOARequestStatus.HOARequestStatusName AS 'HOA Request Status', " +
+"HOA.HOAID AS 'HOA ID', " +
+"HOARequest.RequestSentDate AS 'HOA Request Date Sent', " +
+"HOA.HOAName AS 'HOA Name', " +
+"HOA.ContactName AS 'HOA Contact Name', " +
+"HOA.HOAPhone AS 'HOA Contact Number', " +
+"HOA.HOAEmail AS 'Email', " +
+"HOA.HOAAddress AS 'HOA Office', " +
+"HOA.City AS 'City', " +
+"StateProvince.StateProvinceName AS 'State' " +
+
+"From HOA\n" +
+"Join StateProvince ON StateProvince.StateProvinceID = HOA.StateProvinceID " +
+"Join HOARequest ON HOARequest.HOAID = HOA.HOAID " +
+"Join HOARequestStatus ON HOARequestStatus.HOARequestStatusID = HOARequest.HOARequestStatusID " +
+"Join WorkOrderLineForm ON HOARequest.WorkOrderLineFormID = WorkOrderLineForm.WorkOrderLineFormID " +
+"Join WorkOrderLine ON WorkOrderLineForm.WorkOrderLineID = WorkOrderLine.WorkOrderLineID " +
+"Join WorkOrder ON WorkOrderLine.WorkOrderID = WorkOrder.WorkOrderID " +
+
+"Where HOARequestStatus.HOARequestStatusName = 'Denied' " ;
                
 
                       
@@ -141,7 +157,7 @@ public class HRSD extends javax.swing.JFrame {
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("WorkOrderStatusName"),rs.getString("WorkOrderDate"),rs.getString("WorkOrderID"),rs.getString("CustomerID"), rs.getString("LastName"), rs.getString("FirstName"),  rs.getString("Phone1"),  rs.getString("ZoneName"),  rs.getString("SiteLocation"),  rs.getString("StateProvinceID"),  rs.getString("City"),  rs.getString("CountryID"),  rs.getString("Firstname"),  rs.getString("Lastname")};
+                   Object o[]={rs.getString("Work Order ID"),rs.getString("HOA Request Status"),rs.getString("HOA ID"),rs.getString("HOA Request Date Sent"), rs.getString("HOA Name"), rs.getString("HOA Contact Name"),  rs.getString("HOA Contact Number"),  rs.getString("Email"),  rs.getString("HOA Office"),  rs.getString("City"),  rs.getString("State")};
                    ReportTM.addRow(o);
                }
         }
