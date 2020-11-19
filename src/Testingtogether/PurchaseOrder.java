@@ -99,7 +99,7 @@ public class PurchaseOrder extends javax.swing.JFrame {
         jLabel1.setText("Receipt");
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel7.setText("Subcontractor");
+        jLabel7.setText("Subcontractor ID");
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 51, 255));
@@ -167,7 +167,7 @@ public class PurchaseOrder extends javax.swing.JFrame {
         });
 
         jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel10.setText("Work Order");
+        jLabel10.setText("Work Order ID");
 
         btnNew.setText("View Table");
         btnNew.addActionListener(new java.awt.event.ActionListener() {

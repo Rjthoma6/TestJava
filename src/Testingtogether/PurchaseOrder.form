@@ -409,7 +409,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="12" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Subcontractor"/>
+        <Property name="text" type="java.lang.String" value="Subcontractor ID"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
@@ -530,7 +530,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="12" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Work Order"/>
+        <Property name="text" type="java.lang.String" value="Work Order ID"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnNew">
