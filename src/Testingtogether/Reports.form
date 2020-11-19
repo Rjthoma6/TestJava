@@ -334,8 +334,8 @@
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="Template" max="32767" attributes="0"/>
-                              <Component id="WorkOrderLineForm" min="-2" pref="115" max="-2" attributes="0"/>
+                              <Component id="RP" max="32767" attributes="0"/>
+                              <Component id="SI" min="-2" pref="115" max="-2" attributes="0"/>
                               <Component id="PurchaseOrder" min="-2" pref="115" max="-2" attributes="0"/>
                               <Component id="SubContractorService" min="-2" pref="115" max="-2" attributes="0"/>
                           </Group>
@@ -468,7 +468,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                          <Component id="Template" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="RP" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                           <Component id="GovernmentAgency" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                           <Component id="PermitRequest1" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       </Group>
@@ -477,7 +477,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="ARpHOA" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                      <Component id="WorkOrderLineForm" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="SI" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="GovernmentAgency1" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="PermitRequest3" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                   </Group>
@@ -594,12 +594,12 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PPCbTaaGAActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="Template">
+        <Component class="javax.swing.JButton" name="RP">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Template"/>
+            <Property name="text" type="java.lang.String" value="RP"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TemplateActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RPActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="SWOLwH">
@@ -610,12 +610,12 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SWOLwHActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="WorkOrderLineForm">
+        <Component class="javax.swing.JButton" name="SI">
           <Properties>
-            <Property name="text" type="java.lang.String" value="WOL Form"/>
+            <Property name="text" type="java.lang.String" value="SI"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="WorkOrderLineFormActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SIActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="SubContractor">
