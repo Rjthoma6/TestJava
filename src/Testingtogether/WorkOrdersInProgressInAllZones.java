@@ -107,7 +107,7 @@ public class WorkOrdersInProgressInAllZones extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(357, 357, 357)
                         .addComponent(jLabel5))
-                    .addComponent(Reports2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Reports2))
                 .addContainerGap(39, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(

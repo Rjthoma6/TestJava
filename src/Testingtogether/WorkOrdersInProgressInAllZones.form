@@ -37,7 +37,7 @@
                       <EmptySpace min="-2" pref="357" max="-2" attributes="0"/>
                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="Reports2" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                  <Component id="Reports2" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="39" max="32767" attributes="0"/>
           </Group>
