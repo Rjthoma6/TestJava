@@ -94,21 +94,21 @@ public class FI extends javax.swing.JFrame {
                         .addGap(36, 36, 36)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 929, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(430, 430, 430)
+                        .addGap(367, 367, 367)
                         .addComponent(btnNew))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(357, 357, 357)
+                        .addGap(375, 375, 375)
                         .addComponent(jLabel5)))
                 .addContainerGap(39, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(54, Short.MAX_VALUE)
+                .addContainerGap(51, Short.MAX_VALUE)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnNew)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 564, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -124,13 +124,28 @@ public class FI extends javax.swing.JFrame {
         {
          
                Connection con=DriverManager.getConnection(url,user,pass);
-               String sql="Select * from Customer"
-    +" Join WorkOrder ON WorkOrder.CustomerID = Customer.CustomerID"
-    +" Join EmployeeAssignment ON EmployeeAssignment.WorkOrderID = WorkOrder.WorkOrderID"
-    +" Join Employee ON Employee.EmployeeID = EmployeeAssignment.EmployeeID"
-    +" Join WorkOrderStatus ON WorkOrderStatus.WorkOrderStatusID = WorkOrder.WorkOrderStatusID"
-    +" Join Zone ON Zone.ZoneID = WorkOrder.ZoneID"
-                       +" where WorkOrderStatus.WorkOrderStatusName = 'In-Progress'";
+               String sql="SELECT " +
+"Inspection.InspectionID AS 'Inspection ID', " +
+"Inspection.InspectionDate AS 'Inspection Date', " +
+"InspectionType.InspectionTypeName AS 'Inspection Type', " +
+"InspectionStatus.InspectionStatusName AS 'Inspection Status', " +
+"WorkOrder.WorkOrderID AS 'Work Order ID', " +
+"GovernmentAgency.GovName AS 'Government Agency', " +
+"GovernmentAgency.GovPhone AS 'Agency Phone', " +
+"GovernmentAgency.GovEmail AS 'Agency Email', " +
+"Employee.EmployeeID AS 'Employee Responsible' " +
+
+"FROM Inspection " +
+"JOIN InspectionStatus ON Inspection.InspectionStatusID = InspectionStatus.InspectionStatusID " +
+"JOIN InspectionType ON Inspection.InspectionTypeID = InspectionType.InspectionTypeID " +
+"JOIN GovernmentAgency ON Inspection.GovID = GovernmentAgency.GovID " +
+"JOIN WorkOrderLineForm ON Inspection.WorkOrderLineFormID = WorkOrderLineForm.WorkOrderLineFormID " +
+"JOIN WorkOrder ON WorkOrderLineForm.WorkOrderID = WorkOrder.WorkOrderID " +
+"JOIN EmployeeAssignment ON WorkOrder.WorkOrderID = EmployeeAssignment.WorkOrderID " +
+"JOIN Employee ON EmployeeAssignment.EmployeeID = Employee.EmployeeID " +
+
+"WHERE InspectionStatus.InspectionStatusID = 2 " +
+"GROUP BY Inspection.InspectionID, Inspection.InspectionDate, InspectionType.InspectionTypeName, InspectionStatus.InspectionStatusName, WorkOrder.WorkOrderID, GovernmentAgency.GovName, GovernmentAgency.GovPhone, GovernmentAgency.GovEmail, Employee.EmployeeID " ;
                
 
                       
@@ -141,7 +156,7 @@ public class FI extends javax.swing.JFrame {
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("WorkOrderStatusName"),rs.getString("WorkOrderDate"),rs.getString("WorkOrderID"),rs.getString("CustomerID"), rs.getString("LastName"), rs.getString("FirstName"),  rs.getString("Phone1"),  rs.getString("ZoneName"),  rs.getString("SiteLocation"),  rs.getString("StateProvinceID"),  rs.getString("City"),  rs.getString("CountryID"),  rs.getString("Firstname"),  rs.getString("Lastname")};
+                   Object o[]={rs.getString("Inspection ID"),rs.getString("Inspection Date"),rs.getString("Inspection Type"),rs.getString("Inspection Status"), rs.getString("Work Order ID"), rs.getString("Government Agency"),  rs.getString("Agency Phone"),  rs.getString("Agency Email"),  rs.getString("Employee Responsible")};
                    ReportTM.addRow(o);
                }
         }
