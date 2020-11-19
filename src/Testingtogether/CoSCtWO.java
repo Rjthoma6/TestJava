@@ -124,13 +124,28 @@ public class CoSCtWO extends javax.swing.JFrame {
         {
          
                Connection con=DriverManager.getConnection(url,user,pass);
-               String sql="Select * from Customer"
-    +" Join WorkOrder ON WorkOrder.CustomerID = Customer.CustomerID"
-    +" Join EmployeeAssignment ON EmployeeAssignment.WorkOrderID = WorkOrder.WorkOrderID"
-    +" Join Employee ON Employee.EmployeeID = EmployeeAssignment.EmployeeID"
-    +" Join WorkOrderStatus ON WorkOrderStatus.WorkOrderStatusID = WorkOrder.WorkOrderStatusID"
-    +" Join Zone ON Zone.ZoneID = WorkOrder.ZoneID"
-                       +" where WorkOrderStatus.WorkOrderStatusName = 'In-Progress'";
+               String sql="Select " +
+"Subcontractor.SubContractorID AS 'Sub Contractor ID', " +
+"SubContractorStatus.SubContractorStatusName AS 'Sub Contractor Status', " +
+"SubContractor.Firstname AS 'Sub Contractor First Name', " +
+"SubContractor.Lastname AS 'Sub Contractor Last Name', " +
+"SubContractor.Phone1 AS 'Phone', " +
+"SubContractor.SubContractorEmail AS 'Email', " +
+"SubContractor.BusinessAddress AS 'Business Address', " +
+"SubContractor.City AS 'City', " +
+"StateProvince.StateProvinceName AS 'State', " +
+"SubContractor.ZipCode AS 'Zip Code', " +
+"Country.CountryName AS 'Country', " +
+"COUNT(EmployeeAssignment.SubContractorID) AS 'Number of Completed Work Orders' " +
+
+"FROM SubContractor " +
+"LEFT JOIN SubContractorStatus ON SubContractor.SubContractorStatusID = SubContractorStatus.SubContractorStatusID " +
+"LEFT JOIN StateProvince ON SubContractor.StateProvinceID = StateProvince.StateProvinceID " +
+"LEFT JOIN Country ON SubContractor.CountryID = Country.CountryID " +
+"LEFT JOIN EmployeeAssignment ON SubContractor.SubContractorID = EmployeeAssignment.SubContractorID " +
+"LEFT JOIN WorkOrder ON EmployeeAssignment.WorkOrderID = WorkOrder.WorkOrderID " +
+
+"GROUP BY SubContractor.SubContractorID, SubContractorStatus.SubContractorStatusName, SubContractor.Firstname, SubContractor.Lastname, SubContractor.Phone1, SubContractor.SubContractorEmail, SubContractor.BusinessAddress, SubContractor.City, StateProvinceName, SubContractor.ZipCode, Country.CountryName " ;
                
 
                       
@@ -141,7 +156,7 @@ public class CoSCtWO extends javax.swing.JFrame {
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("WorkOrderStatusName"),rs.getString("WorkOrderDate"),rs.getString("WorkOrderID"),rs.getString("CustomerID"), rs.getString("LastName"), rs.getString("FirstName"),  rs.getString("Phone1"),  rs.getString("ZoneName"),  rs.getString("SiteLocation"),  rs.getString("StateProvinceID"),  rs.getString("City"),  rs.getString("CountryID"),  rs.getString("Firstname"),  rs.getString("Lastname")};
+                   Object o[]={rs.getString("Sub Contractor ID"),rs.getString("Sub Contractor Status"),rs.getString("Sub Contractor First Name"),rs.getString("Sub Contractor Last Name"), rs.getString("Phone"), rs.getString("Email"),  rs.getString("Business Address"),  rs.getString("City"),  rs.getString("State"),  rs.getString("Zip Code"),  rs.getString("Country"),  rs.getString("Number of Completed Work Orders")};
                    ReportTM.addRow(o);
                }
         }

@@ -123,13 +123,27 @@ public class EWi2020 extends javax.swing.JFrame {
         {
          
                Connection con=DriverManager.getConnection(url,user,pass);
-               String sql="Select * from Customer"
-    +" Join WorkOrder ON WorkOrder.CustomerID = Customer.CustomerID"
-    +" Join EmployeeAssignment ON EmployeeAssignment.WorkOrderID = WorkOrder.WorkOrderID"
-    +" Join Employee ON Employee.EmployeeID = EmployeeAssignment.EmployeeID"
-    +" Join WorkOrderStatus ON WorkOrderStatus.WorkOrderStatusID = WorkOrder.WorkOrderStatusID"
-    +" Join Zone ON Zone.ZoneID = WorkOrder.ZoneID"
-                       +" where WorkOrderStatus.WorkOrderStatusName = 'In-Progress'";
+               String sql="Select " +
+"Warranty.WarrantyID AS 'Warranty ID', " +
+"Warranty.ExpirationDate AS 'Warranty Expiration Date', " +
+"WorkOrder.WorkOrderID AS 'Work Order ID', " +
+"Customer.CustomerID AS 'Customer ID' , " +
+"Customer.Lastname AS 'Customer Last Name', " +
+"Customer.Firstname AS 'Customer First Name', " +
+"Customer.Email AS 'Customer Email', " +
+"Customer.Phone1 AS 'Customer Phone', " +
+"Employee.Firstname AS 'Employee Assigned to WO' " +
+ 
+"From Warranty " +
+"JOIN WorkOrder ON Warranty.WorkOrderID = WorkOrder.WorkOrderID " +
+"JOIN Customer ON WorkOrder.CustomerID = Customer.CustomerID " +
+"JOIN EmployeeAssignment ON WorkOrder.WorkOrderID = EmployeeAssignment.WorkOrderID " +
+"JOIN Employee ON EmployeeAssignment.EmployeeID = Employee.EmployeeID " +
+ 
+"WHERE Warranty.ExpirationDate BETWEEN '2020-01-01' AND '2020-12-31' " +
+"AND Employee.EmployeeID = 1 " +
+ 
+"GROUP BY Warranty.WarrantyID, Warranty.ExpirationDate, WorkOrder.WorkOrderID, Customer.CustomerID, Customer.Lastname, Customer.Firstname, Customer.Email, Customer.Phone1, Employee.Firstname " ;
                
 
                       
@@ -140,7 +154,7 @@ public class EWi2020 extends javax.swing.JFrame {
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("WorkOrderStatusName"),rs.getString("WorkOrderDate"),rs.getString("WorkOrderID"),rs.getString("CustomerID"), rs.getString("LastName"), rs.getString("FirstName"),  rs.getString("Phone1"),  rs.getString("ZoneName"),  rs.getString("SiteLocation"),  rs.getString("StateProvinceID"),  rs.getString("City"),  rs.getString("CountryID"),  rs.getString("Firstname"),  rs.getString("Lastname")};
+                   Object o[]={rs.getString("Warranty ID"),rs.getString("Warranty Expiration Date"),rs.getString("Work Order ID"),rs.getString("Customer ID"), rs.getString("Customer Last Name"), rs.getString("Customer First Name"),  rs.getString("Customer Email"),  rs.getString("Customer Phone"),  rs.getString("Employee Assigned to WO")};
                    ReportTM.addRow(o);
                }
         }
