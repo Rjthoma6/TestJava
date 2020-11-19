@@ -300,10 +300,10 @@
                   <Component id="box1" max="32767" attributes="0"/>
                   <Component id="box2" alignment="0" max="32767" attributes="0"/>
                   <Component id="box3" alignment="0" max="32767" attributes="0"/>
-                  <Component id="box4" alignment="0" max="32767" attributes="0"/>
-                  <Component id="box5" alignment="0" max="32767" attributes="0"/>
                   <Component id="box6" alignment="0" max="32767" attributes="0"/>
-                  <Component id="box7" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
+                  <Component id="box7" alignment="0" pref="70" max="32767" attributes="0"/>
+                  <Component id="box5" alignment="0" max="32767" attributes="0"/>
+                  <Component id="box4" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -361,18 +361,16 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="box4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jButton3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="box4" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="box5" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -444,10 +442,6 @@
     <Component class="javax.swing.JTextField" name="box2">
     </Component>
     <Component class="javax.swing.JTextField" name="box3">
-    </Component>
-    <Component class="javax.swing.JTextField" name="box4">
-    </Component>
-    <Component class="javax.swing.JTextField" name="box5">
     </Component>
     <Component class="javax.swing.JTextField" name="box6">
     </Component>
@@ -573,5 +567,25 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JComboBox" name="box4">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="0"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="box5">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="0"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
   </SubComponents>
 </Form>
