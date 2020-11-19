@@ -94,11 +94,11 @@ public class FoWO extends javax.swing.JFrame {
                         .addGap(36, 36, 36)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 929, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(430, 430, 430)
-                        .addComponent(btnNew))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(357, 357, 357)
-                        .addComponent(jLabel5)))
+                        .addComponent(jLabel5))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(379, 379, 379)
+                        .addComponent(btnNew)))
                 .addContainerGap(39, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -106,9 +106,9 @@ public class FoWO extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(54, Short.MAX_VALUE)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(9, 9, 9)
                 .addComponent(btnNew)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 564, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -124,13 +124,26 @@ public class FoWO extends javax.swing.JFrame {
         {
          
                Connection con=DriverManager.getConnection(url,user,pass);
-               String sql="Select * from Customer"
-    +" Join WorkOrder ON WorkOrder.CustomerID = Customer.CustomerID"
-    +" Join EmployeeAssignment ON EmployeeAssignment.WorkOrderID = WorkOrder.WorkOrderID"
-    +" Join Employee ON Employee.EmployeeID = EmployeeAssignment.EmployeeID"
-    +" Join WorkOrderStatus ON WorkOrderStatus.WorkOrderStatusID = WorkOrder.WorkOrderStatusID"
-    +" Join Zone ON Zone.ZoneID = WorkOrder.ZoneID"
-                       +" where WorkOrderStatus.WorkOrderStatusName = 'In-Progress'";
+               String sql="Select " +
+"Feedback.FeedbackID AS 'Feedback ID', " +
+"Feedback.FeedbackDate AS 'Feedback Date', " +
+"Feedback.Comment AS 'Feedback Comment', " +
+"WorkOrder.WorkOrderID AS 'Work Order ID', " +
+"Employee.FirstName AS 'Employee First Name', " +
+"Employee.LastName AS 'Employee Last Name', " +
+"Customer.CustomerID AS 'CustomerID', " +
+"Customer.Lastname AS 'Customer Last Name', " +
+"Customer.Firstname AS 'Customer First Name' " +
+ 
+"From Feedback " +
+"JOIN Customer ON Feedback.CustomerID = Customer.CustomerID " +
+"JOIN WorkOrder ON Feedback.FeedbackID = WorkOrder.WorkOrderID " +
+"JOIN EmployeeAssignment ON WorkOrder.WorkOrderID = EmployeeAssignment.WorkOrderID " +
+"JOIN Employee ON EmployeeAssignment.EmployeeID = Employee.EmployeeID " +
+
+"WHERE Employee.Firstname = 'Effrin' " +
+
+"GROUP BY Feedback.FeedbackID, Feedback.FeedbackDate, Feedback.Comment, WorkOrder.WorkOrderID, Employee.FirstName, Employee.LastName, Customer.CustomerID, Customer.Lastname, Customer.Firstname " ;
                
 
                       
@@ -141,7 +154,7 @@ public class FoWO extends javax.swing.JFrame {
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("WorkOrderStatusName"),rs.getString("WorkOrderDate"),rs.getString("WorkOrderID"),rs.getString("CustomerID"), rs.getString("LastName"), rs.getString("FirstName"),  rs.getString("Phone1"),  rs.getString("ZoneName"),  rs.getString("SiteLocation"),  rs.getString("StateProvinceID"),  rs.getString("City"),  rs.getString("CountryID"),  rs.getString("Firstname"),  rs.getString("Lastname")};
+                   Object o[]={rs.getString("Feedback ID"),rs.getString("Feedback Date"),rs.getString("Feedback Comment"),rs.getString("Work Order ID"), rs.getString("Employee First Name"), rs.getString("Employee Last Name"),  rs.getString("CustomerID"),  rs.getString("Customer Last Name"),  rs.getString("Customer First Name")};
                    ReportTM.addRow(o);
                }
         }
