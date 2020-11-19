@@ -125,7 +125,7 @@ public class SZA extends javax.swing.JFrame {
          
                Connection con=DriverManager.getConnection(url,user,pass);
                String sql="Select " +
-"Zone.ZoneName AS 'Zone ', " +
+"Zone.ZoneName AS 'Zone', " +
 "WorkOrder.WorkOrderID, " +
 "SubContractor.SubContractorID AS  'Sub Contractor ID', " +
 "SubContractorStatus.SubContractorStatusName AS  'Sub Contractor Status', " +
