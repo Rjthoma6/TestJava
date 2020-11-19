@@ -124,25 +124,29 @@ public class PR extends javax.swing.JFrame {
         {
          
                Connection con=DriverManager.getConnection(url,user,pass);
-               String sql="Select " +
+               String sql="Select Distinct " +
 "WorkOrder.WorkOrderID AS 'Work Order ID', " +
-"Customer.Lastname AS 'Last Name', " +
-"Customer.Firstname AS 'First Name', " +
-"Customer.Email AS 'Email Address', " +
-"Customer.MailingAddress AS 'Mailing Address', " +
-"Customer.MailingCity AS 'City', " +
-"Customer.MailingZipCode AS 'ZIP Code', " +
+"PermitRequest.PermitRequestID AS 'Permit Request ID', " +
+"PermitRequestStatus.PermitRequestStatusName AS 'Permit Request Status Name', " +
+"PermitRequest.PermitRequestDate AS 'Permit Request Date', " +
+"PermitRequestType.PermitRequestTypeName AS 'Permit Request TypeName', " +
+"PermitRequest.GovID AS 'Gov ID', " +
+"GovernmentAgency.GovName AS 'Permitting Agency', " +
+"GovernmentAgency.GovAddress AS 'Agency Address', " +
 "StateProvince.StateProvinceName AS 'State', " +
-"Country.CountryName AS 'Country' " +
+"GovernmentAgency.ZipCode AS 'Zip Code' " +
 
-"From Customer " +
-"Join StateProvince ON  Customer.StateProvinceID = StateProvince.StateProvinceID " +
-"Join Country ON Country.CountryID = StateProvince.CountryID " +
-"Join WorkOrder ON WorkOrder.CustomerID = Customer.CustomerID " +
+"FROM GovernmentAgency " +
+"join PermitRequest ON GovernmentAgency.GovID = PermitRequest.GovID " +
+"join PermitRequestStatus ON PermitRequest.PermitRequestStatusID=PermitRequestStatus.PermitRequestStatusID " +
+"join PermitRequestType ON  PermitRequest.PermitRequestTypeID= PermitRequestType.PermitRequestTypeID " +
+"join WorkOrderLineForm ON PermitRequest.WorkOrderLineFormID = WorkOrderLineForm.WorkOrderLineFormID " +
+"join WorkOrder ON WorkOrderLineForm.WorkOrderID = WorkOrder.WorkOrderID " +
+"join StateProvince ON GovernmentAgency.StateProvinceID = StateProvince.StateProvinceID " +
 
-"Where " +
-"WorkOrder.WorkOrderStatusID = 5 " +
-"GROUP BY WorkOrder.WorkOrderID,Customer.Lastname, Customer.Firstname, Customer.MailingAddress, Customer.MailingCity, Customer.MailingZipCode, StateProvince.StateProvinceName, Country.CountryName, Customer.Email " ;
+"WHERE PermitRequestStatus.PermitRequestStatusName = 'Corrections Required' " +
+
+"Group BY WorkOrder.WorkOrderID, PermitRequest.PermitRequestID, PermitRequestStatus.PermitRequestStatusName, PermitRequest.PermitRequestDate, PermitRequest.Document, PermitRequestType.PermitRequestTypeName, PermitRequest.GovID, GovernmentAgency.GovName, GovernmentAgency.GovAddress, StateProvince.StateProvinceName, GovernmentAgency.ZipCode " ;
                
 
                       
@@ -153,7 +157,7 @@ public class PR extends javax.swing.JFrame {
                
                while(rs.next())
                {
-                   Object o[]={rs.getString("Work Order ID"),rs.getString("Last Name"),rs.getString("First Name"),rs.getString("Email Address"), rs.getString("Mailing Address"), rs.getString("City"),  rs.getString("ZIP Code"),  rs.getString("State"),  rs.getString("Country")};
+                   Object o[]={rs.getString("Work Order ID"),rs.getString("Permit Request ID"),rs.getString("Permit Request Status Name"), rs.getString("Permit Request Date"), rs.getString("Permit Request TypeName"),  rs.getString("Gov ID"),  rs.getString("Permitting Agency"),  rs.getString("Agency Address"),  rs.getString("State"),  rs.getString("Zip Code")};
                    ReportTM.addRow(o);
                }
         }
